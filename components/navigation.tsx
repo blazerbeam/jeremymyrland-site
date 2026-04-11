@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
+  { href: "#journey", label: "Journey" },
   { href: "#work", label: "Work" },
   { href: "#building", label: "Building" },
   { href: "#community", label: "Community" },

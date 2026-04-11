@@ -2,6 +2,7 @@
 
 import { Navigation } from "@/components/navigation";
 import { HeroSection } from "@/components/hero-section";
+import { JourneySection } from "@/components/journey-section";
 import { WorkSection } from "@/components/work-section";
 import { BuildingSection } from "@/components/building-section";
 import { CommunitySection } from "@/components/community-section";
@@ -15,6 +16,7 @@ export default function Home() {
       <Navigation />
       <main>
         <HeroSection />
+        <JourneySection />
         <WorkSection />
         <BuildingSection />
         <CommunitySection />
