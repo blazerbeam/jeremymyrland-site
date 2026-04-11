@@ -102,6 +102,42 @@ export function CommunitySection() {
           ))}
         </div>
 
+        {/* Community Photos */}
+        <div
+          className={cn(
+            "mt-16 flex flex-col sm:flex-row gap-8 justify-center items-center transition-all duration-700 ease-out delay-500",
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          )}
+        >
+          {/* Gala Photo */}
+          <div className="flex flex-col items-center">
+            <div className="w-72 h-80 rounded-xl overflow-hidden border border-border">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gala-kHYr0mpcYNjCHvMsVjNDLnRBDUULUW.jpeg"
+                alt="Jeremy Myrland with Congressman Earl Blumenauer at the Lake Oswego Schools Foundation Annual Gala"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="mt-3 text-sm text-muted-foreground text-center max-w-xs">
+              With Congressman Earl Blumenauer at the Lake Oswego Schools Foundation Annual Gala
+            </p>
+          </div>
+
+          {/* Blazers Photo */}
+          <div className="flex flex-col items-center">
+            <div className="w-64 h-72 rounded-xl overflow-hidden border border-border">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/blazers-0WMhjY7frE309gKTApm9AEdAHf6VcU.jpeg"
+                alt="Jeremy Myrland with his kids at a Portland Trail Blazers game"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="mt-3 text-sm text-muted-foreground text-center">
+              Rip City.
+            </p>
+          </div>
+        </div>
+
         <p
           className={cn(
             "mt-12 text-center text-muted-foreground italic transition-all duration-700 ease-out delay-700",

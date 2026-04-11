@@ -55,7 +55,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Headshot Placeholder */}
+          {/* Headshot */}
           <div
             className={cn(
               "lg:col-span-2 flex justify-center lg:justify-end transition-all duration-700 ease-out delay-200",
@@ -66,23 +66,12 @@ export function HeroSection() {
           >
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-border" />
-              <div className="absolute inset-4 rounded-xl bg-secondary/50 flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <svg
-                    className="w-16 h-16 mx-auto mb-3 opacity-50"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                  <p className="text-sm">Headshot</p>
-                </div>
+              <div className="absolute inset-4 rounded-xl overflow-hidden">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/headshot-hHgHPVf6CZiheNfE43flBj5RQXLtBl.jpeg"
+                  alt="Jeremy Myrland - Senior Product Leader"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
             </div>
           </div>
