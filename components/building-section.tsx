@@ -7,12 +7,20 @@ const projects = [
   {
     name: "bethere.community",
     url: "https://bethere.community",
-    body: "I was running our school PTO and watched the same thing happen every year — parents get blasted with generic volunteer asks, most ignore them, and the same five people end up doing everything. The matching problem seemed solvable. So I built bethere.community: answer a few questions, get matched to opportunities that actually fit your life. First real thing I've ever shipped. Built with Claude AI, v0, and Vercel.",
+    problem:
+      "I was running our school PTO and watched the same thing happen every year — parents get blasted with generic volunteer asks, most ignore them, and the same five people end up doing everything. The matching problem seemed solvable.",
+    solution:
+      "Answer a few questions, get matched to opportunities that actually fit your life. First real thing I've ever shipped.",
+    builtWith: "Claude AI, v0, and Vercel",
   },
   {
     name: "inkind.one",
     url: "https://inkind.one",
-    body: "I ran procurement for our school foundation's annual gala. The whole process lived in spreadsheets, email chains, and people's heads. Donor outreach was inconsistent, ownership was unclear, and nothing was trackable. I built inkind.one to fix that — one place for sourcing items, tracking outreach, managing packages, and generating donor emails with AI. Second thing I've ever shipped.",
+    problem:
+      "I ran procurement for our school foundation's annual gala. The whole process lived in spreadsheets, email chains, and people's heads. Donor outreach was inconsistent, ownership was unclear, and nothing was trackable.",
+    solution:
+      "One place for sourcing items, tracking outreach, managing packages, and generating donor emails with AI. Second thing I've ever shipped.",
+    builtWith: "Claude AI, v0, and Vercel",
   },
 ];
 
@@ -101,10 +109,33 @@ export function BuildingSection() {
                 </span>
               </div>
 
-              {/* Body paragraph */}
-              <p className="text-sm sm:text-base text-foreground/90 leading-relaxed">
-                {project.body}
-              </p>
+              {/* Problem section */}
+              <div className="mb-5">
+                <span className="text-[10px] font-semibold tracking-[0.15em] uppercase text-muted-foreground">
+                  Problem I faced
+                </span>
+                <blockquote className="mt-2 border-l-2 border-primary pl-4 text-sm sm:text-base text-foreground/90 leading-relaxed">
+                  {project.problem}
+                </blockquote>
+              </div>
+
+              {/* Solution section */}
+              <div className="mb-5">
+                <span className="text-[10px] font-semibold tracking-[0.15em] uppercase text-muted-foreground">
+                  What I built
+                </span>
+                <blockquote className="mt-2 border-l-2 border-primary pl-4 text-sm sm:text-base text-foreground/90 leading-relaxed">
+                  {project.solution}
+                </blockquote>
+              </div>
+
+              {/* Built with */}
+              <div className="pt-4 border-t border-border/50">
+                <span className="text-xs text-muted-foreground">
+                  <span className="font-semibold">Built with:</span>{" "}
+                  {project.builtWith}
+                </span>
+              </div>
             </div>
           ))}
         </div>
