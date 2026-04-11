@@ -5,25 +5,28 @@ import { cn } from "@/lib/utils";
 
 const communityItems = [
   {
-    title: "Lake Oswego Schools Foundation",
-    role: "Board Member",
-    description:
-      "Secretary year one. Led procurement for annual gala (which led to building inkind.one). Incoming Vice President.",
+    name: "LAKE OSWEGO SCHOOLS FOUNDATION",
+    description: "Board Member. Secretary → Procurement Lead → incoming VP. Led the gala procurement process that inspired inkind.one.",
   },
   {
-    title: "Forest Hills PTO",
-    role: "Vice President",
-    description: "Incoming President.",
+    name: "FOREST HILLS PTO",
+    description: "Vice President, incoming President. Forest Hills Elementary, Lake Oswego.",
   },
   {
-    title: "Special Olympics Oregon",
-    role: "Super Plunger",
-    description: "Raised $10,000+. Unified softball player.",
+    name: "CHILDREN'S CANCER ASSOCIATION",
+    description: "Chemo Pal Mentor. One-on-one support for kids going through cancer treatment.",
   },
   {
-    title: "Habitat for Humanity",
-    role: "Volunteer",
+    name: "SPECIAL OLYMPICS OREGON",
+    description: "Super Plunger — raised $10,000+. Unified softball teammate.",
+  },
+  {
+    name: "HABITAT FOR HUMANITY",
     description: "House builds.",
+  },
+  {
+    name: "YOUNG ENTREPRENEURS BUSINESS WEEK",
+    description: "Company Advisor.",
   },
 ];
 
@@ -50,7 +53,7 @@ export function CommunitySection() {
 
   return (
     <section id="community" ref={sectionRef} className="py-24 px-6">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-4xl">
         <div className="mb-16">
           <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
             Community
@@ -61,64 +64,85 @@ export function CommunitySection() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Editorial List */}
+        <div className="space-y-8">
           {communityItems.map((item, index) => (
             <div
-              key={item.title}
+              key={item.name}
               className={cn(
-                "border border-border rounded-xl p-6 bg-card/50 transition-all duration-700 ease-out hover:shadow-md",
+                "transition-all duration-700 ease-out",
                 isVisible
                   ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
+                  : "opacity-0 translate-y-4"
               )}
-              style={{ transitionDelay: isVisible ? `${index * 100}ms` : "0ms" }}
+              style={{ transitionDelay: isVisible ? `${index * 80}ms` : "0ms" }}
             >
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
-                <div>
-                  <h3 className="font-serif font-semibold text-foreground">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-primary font-medium mt-1">
-                    {item.role}
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
+              <h3 className="font-serif text-base font-semibold text-foreground tracking-wide">
+                {item.name}
+              </h3>
+              <p className="mt-1 text-muted-foreground leading-relaxed">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>
 
+        {/* Divider */}
+        <div
+          className={cn(
+            "mt-16 mb-10 h-px bg-border transition-all duration-700 ease-out delay-500",
+            isVisible ? "opacity-100" : "opacity-0"
+          )}
+        />
+
+        {/* Leadership Thread */}
+        <p
+          className={cn(
+            "text-muted-foreground italic leading-relaxed transition-all duration-700 ease-out delay-500",
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          )}
+        >
+          Leadership has been a thread since early on — student government, campus organizing, always finding the thing that needed doing and jumping in.
+        </p>
+
+        {/* Someday line */}
+        <p
+          className={cn(
+            "mt-4 text-sm text-muted-foreground transition-all duration-700 ease-out delay-600",
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          )}
+        >
+          Someday: school board. Maybe city council. We&apos;ll see where it goes.
+        </p>
+
         {/* Community Photos */}
         <div
           className={cn(
-            "mt-16 flex flex-col sm:flex-row gap-8 justify-center items-center transition-all duration-700 ease-out delay-500",
+            "mt-16 grid grid-cols-1 sm:grid-cols-2 gap-10 justify-items-center max-w-xl mx-auto transition-all duration-700 ease-out delay-700",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}
         >
           {/* Gala Photo */}
           <div className="flex flex-col items-center">
-            <div className="w-72 h-80 rounded-xl overflow-hidden border border-border">
+            <div className="w-70 h-70 rounded-lg overflow-hidden" style={{ width: '280px', height: '280px' }}>
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gala-kHYr0mpcYNjCHvMsVjNDLnRBDUULUW.jpeg"
                 alt="Jeremy Myrland with Congressman Earl Blumenauer at the Lake Oswego Schools Foundation Annual Gala"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </div>
-            <p className="mt-3 text-sm text-muted-foreground text-center max-w-xs">
+            <p className="mt-3 text-sm text-muted-foreground text-center">
               With Congressman Earl Blumenauer at the Lake Oswego Schools Foundation Annual Gala
             </p>
           </div>
 
           {/* Blazers Photo */}
           <div className="flex flex-col items-center">
-            <div className="w-64 h-72 rounded-xl overflow-hidden border border-border">
+            <div className="w-70 h-70 rounded-lg overflow-hidden" style={{ width: '280px', height: '280px' }}>
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/blazers-0WMhjY7frE309gKTApm9AEdAHf6VcU.jpeg"
                 alt="Jeremy Myrland with his kids at a Portland Trail Blazers game"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </div>
             <p className="mt-3 text-sm text-muted-foreground text-center">
@@ -126,24 +150,6 @@ export function CommunitySection() {
             </p>
           </div>
         </div>
-
-        <p
-          className={cn(
-            "mt-12 text-center text-muted-foreground italic transition-all duration-700 ease-out delay-600",
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          )}
-        >
-          Leadership has been a thread since early on — student government, campus organizing, always finding the thing that needed doing and jumping in.
-        </p>
-
-        <p
-          className={cn(
-            "mt-6 text-center text-muted-foreground italic transition-all duration-700 ease-out delay-700",
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          )}
-        >
-          Someday: school board. Maybe city council. We&apos;ll see where it goes.
-        </p>
       </div>
     </section>
   );
