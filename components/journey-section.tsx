@@ -3,7 +3,28 @@
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
-const journeyRoles = [
+interface Pillar {
+  name: string;
+  vision: string;
+  description: string;
+  covered?: string;
+  principle?: string;
+}
+
+interface JourneyRole {
+  company: string;
+  title: string;
+  dates: string;
+  color: string;
+  narrative: string;
+  tags: string[];
+  hasPillars?: boolean;
+  headerLine?: string;
+  pillars?: Pillar[];
+  footerLine?: string;
+}
+
+const journeyRoles: JourneyRole[] = [
   {
     company: "VIEWPOINT",
     title: "International Product Manager",
@@ -63,8 +84,24 @@ const journeyRoles = [
     title: "Manager, Platform Product Management",
     dates: "2022–2025",
     color: "#E9A033", // Workday orange - lightened for dark bg
-    narrative:
-      "Led a team of 9 product managers across the US, Canada, and Ireland — built the team from scratch across two distinct product pillars within Workday's UI Platform organization.\n\nInteroperability: The vision was \"seamless, scalable experiences through full-stack orchestration.\" Started with Kernel (front-end orchestration) and expanded scope to include back-end and data layers — the connective tissue for Workday's platform and ecosystem play. This covered 90+ payroll partner integrations, acquired product integration, skills cloud connectivity, and marketplace infrastructure. The pitch to leadership: Workday needed to stop being a suite and start being a platform. Interoperability was the foundation that made that possible.\n\nDelivery: The vision was \"force multiplier for UI Platform.\" North star metric: save developers time getting products to market. Consolidated fragmented CI infrastructure into GitHub Actions, built observability frameworks, established quality guardrails, and divested proprietary systems. Operating principle: time is the universal currency. Everything was measured against it.\n\nBuilt both teams from scratch: 6 hires, 2 promotions, 2 managed out.",
+    narrative: "", // Using pillars instead
+    hasPillars: true,
+    headerLine: "Led a team of 9 product managers across the US, Canada, and Ireland. Built two distinct product pillars from scratch simultaneously.",
+    pillars: [
+      {
+        name: "INTEROPERABILITY",
+        vision: "Seamless, scalable experiences through full-stack orchestration.",
+        description: "The job: Be the connective tissue for Workday's platform and ecosystem play. Started with Kernel (front-end orchestration) and expanded into back-end and data layers. The pitch to leadership was simple — Workday needed to stop being a suite and start being a platform. Interoperability was what made that possible.",
+        covered: "90+ payroll partner integrations, acquired product integration (Evisort), skills cloud connectivity, marketplace infrastructure.",
+      },
+      {
+        name: "DELIVERY",
+        vision: "Force multiplier for UI Platform.",
+        description: "North star metric: save developers time getting products to market. Consolidated fragmented CI infrastructure into GitHub Actions, built observability frameworks, established quality guardrails, divested proprietary systems that no longer belonged to the team.",
+        principle: "Operating principle: time is the universal currency. Everything was measured against it.",
+      },
+    ],
+    footerLine: "6 hires total across both pillars. 2 promoted. 2 managed out.",
     tags: ["Platform", "Interoperability", "Developer Experience", "Team Building", "GenAI", "Full-Stack Orchestration"],
   },
   {
@@ -216,14 +253,77 @@ export function JourneySection() {
                     className={cn(
                       "overflow-hidden transition-all duration-300 ease-out",
                       expandedIndex === index
-                        ? "max-h-96 opacity-100 mt-4"
+                        ? "max-h-[800px] opacity-100 mt-4"
                         : "max-h-0 opacity-0"
                     )}
                   >
                     <div className="pt-4 border-t border-border">
-                      <p className="text-sm sm:text-base text-foreground leading-relaxed">
-                        {role.narrative}
-                      </p>
+                      {role.hasPillars && role.pillars ? (
+                        <div className="space-y-5">
+                          {/* Header line */}
+                          <p className="text-sm sm:text-base text-foreground font-medium leading-relaxed">
+                            {role.headerLine}
+                          </p>
+
+                          {/* Pillars */}
+                          <div className="grid gap-4 sm:grid-cols-2">
+                            {role.pillars.map((pillar, pillarIndex) => (
+                              <div
+                                key={pillarIndex}
+                                className="bg-secondary/50 border border-border/50 rounded-lg p-4 space-y-3"
+                              >
+                                {/* Pillar name */}
+                                <div className="flex items-center gap-2">
+                                  <span className="text-[10px] font-bold tracking-[0.15em] text-muted-foreground">
+                                    PILLAR {pillarIndex + 1}
+                                  </span>
+                                  <div className="h-px flex-1 bg-border/50" />
+                                </div>
+                                <h4
+                                  className="font-serif text-base font-semibold"
+                                  style={{ color: role.color }}
+                                >
+                                  {pillar.name}
+                                </h4>
+
+                                {/* Vision as pull quote */}
+                                <blockquote className="border-l-2 pl-3 italic text-sm text-foreground/90" style={{ borderColor: role.color }}>
+                                  &ldquo;{pillar.vision}&rdquo;
+                                </blockquote>
+
+                                {/* Description */}
+                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                  {pillar.description}
+                                </p>
+
+                                {/* Covered items (for Interoperability) */}
+                                {pillar.covered && (
+                                  <div className="text-xs text-muted-foreground pt-2 border-t border-border/30">
+                                    <span className="font-semibold text-foreground/70">Covered:</span>{" "}
+                                    {pillar.covered}
+                                  </div>
+                                )}
+
+                                {/* Operating principle (for Delivery) */}
+                                {pillar.principle && (
+                                  <p className="text-xs text-muted-foreground italic pt-2 border-t border-border/30">
+                                    {pillar.principle}
+                                  </p>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* Footer line */}
+                          <p className="text-sm text-muted-foreground font-medium pt-2">
+                            {role.footerLine}
+                          </p>
+                        </div>
+                      ) : (
+                        <p className="text-sm sm:text-base text-foreground leading-relaxed whitespace-pre-line">
+                          {role.narrative}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </button>
