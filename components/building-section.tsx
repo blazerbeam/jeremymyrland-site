@@ -139,6 +139,24 @@ export function BuildingSection() {
             </div>
           ))}
         </div>
+
+        {/* Open Source Line */}
+        <p
+          className={cn(
+            "mt-10 text-center text-sm text-muted-foreground transition-all duration-700 ease-out delay-300",
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          )}
+        >
+          All projects are open source.{" "}
+          <a
+            href="https://github.com/blazerbeam"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            github.com/blazerbeam
+          </a>
+        </p>
       </div>
     </section>
   );
