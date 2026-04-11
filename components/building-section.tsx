@@ -7,20 +7,12 @@ const projects = [
   {
     name: "bethere.community",
     url: "https://bethere.community",
-    problem:
-      "Running a PTO, I watched parents get asked to volunteer with zero context on what was actually needed or whether it fit their life.",
-    solution:
-      "A matching tool where parents answer a few questions and get connected to opportunities that fit their schedule and interests.",
-    builtWith: "Next.js, Vercel, Claude AI, v0.dev",
+    body: "I was running our school PTO and watched the same thing happen every year — parents get blasted with generic volunteer asks, most ignore them, and the same five people end up doing everything. The matching problem seemed solvable. So I built bethere.community: answer a few questions, get matched to opportunities that actually fit your life. First real thing I've ever shipped. Built with Claude AI, v0, and Vercel.",
   },
   {
     name: "inkind.one",
     url: "https://inkind.one",
-    problem:
-      "Leading procurement for a nonprofit gala, I watched the whole process fall apart across spreadsheets, emails, and tribal knowledge.",
-    solution:
-      "An auction procurement app with clear ownership, flexible item packaging, and AI-generated donor outreach — single source of truth.",
-    builtWith: "Next.js, Vercel, Claude AI, v0.dev",
+    body: "I ran procurement for our school foundation's annual gala. The whole process lived in spreadsheets, email chains, and people's heads. Donor outreach was inconsistent, ownership was unclear, and nothing was trackable. I built inkind.one to fix that — one place for sourcing items, tracking outreach, managing packages, and generating donor emails with AI. Second thing I've ever shipped.",
   },
 ];
 
@@ -74,15 +66,15 @@ export function BuildingSection() {
             <div
               key={project.name}
               className={cn(
-                "bg-card border border-border rounded-xl p-6 sm:p-8 transition-all duration-700 ease-out flex flex-col",
+                "bg-card border border-border rounded-xl p-6 sm:p-8 transition-all duration-700 ease-out",
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
               )}
               style={{ transitionDelay: isVisible ? `${index * 150}ms` : "0ms" }}
             >
-              {/* Project Name + Link */}
-              <div className="flex items-center justify-between mb-6">
+              {/* Project Name + Tag */}
+              <div className="flex items-start justify-between mb-6">
                 <a
                   href={project.url}
                   target="_blank"
@@ -104,70 +96,18 @@ export function BuildingSection() {
                     />
                   </svg>
                 </a>
-                <span className="text-[10px] font-medium tracking-wider uppercase text-muted-foreground bg-secondary px-2 py-1 rounded">
+                <span className="text-[10px] font-medium tracking-wider uppercase text-muted-foreground bg-secondary px-2 py-1 rounded whitespace-nowrap ml-4">
                   Experiment in progress
                 </span>
               </div>
 
-              {/* Problem */}
-              <div className="mb-4">
-                <span className="text-xs font-semibold tracking-wider uppercase text-primary/80">
-                  Problem I faced
-                </span>
-                <p className="mt-1 text-sm text-foreground/90 leading-relaxed border-l-2 border-primary/30 pl-3">
-                  &ldquo;{project.problem}&rdquo;
-                </p>
-              </div>
-
-              {/* Solution */}
-              <div className="mb-4">
-                <span className="text-xs font-semibold tracking-wider uppercase text-primary/80">
-                  What I built
-                </span>
-                <p className="mt-1 text-sm text-foreground/90 leading-relaxed border-l-2 border-primary/30 pl-3">
-                  &ldquo;{project.solution}&rdquo;
-                </p>
-              </div>
-
-              {/* Built With */}
-              <div className="mb-6">
-                <span className="text-xs font-semibold tracking-wider uppercase text-primary/80">
-                  Built with
-                </span>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  {project.builtWith}
-                </p>
-              </div>
-
-              {/* Spacer to push footer to bottom */}
-              <div className="flex-1" />
-
-              {/* Footer link */}
-              <div className="pt-4 border-t border-border/50">
-                <p className="text-xs text-muted-foreground">
-                  Want to know more about who built this?{" "}
-                  <a
-                    href="https://jeremymyrland.com"
-                    className="text-primary hover:underline"
-                  >
-                    jeremymyrland.com
-                  </a>
-                </p>
-              </div>
+              {/* Body paragraph */}
+              <p className="text-sm sm:text-base text-foreground/90 leading-relaxed">
+                {project.body}
+              </p>
             </div>
           ))}
         </div>
-
-        {/* Closing line */}
-        <p
-          className={cn(
-            "mt-12 text-center text-sm text-muted-foreground italic transition-all duration-700",
-            isVisible ? "opacity-100" : "opacity-0"
-          )}
-          style={{ transitionDelay: isVisible ? "400ms" : "0ms" }}
-        >
-          More experiments coming. This is what happens when a PM finally gets a coding superpower.
-        </p>
       </div>
     </section>
   );
