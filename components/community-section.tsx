@@ -25,17 +25,6 @@ const communityItems = [
     role: "Volunteer",
     description: "House builds.",
   },
-  {
-    title: "High School Leadership",
-    role: "Student Leader",
-    description: "ASB Treasurer, FBLA President, School Newspaper Editor.",
-  },
-  {
-    title: "Oregon State University",
-    role: "Campus Involvement",
-    description:
-      "Ran for ASOSU President. Endorsed by The Daily Barometer student newspaper.",
-  },
 ];
 
 export function CommunitySection() {
@@ -140,7 +129,16 @@ export function CommunitySection() {
 
         <p
           className={cn(
-            "mt-12 text-center text-muted-foreground italic transition-all duration-700 ease-out delay-700",
+            "mt-12 text-center text-muted-foreground italic transition-all duration-700 ease-out delay-600",
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          )}
+        >
+          Leadership has been a thread since early on — student government, campus organizing, always finding the thing that needed doing and jumping in.
+        </p>
+
+        <p
+          className={cn(
+            "mt-6 text-center text-muted-foreground italic transition-all duration-700 ease-out delay-700",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           )}
         >
