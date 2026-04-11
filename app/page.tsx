@@ -1,16 +1,27 @@
+"use client";
+
+import { Navigation } from "@/components/navigation";
+import { HeroSection } from "@/components/hero-section";
+import { WorkSection } from "@/components/work-section";
+import { BuildingSection } from "@/components/building-section";
+import { CommunitySection } from "@/components/community-section";
+import { WritingSection } from "@/components/writing-section";
+import { ContactSection } from "@/components/contact-section";
+import { Footer } from "@/components/footer";
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center font-sans">
-      <main className="flex w-full max-w-3xl flex-col items-center gap-8 px-6 py-16 text-center sm:items-start sm:text-left">
-        <div className="flex flex-col gap-4">
-          <h1 className="text-4xl font-bold tracking-tight">
-            Jeremy Career Site
-          </h1>
-          <p className="max-w-md text-lg text-muted-foreground">
-            To get started, send a prompt or modify this page directly.
-          </p>
-        </div>
+    <div className="min-h-screen">
+      <Navigation />
+      <main>
+        <HeroSection />
+        <WorkSection />
+        <BuildingSection />
+        <CommunitySection />
+        <WritingSection />
+        <ContactSection />
       </main>
+      <Footer />
     </div>
   );
 }

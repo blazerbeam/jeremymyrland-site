@@ -1,14 +1,23 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Source_Serif_4, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const sourceSerif = Source_Serif_4({ 
+  subsets: ["latin"],
+  variable: '--font-serif',
+  display: 'swap',
+});
+
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: '--font-sans',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Jeremy Myrland | Senior Product Leader',
+  description: '15 years of product leadership at Nike, Workday, Wayfair, and Apple. I specialize in orchestration — connecting fragmented systems, teams, and workflows so they produce real outcomes.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -35,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${sourceSerif.variable} ${inter.variable}`}>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
