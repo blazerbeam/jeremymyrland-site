@@ -64,8 +64,8 @@ const journeyRoles = [
     dates: "2022–2025",
     color: "#D97D0D", // Workday orange
     narrative:
-      "Led a global team of 5–9 PMs across the US, Canada, and Ireland owning the interoperability and delivery pillars of Workday's UI Platform. Defined the vision for interoperability as the connective tissue for Workday's partner ecosystem — 90+ payroll integrations, mobile web view platform, first GenAI chatbot strategy. Built the team from scratch: 6 hires, 2 promotions, 2 managed out.",
-    tags: ["Platform", "Team Building", "Interoperability", "GenAI"],
+      "Led a team of 9 product managers across the US, Canada, and Ireland — built the team from scratch across two distinct product pillars within Workday's UI Platform organization.\n\nInteroperability: The vision was \"seamless, scalable experiences through full-stack orchestration.\" Started with Kernel (front-end orchestration) and expanded scope to include back-end and data layers — the connective tissue for Workday's platform and ecosystem play. This covered 90+ payroll partner integrations, acquired product integration, skills cloud connectivity, and marketplace infrastructure. The pitch to leadership: Workday needed to stop being a suite and start being a platform. Interoperability was the foundation that made that possible.\n\nDelivery: The vision was \"force multiplier for UI Platform.\" North star metric: save developers time getting products to market. Consolidated fragmented CI infrastructure into GitHub Actions, built observability frameworks, established quality guardrails, and divested proprietary systems. Operating principle: time is the universal currency. Everything was measured against it.\n\nBuilt both teams from scratch: 6 hires, 2 promotions, 2 managed out.",
+    tags: ["Platform", "Interoperability", "Developer Experience", "Team Building", "GenAI", "Full-Stack Orchestration"],
   },
   {
     company: "NIKE",
