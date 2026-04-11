@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { CaseStudyModal, NikeSearchCaseStudy } from "./case-study-modal";
 
 const workHistory = [
   {
@@ -61,6 +62,7 @@ const workHistory = [
       "6%+ conversion vs 3% baseline",
       "Reduced manual merchandising from ~85% to ~5% of top queries",
     ],
+    caseStudyId: "nike-search",
   },
   {
     company: "Earlier",
@@ -76,6 +78,7 @@ const workHistory = [
 
 export function WorkSection() {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
+  const [caseStudyOpen, setCaseStudyOpen] = useState<string | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -160,12 +163,43 @@ export function WorkSection() {
                       </li>
                     ))}
                   </ul>
+
+                  {/* Case Study Button */}
+                  {role.caseStudyId && (
+                    <button
+                      onClick={() => setCaseStudyOpen(role.caseStudyId)}
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                    >
+                      Read the full story
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </button>
+                  )}
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* Case Study Modal */}
+      <CaseStudyModal
+        isOpen={caseStudyOpen === "nike-search"}
+        onClose={() => setCaseStudyOpen(null)}
+      >
+        <NikeSearchCaseStudy />
+      </CaseStudyModal>
     </section>
   );
 }
