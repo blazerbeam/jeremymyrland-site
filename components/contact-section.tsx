@@ -39,9 +39,8 @@ export function ContactSection() {
           </span>
 
           <p className="mt-8 text-lg text-muted-foreground leading-relaxed">
-            I&apos;m open to staff PM and director of product roles at companies that
-            pay well and solve interesting problems. Remote preferred.
-            Portland-based.
+            Staff PM and director of product is where I do my best work.
+            Remote-friendly. Based in Lake Oswego, Oregon (Portland metro).
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
