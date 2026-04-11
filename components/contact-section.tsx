@@ -75,7 +75,7 @@ export function ContactSection() {
               className="border-foreground/20 hover:bg-secondary font-medium px-8 w-full sm:w-auto"
             >
               <a
-                href="https://linkedin.com/in/jpmyrland"
+                href="https://www.linkedin.com/in/jpmyrland/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
