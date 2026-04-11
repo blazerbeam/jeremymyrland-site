@@ -22,6 +22,10 @@ interface JourneyRole {
   headerLine?: string;
   pillars?: Pillar[];
   footerLine?: string;
+  stat?: {
+    value: string;
+    color: string; // Tailwind color class
+  };
 }
 
 const journeyRoles: JourneyRole[] = [
@@ -42,6 +46,7 @@ const journeyRoles: JourneyRole[] = [
     narrative:
       "Joined as employee ~40 and their first real PM. Did the market segmentation work that shifted the company away from small customers toward large, complex ones — aerospace, defense, automotive. Launched a decision-tracking feature that logged 10,000 decisions in its first month. Became the first agile SaaS company to achieve ISO 26262 automotive certification, growing the automotive pipeline 5x in a single quarter. Named fastest-growing startup in Oregon while there.",
     tags: ["0→1", "Market Segmentation", "Automotive", "ISO 26262"],
+    stat: { value: "5x pipeline", color: "#F59E0B" }, // amber
   },
   {
     company: "NIKE",
@@ -51,6 +56,7 @@ const journeyRoles: JourneyRole[] = [
     narrative:
       "Joined right as Nike decided to replace its legacy Endeca search platform with an in-house ML system. Spent four years orchestrating the migration while managing real tension between brand (who wanted curation and control) and commerce (who wanted revenue). Reduced manual merchandising from ~85% of top queries to ~5%. Launched Search Preview, which drove $50M+ in incremental revenue in the first few months at 6%+ conversion vs a 3% baseline. Built transparency tooling so stakeholders could understand why the algorithm ranked products the way it did.",
     tags: ["ML Search", "$50M Revenue", "Global Rollout", "Organizational Alignment"],
+    stat: { value: "$50M+", color: "#5C9E6E" }, // accent green
   },
   {
     company: "CONSTRUCTOR",
@@ -78,6 +84,7 @@ const journeyRoles: JourneyRole[] = [
     narrative:
       "Led the launch of a neural network-powered search engine that replaced Wayfair's legacy system. Built the A/B testing framework from scratch, iterated on the ranking model, and rolled out across 5 international markets with no major incidents on the US launch. $100M+ in incremental global revenue, $65M+ in the US alone.",
     tags: ["Neural Search", "$100M Revenue", "5 Markets", "A/B Testing"],
+    stat: { value: "$100M+", color: "#5C9E6E" }, // accent green
   },
   {
     company: "WORKDAY",
@@ -103,6 +110,7 @@ const journeyRoles: JourneyRole[] = [
     ],
     footerLine: "6 hires total across both pillars. 2 promoted. 2 managed out.",
     tags: ["Platform", "Interoperability", "Developer Experience", "Team Building", "GenAI", "Full-Stack Orchestration"],
+    stat: { value: "9 PMs", color: "#14B8A6" }, // teal
   },
   {
     company: "NIKE",
@@ -112,6 +120,7 @@ const journeyRoles: JourneyRole[] = [
     narrative:
       "Back at Nike, this time in enterprise HR. Same problem, different domain: disconnected systems that slow people down every day. Rebuilt the U.S. onboarding journey. Consolidated document management from ServiceNow into Workday — saved hundreds of thousands in licensing. Automated California compliance workflows. Now shaping Nike's strategic workforce planning — connecting Workday, planning tools, and skills data across 75,000+ employees.",
     tags: ["Enterprise HR", "Workday", "Workforce Planning", "Automation"],
+    stat: { value: "75K+ employees", color: "#5C9E6E" }, // accent green
   },
 ];
 
@@ -214,25 +223,46 @@ export function JourneySection() {
                       </p>
                     </div>
                     <div className="flex items-center gap-2">
+                      {/* Key stat (only shown when collapsed) */}
+                      {role.stat && expandedIndex !== index && (
+                        <span
+                          className="text-xs font-semibold px-2 py-0.5 rounded"
+                          style={{ 
+                            color: role.stat.color,
+                            backgroundColor: `${role.stat.color}15`
+                          }}
+                        >
+                          {role.stat.value}
+                        </span>
+                      )}
                       <span className="text-xs sm:text-sm text-muted-foreground bg-secondary px-3 py-1 rounded-full whitespace-nowrap">
                         {role.dates}
                       </span>
-                      <svg
+                      {/* Expand/Close pill button */}
+                      <span
                         className={cn(
-                          "w-4 h-4 text-muted-foreground transition-transform duration-300",
-                          expandedIndex === index && "rotate-180"
+                          "flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full transition-colors",
+                          "bg-primary/15 text-primary hover:bg-primary/25"
                         )}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
+                        {expandedIndex === index ? "close" : "expand"}
+                        <svg
+                          className={cn(
+                            "w-3 h-3 transition-transform duration-300",
+                            expandedIndex === index && "rotate-180"
+                          )}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </span>
                     </div>
                   </div>
 
