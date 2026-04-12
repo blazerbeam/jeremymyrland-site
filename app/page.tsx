@@ -6,7 +6,6 @@ import { JourneySection } from "@/components/journey-section";
 import { WorkSection } from "@/components/work-section";
 import { BuildingSection } from "@/components/building-section";
 import { CommunitySection } from "@/components/community-section";
-import { WritingSection } from "@/components/writing-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
@@ -21,7 +20,6 @@ export default function Home() {
         <WorkSection />
         <BuildingSection />
         <CommunitySection />
-        <WritingSection />
         <TestimonialsSection />
         <ContactSection />
       </main>
