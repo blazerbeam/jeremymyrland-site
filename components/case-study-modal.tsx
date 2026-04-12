@@ -326,3 +326,113 @@ export function ViewpointCaseStudy() {
     </article>
   );
 }
+
+// Wayfair Case Study Content
+export function WayfairCaseStudy() {
+  return (
+    <article className="max-w-[680px] mx-auto space-y-10">
+      {/* Header */}
+      <header className="space-y-4">
+        <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
+          Case Study
+        </span>
+        <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight">
+          Neural Search at Scale
+        </h1>
+        <p className="text-xl text-muted-foreground leading-relaxed">
+          Replacing Wayfair&apos;s legacy search engine across 5 markets without breaking anything
+        </p>
+        <div className="flex flex-wrap gap-3 pt-2">
+          <span className="text-xs px-3 py-1 rounded-full bg-primary/15 text-primary">
+            Wayfair
+          </span>
+          <span className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground">
+            2021–2022
+          </span>
+          <span className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground">
+            Search Platform
+          </span>
+        </div>
+      </header>
+
+      <hr className="border-border" />
+
+      {/* The Situation */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Situation
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          Wayfair&apos;s search platform was running on a legacy system that couldn&apos;t keep pace with the business. The task: replace it with a neural network-powered engine, validate it with real revenue impact, and roll it out across five international markets and brands. No pressure.
+        </p>
+      </section>
+
+      {/* The Real Problem */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Real Problem
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          Replacing a search engine isn&apos;t a technical problem — it&apos;s an organizational and trust problem. Wayfair had merchandisers, SEO teams, category managers, and regional GMs who all had opinions about search results and a lot of anxiety about handing control to an algorithm. The technical work was challenging. Getting 60+ people across multiple countries to trust the new system enough to let it run was harder.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          The other real problem: we didn&apos;t fully know what &ldquo;better&rdquo; looked like until we were in it. The nearest neighbor algorithm we launched with needed adjustment. We had to build in enough experimentation infrastructure to catch that quickly and fix it without losing momentum.
+        </p>
+      </section>
+
+      {/* What I Did */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          What I Did
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          Built the A/B testing framework before we needed it. That was the foundational decision — we couldn&apos;t make claims about revenue impact without a rigorous way to measure it, and we couldn&apos;t iterate on the ranking model without fast feedback loops.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          Worked closely with data science on the ranking model itself — defining which signals mattered for relevance, where business goals like margin and newness should come in, and how to balance personalization against consistency across markets.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          Partnered with each international market&apos;s merchandising team before rollout, not after. Understood the regional nuances — what &ldquo;relevant&rdquo; meant in Germany vs the UK vs the US isn&apos;t the same. Built those inputs into the model rather than treating them as edge cases to handle later.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          On the US launch: no diving catches. We planned for things to go wrong and they didn&apos;t. The contingency plans never had to be used, which meant the international rollouts could follow on the timeline we&apos;d promised.
+        </p>
+      </section>
+
+      {/* The Numbers */}
+      <section className="space-y-6">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Numbers
+        </h2>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">$100M+</p>
+            <p className="text-sm text-muted-foreground">incremental global revenue</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">$65M+</p>
+            <p className="text-sm text-muted-foreground">in the US alone</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">5 markets</p>
+            <p className="text-sm text-muted-foreground">rolled out internationally</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">Mid-flight</p>
+            <p className="text-sm text-muted-foreground">algorithm adjusted based on test results</p>
+          </div>
+        </div>
+      </section>
+
+      {/* The Lesson */}
+      <section className="space-y-4 pb-8">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Lesson
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          Experimentation infrastructure is not a nice-to-have. It&apos;s what lets you move fast without guessing. We could have launched and hoped. Instead we launched, measured, learned, and adjusted — and had the receipts to prove what worked. That&apos;s the difference between a successful platform migration and a lucky one.
+        </p>
+      </section>
+    </article>
+  );
+}
