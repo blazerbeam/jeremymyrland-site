@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { CaseStudyModal, NikeSearchCaseStudy, ViewpointCaseStudy, WayfairCaseStudy, JamaCaseStudy } from "./case-study-modal";
 
 interface Pillar {
   name: string;
@@ -127,6 +128,7 @@ const journeyRoles: JourneyRole[] = [
 export function JourneySection() {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [caseStudyOpen, setCaseStudyOpen] = useState<string | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -350,9 +352,111 @@ export function JourneySection() {
                           </p>
                         </div>
                       ) : (
-                        <p className="text-sm sm:text-base text-foreground leading-relaxed whitespace-pre-line">
-                          {role.narrative}
-                        </p>
+                        <div className="space-y-4">
+                          <p className="text-sm sm:text-base text-foreground leading-relaxed whitespace-pre-line">
+                            {role.narrative}
+                          </p>
+                          {/* Case study link for Nike Search (2016-2020) */}
+                          {role.company === "NIKE" && role.dates === "2016–2020" && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCaseStudyOpen("nike-search");
+                              }}
+                              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                            >
+                              Read case study
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                />
+                              </svg>
+                            </button>
+                          )}
+                          {/* Case study link for Viewpoint (2010-2012) */}
+                          {role.company === "VIEWPOINT" && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCaseStudyOpen("viewpoint");
+                              }}
+                              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                            >
+                              Read case study
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                />
+                              </svg>
+                            </button>
+                          )}
+                          {/* Case study link for Wayfair (2021-2022) */}
+                          {role.company === "WAYFAIR" && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCaseStudyOpen("wayfair");
+                              }}
+                              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                            >
+                              Read case study
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                />
+                              </svg>
+                            </button>
+                          )}
+                          {/* Case study link for Jama (2012-2016) */}
+                          {role.company === "JAMA SOFTWARE" && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCaseStudyOpen("jama");
+                              }}
+                              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                            >
+                              Read case study
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                />
+                              </svg>
+                            </button>
+                          )}
+                        </div>
                       )}
                     </div>
                   </div>
@@ -362,6 +466,32 @@ export function JourneySection() {
           </div>
         </div>
       </div>
+
+      {/* Case Study Modals */}
+      <CaseStudyModal
+        isOpen={caseStudyOpen === "nike-search"}
+        onClose={() => setCaseStudyOpen(null)}
+      >
+        <NikeSearchCaseStudy />
+      </CaseStudyModal>
+      <CaseStudyModal
+        isOpen={caseStudyOpen === "viewpoint"}
+        onClose={() => setCaseStudyOpen(null)}
+      >
+        <ViewpointCaseStudy />
+      </CaseStudyModal>
+      <CaseStudyModal
+        isOpen={caseStudyOpen === "wayfair"}
+        onClose={() => setCaseStudyOpen(null)}
+      >
+        <WayfairCaseStudy />
+      </CaseStudyModal>
+      <CaseStudyModal
+        isOpen={caseStudyOpen === "jama"}
+        onClose={() => setCaseStudyOpen(null)}
+      >
+        <JamaCaseStudy />
+      </CaseStudyModal>
     </section>
   );
 }
