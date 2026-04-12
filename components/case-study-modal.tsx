@@ -102,7 +102,7 @@ export function CaseStudyModal({ isOpen, onClose, children }: CaseStudyModalProp
 // Nike Search Preview Case Study Content
 export function NikeSearchCaseStudy() {
   return (
-    <article className="space-y-8">
+    <article className="max-w-[680px] mx-auto space-y-10">
       {/* Header */}
       <header className="space-y-4">
         <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
@@ -111,8 +111,8 @@ export function NikeSearchCaseStudy() {
         <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight">
           Nike Search Preview
         </h1>
-        <p className="text-lg text-muted-foreground">
-          How a single feature drove $50M+ in incremental revenue
+        <p className="text-xl text-muted-foreground leading-relaxed">
+          How a platform team shipped a $50M feature they didn&apos;t own
         </p>
         <div className="flex flex-wrap gap-3 pt-2">
           <span className="text-xs px-3 py-1 rounded-full bg-primary/15 text-primary">
@@ -129,49 +129,100 @@ export function NikeSearchCaseStudy() {
 
       <hr className="border-border" />
 
-      {/* Placeholder sections - to be filled in */}
+      {/* The Situation */}
       <section className="space-y-4">
-        <h2 className="font-serif text-2xl font-semibold text-foreground">
-          The Context
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Situation
         </h2>
-        <p className="text-muted-foreground leading-relaxed">
-          [Content coming soon]
+        <p className="text-foreground leading-[1.8]">
+          Nike.com search ran on legacy Endeca — thousands of manually curated rules, no ML, every result touched by a human. A decision was made to rebuild from scratch with an in-house ML system. I joined right as that decision was being made.
         </p>
       </section>
 
+      {/* The Real Problem */}
       <section className="space-y-4">
-        <h2 className="font-serif text-2xl font-semibold text-foreground">
-          The Problem
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Real Problem
         </h2>
-        <p className="text-muted-foreground leading-relaxed">
-          [Content coming soon]
+        <p className="text-foreground leading-[1.8]">
+          The tech was the easy part. The real problem was organizational. Brand wanted control and storytelling — products placed for visual impact, full-price items front and center regardless of what consumers were actually searching for. Commerce wanted revenue and optimization. These teams had never had to agree on anything before. Now they had to agree on everything. And nobody trusted an algorithm they couldn&apos;t see into.
         </p>
       </section>
 
-      <section className="space-y-4">
-        <h2 className="font-serif text-2xl font-semibold text-foreground">
-          The Approach
+      {/* What I Did */}
+      <section className="space-y-6">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          What I Did
         </h2>
-        <p className="text-muted-foreground leading-relaxed">
-          [Content coming soon]
+        <p className="text-foreground leading-[1.8]">
+          Three moves that mattered:
         </p>
+
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <h3 className="font-semibold text-foreground">
+              1. Built alignment before building anything.
+            </h3>
+            <p className="text-foreground leading-[1.8]">
+              Got brand and commerce leadership to agree on shared OKRs before a line of code was written. Forced the conversation about what &ldquo;better&rdquo; actually meant. Without this, any result the algorithm produced would have been disputed.
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="font-semibold text-foreground">
+              2. Demystified the black box.
+            </h3>
+            <p className="text-foreground leading-[1.8]">
+              Built transparency tooling so stakeholders could see WHY specific products ranked where they did. Showed the signals, the weights, the logic. People don&apos;t trust what they can&apos;t see. Once they could see it, they could argue about it — which is actually progress.
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="font-semibold text-foreground">
+              3. Shipped Search Preview without owning the front end.
+            </h3>
+            <p className="text-foreground leading-[1.8]">
+              Saw that queries landing directly on a PDP converted at nearly 150% higher than search results pages. Wanted to capture that. Problem: I owned the platform, not the front end. That team was 12+ months out. So I got VP buy-in, borrowed engineers, and built it ourselves using our own services before they were fully hardened.
+            </p>
+            <p className="text-foreground leading-[1.8]">
+              Right before launch, a VP got cold feet. Thought the experience was &ldquo;too different.&rdquo; I walked him through every brand conversation we&apos;d already had, showed him how quickly we could make changes, and reminded him he&apos;d been in the status meetings the whole time. He had cold feet. We launched anyway. No issues. Within days we were all looking at the next thing.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section className="space-y-4">
-        <h2 className="font-serif text-2xl font-semibold text-foreground">
-          The Outcome
+      {/* The Numbers */}
+      <section className="space-y-6">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Numbers
         </h2>
-        <p className="text-muted-foreground leading-relaxed">
-          [Content coming soon]
-        </p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">$50M+</p>
+            <p className="text-sm text-muted-foreground">incremental revenue in first few months</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">6%+</p>
+            <p className="text-sm text-muted-foreground">conversion rate vs 3% baseline</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">85% → 5%</p>
+            <p className="text-sm text-muted-foreground">manual merchandising of top queries</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">Hundreds</p>
+            <p className="text-sm text-muted-foreground">of stakeholders with real-time reporting globally</p>
+          </div>
+        </div>
       </section>
 
-      <section className="space-y-4">
-        <h2 className="font-serif text-2xl font-semibold text-foreground">
-          What I Learned
+      {/* The Lesson */}
+      <section className="space-y-4 pb-8">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Lesson
         </h2>
-        <p className="text-muted-foreground leading-relaxed">
-          [Content coming soon]
+        <p className="text-foreground leading-[1.8]">
+          Alignment is the product. The algorithm was the easy part. The hard part was getting two organizations with genuinely different goals to build shared language around what success looked like — and then trust the system enough to let it run.
         </p>
       </section>
     </article>
