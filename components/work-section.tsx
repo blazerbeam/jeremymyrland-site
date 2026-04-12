@@ -168,9 +168,9 @@ export function WorkSection() {
                   {role.caseStudyId && (
                     <button
                       onClick={() => setCaseStudyOpen(role.caseStudyId)}
-                      className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
                     >
-                      Read the full story
+                      Read case study
                       <svg
                         className="w-4 h-4"
                         fill="none"
