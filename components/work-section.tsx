@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { CaseStudyModal, NikeSearchCaseStudy } from "./case-study-modal";
+import { CaseStudyModal, NikeSearchCaseStudy, ViewpointCaseStudy } from "./case-study-modal";
 
 const workHistory = [
   {
@@ -65,14 +65,25 @@ const workHistory = [
     caseStudyId: "nike-search",
   },
   {
-    company: "Earlier",
-    title: "Jama (2012–2016) & Viewpoint (2010–2012)",
-    dates: "2010–2016",
+    company: "Jama Software",
+    title: "Product Manager",
+    dates: "2012–2016",
     summary: "First PM at Jama — 10,000 decisions logged in month one.",
     outcomes: [
       "First agile company ISO 26262 certified for automotive",
       "5x pipeline growth in one quarter",
     ],
+  },
+  {
+    company: "Viewpoint",
+    title: "International Product Manager",
+    dates: "2010–2012",
+    summary: "Launched a 20-year-old US ERP product in Australia and Canada.",
+    outcomes: [
+      "First customer went live and became strongest advocate",
+      "Largest selling quarter in company history",
+    ],
+    caseStudyId: "viewpoint",
   },
 ];
 
@@ -193,12 +204,18 @@ export function WorkSection() {
         </div>
       </div>
 
-      {/* Case Study Modal */}
+      {/* Case Study Modals */}
       <CaseStudyModal
         isOpen={caseStudyOpen === "nike-search"}
         onClose={() => setCaseStudyOpen(null)}
       >
         <NikeSearchCaseStudy />
+      </CaseStudyModal>
+      <CaseStudyModal
+        isOpen={caseStudyOpen === "viewpoint"}
+        onClose={() => setCaseStudyOpen(null)}
+      >
+        <ViewpointCaseStudy />
       </CaseStudyModal>
     </section>
   );

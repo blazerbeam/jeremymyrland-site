@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { CaseStudyModal, NikeSearchCaseStudy } from "./case-study-modal";
+import { CaseStudyModal, NikeSearchCaseStudy, ViewpointCaseStudy } from "./case-study-modal";
 
 interface Pillar {
   name: string;
@@ -128,7 +128,7 @@ const journeyRoles: JourneyRole[] = [
 export function JourneySection() {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-  const [caseStudyOpen, setCaseStudyOpen] = useState(false);
+  const [caseStudyOpen, setCaseStudyOpen] = useState<string | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -361,7 +361,32 @@ export function JourneySection() {
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
-                                setCaseStudyOpen(true);
+                                setCaseStudyOpen("nike-search");
+                              }}
+                              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                            >
+                              Read case study
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                />
+                              </svg>
+                            </button>
+                          )}
+                          {/* Case study link for Viewpoint (2010-2012) */}
+                          {role.company === "VIEWPOINT" && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCaseStudyOpen("viewpoint");
                               }}
                               className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
                             >
@@ -392,12 +417,18 @@ export function JourneySection() {
         </div>
       </div>
 
-      {/* Case Study Modal */}
+      {/* Case Study Modals */}
       <CaseStudyModal
-        isOpen={caseStudyOpen}
-        onClose={() => setCaseStudyOpen(false)}
+        isOpen={caseStudyOpen === "nike-search"}
+        onClose={() => setCaseStudyOpen(null)}
       >
         <NikeSearchCaseStudy />
+      </CaseStudyModal>
+      <CaseStudyModal
+        isOpen={caseStudyOpen === "viewpoint"}
+        onClose={() => setCaseStudyOpen(null)}
+      >
+        <ViewpointCaseStudy />
       </CaseStudyModal>
     </section>
   );

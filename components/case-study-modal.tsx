@@ -228,3 +228,101 @@ export function NikeSearchCaseStudy() {
     </article>
   );
 }
+
+// Viewpoint Case Study Content
+export function ViewpointCaseStudy() {
+  return (
+    <article className="max-w-[680px] mx-auto space-y-10">
+      {/* Header */}
+      <header className="space-y-4">
+        <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
+          Case Study
+        </span>
+        <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight">
+          Rebuilding Trust in the Field
+        </h1>
+        <p className="text-xl text-muted-foreground leading-relaxed">
+          What happens when you sell a product before it&apos;s ready — and you&apos;re the only one who can fix it
+        </p>
+        <div className="flex flex-wrap gap-3 pt-2">
+          <span className="text-xs px-3 py-1 rounded-full bg-primary/15 text-primary">
+            Viewpoint
+          </span>
+          <span className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground">
+            2010–2012
+          </span>
+          <span className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground">
+            International Expansion
+          </span>
+        </div>
+      </header>
+
+      <hr className="border-border" />
+
+      {/* The Situation */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Situation
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          A 20-year-old US construction ERP product — used by hundreds of complex companies for payroll, project management, and equipment tracking — was sold into Australia and Canada before it was ready. I was sent in as the first person on the ground in both countries. The product worked in the US. It didn&apos;t fully work there yet.
+        </p>
+      </section>
+
+      {/* The Real Problem */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Real Problem
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          The product gaps were fixable. The trust wasn&apos;t — at least not easily. Buyers felt misled. They&apos;d signed contracts based on what they were told the product could do, and what they got wasn&apos;t that. I was the first company representative many of them had met in person. I walked into rooms full of people who had every reason not to trust me or anyone I worked for.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          The other problem: I had to figure out what actually mattered. Not everything on the gap list was equal. Some things were critical for their first tax season. Some things were nice-to-haves that could wait a year. Nobody had done this before for these markets, so nobody could tell me which was which. I had to learn it myself — from the customers.
+        </p>
+      </section>
+
+      {/* What I Did */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          What I Did
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          I showed up. In person. Multiple times. I sat with CEOs and CFOs. I sat with the people who would actually use the product every day. I asked what was keeping them up at night and I listened without defending the product.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          Then I made a list of what absolutely had to work for their first tax season, their first major project close, their first regulatory deadline. Everything else went into a backlog with honest timelines. I stopped telling customers what they wanted to hear and started telling them what I could actually promise.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          Internally I had to do the same thing — bring our product and engineering teams along on what actually mattered for these markets, and why some of what felt urgent in the US wasn&apos;t the right priority here. That required building credibility on two fronts simultaneously.
+        </p>
+      </section>
+
+      {/* The Outcome */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Outcome
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          Our first Australian customer went live, got through their first tax season, and became one of our strongest advocates. That one customer helped unlock momentum in the market. The quarter we went live in Australia was the largest selling quarter in company history — not just in Australia, but company-wide.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          I still keep in touch with the CFO from that first customer.
+        </p>
+      </section>
+
+      {/* The Lesson */}
+      <section className="space-y-4 pb-8">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Lesson
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          When trust is broken, the only currency that matters is honesty about what you can actually deliver. A realistic promise kept is worth more than an optimistic one missed. Showing up in person and saying &ldquo;here&apos;s what I can commit to and here&apos;s what I can&apos;t&rdquo; did more for those relationships than any roadmap or feature release.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          It also taught me something I&apos;ve used in every role since: ruthless prioritization isn&apos;t about saying no to things — it&apos;s about being clear on what saying yes to one thing means you can&apos;t do another.
+        </p>
+      </section>
+    </article>
+  );
+}
