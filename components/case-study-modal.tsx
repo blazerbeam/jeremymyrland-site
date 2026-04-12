@@ -436,3 +436,116 @@ export function WayfairCaseStudy() {
     </article>
   );
 }
+
+// Jama Case Study Content
+export function JamaCaseStudy() {
+  return (
+    <article className="max-w-[680px] mx-auto space-y-10">
+      {/* Header */}
+      <header className="space-y-4">
+        <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
+          Case Study
+        </span>
+        <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight">
+          Finding the Right Customer
+        </h1>
+        <p className="text-xl text-muted-foreground leading-relaxed">
+          How market segmentation saved a startup from growing in the wrong direction
+        </p>
+        <div className="flex flex-wrap gap-3 pt-2">
+          <span className="text-xs px-3 py-1 rounded-full bg-primary/15 text-primary">
+            Jama Software
+          </span>
+          <span className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground">
+            2012–2016
+          </span>
+          <span className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground">
+            0→1
+          </span>
+        </div>
+      </header>
+
+      <hr className="border-border" />
+
+      {/* The Situation */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Situation
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          Jama was saying yes to everyone. Requirements management software for any company that would pay for it — small, large, simple, complex. I joined as their first PM when the company had fewer than 40 employees. We had around 10 large complex customers and 25-30 smaller ones. The CEO was still helping close deals. The sales team was immature. The product was being dog-fooded and shaped by whoever was loudest.
+        </p>
+      </section>
+
+      {/* The Real Problem */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Real Problem
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          The small customers looked like growth. They had shorter sales cycles and we were closing them. But when I did the analysis on who was renewing and what the unit economics looked like, the picture was different. Small customers churned. They cost almost as much to support as the large ones. And they were pulling the product in directions that didn&apos;t serve the complex use cases where we were actually winning.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          The large customers — aerospace, defense, medical devices, automotive — were harder to close. But when we closed them, they stayed. And they had problems complex enough that our product actually mattered to them in a way it never would for a company that could just use Jira.
+        </p>
+      </section>
+
+      {/* What I Did */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          What I Did
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          Made the case for minimum deal sizes. That meant saying no to a category of customer we&apos;d been saying yes to, which is uncomfortable for any early-stage company with revenue pressure. Had to build the argument from data, not intuition — churn rates, support costs, renewal rates, lifetime value by segment.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          Then shifted focus to the segments where we had real defensibility. Automotive was the most interesting — Tesla was becoming a major player, companies like Faraday Future were promising full autonomy. The regulatory requirements for automotive electronics software were intense, and nobody in our space was set up to serve them well.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          I identified ISO 26262 — a critical certification for automotive electronics development — as the key unlock. Competitors had it. We didn&apos;t. Prospects weren&apos;t always asking for it upfront, but it was becoming a deal-stopper at contract time. I got a quote from TUV SUD (the leading certification body, based in Europe), built the business case, and convinced the executive team and board to invest in the certification process.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          We were the first agile SaaS company they had ever certified. Their process wasn&apos;t designed for how we worked — I had to work with them to adapt their surveys and audit approach. Then coordinated the internal audit process across the whole org.
+        </p>
+      </section>
+
+      {/* The Outcome */}
+      <section className="space-y-6">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Outcome
+        </h2>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">5x</p>
+            <p className="text-sm text-muted-foreground">automotive pipeline growth in one quarter</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">10,000</p>
+            <p className="text-sm text-muted-foreground">decisions logged in month one of new feature</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">#1</p>
+            <p className="text-sm text-muted-foreground">fastest-growing startup in Oregon</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">First</p>
+            <p className="text-sm text-muted-foreground">agile SaaS company ISO 26262 certified</p>
+          </div>
+        </div>
+        <p className="text-foreground leading-[1.8]">
+          I also launched a decision-tracking feature during this period — zero to one, built with our design and research team — that logged 10,000 decisions in its first month. Customers immediately started asking for it in other parts of the product.
+        </p>
+      </section>
+
+      {/* The Lesson */}
+      <section className="space-y-4 pb-8">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Lesson
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          Growth in the wrong direction is worse than slow growth. Saying no to a customer type you&apos;ve been successfully closing requires conviction and data. The data was there — we just hadn&apos;t looked at it the right way. Once we did, the path was clear: go deep on the customers who actually needed us, and become the best possible solution for problems complex enough that nobody else wanted to solve them.
+        </p>
+      </section>
+    </article>
+  );
+}
