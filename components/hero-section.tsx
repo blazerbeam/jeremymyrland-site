@@ -51,6 +51,26 @@ export function HeroSection() {
                 <a href="#building">What I&apos;m Building</a>
               </Button>
             </div>
+
+            {/* Stats row */}
+            <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-0 sm:divide-x sm:divide-border/50 max-w-xl">
+              <div className="text-center sm:px-4 first:sm:pl-0 last:sm:pr-0">
+                <p className="text-2xl sm:text-3xl font-semibold text-primary">$150M+</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">Revenue Impact</p>
+              </div>
+              <div className="text-center sm:px-4">
+                <p className="text-2xl sm:text-3xl font-semibold text-primary">75K+</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">Employees Served</p>
+              </div>
+              <div className="text-center sm:px-4">
+                <p className="text-2xl sm:text-3xl font-semibold text-primary">9</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">PMs Led</p>
+              </div>
+              <div className="text-center sm:px-4 last:sm:pr-0">
+                <p className="text-2xl sm:text-3xl font-semibold text-primary">15</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">Years of Experience</p>
+              </div>
+            </div>
           </div>
 
           {/* Headshot */}
