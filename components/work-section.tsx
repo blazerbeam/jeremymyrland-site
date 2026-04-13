@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { CaseStudyModal, NikeSearchCaseStudy, ViewpointCaseStudy, WayfairCaseStudy, JamaCaseStudy } from "./case-study-modal";
+import { CaseStudyModal, NikeSearchCaseStudy, ViewpointCaseStudy, WayfairCaseStudy, JamaCaseStudy, WorkdayCaseStudy } from "./case-study-modal";
 
 const workHistory = [
   {
@@ -28,6 +28,7 @@ const workHistory = [
       "Built and shipped first GenAI chatbot strategy",
       "Made 6 hires, promoted 2, managed a team across 3 countries",
     ],
+    caseStudyId: "workday",
   },
   {
     company: "Wayfair",
@@ -230,6 +231,12 @@ export function WorkSection() {
         onClose={() => setCaseStudyOpen(null)}
       >
         <JamaCaseStudy />
+      </CaseStudyModal>
+      <CaseStudyModal
+        isOpen={caseStudyOpen === "workday"}
+        onClose={() => setCaseStudyOpen(null)}
+      >
+        <WorkdayCaseStudy />
       </CaseStudyModal>
     </section>
   );

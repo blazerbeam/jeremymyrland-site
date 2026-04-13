@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { CaseStudyModal, NikeSearchCaseStudy, ViewpointCaseStudy, WayfairCaseStudy, JamaCaseStudy } from "./case-study-modal";
+import { CaseStudyModal, NikeSearchCaseStudy, ViewpointCaseStudy, WayfairCaseStudy, JamaCaseStudy, WorkdayCaseStudy } from "./case-study-modal";
 
 interface Pillar {
   name: string;
@@ -456,6 +456,31 @@ export function JourneySection() {
                               </svg>
                             </button>
                           )}
+                          {/* Case study link for Workday (2022-2025) */}
+                          {role.company === "WORKDAY" && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCaseStudyOpen("workday");
+                              }}
+                              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                            >
+                              Read case study
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                />
+                              </svg>
+                            </button>
+                          )}
                         </div>
                       )}
                     </div>
@@ -491,6 +516,12 @@ export function JourneySection() {
         onClose={() => setCaseStudyOpen(null)}
       >
         <JamaCaseStudy />
+      </CaseStudyModal>
+      <CaseStudyModal
+        isOpen={caseStudyOpen === "workday"}
+        onClose={() => setCaseStudyOpen(null)}
+      >
+        <WorkdayCaseStudy />
       </CaseStudyModal>
     </section>
   );
