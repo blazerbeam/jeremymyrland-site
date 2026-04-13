@@ -46,7 +46,7 @@ export function HeroSection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-foreground/20 hover:bg-secondary font-medium px-8"
+                className="border-2 border-foreground/40 md:border md:border-foreground/20 hover:bg-secondary font-medium px-8 text-base md:text-sm"
               >
                 <a href="#building">What I&apos;m Building</a>
               </Button>
