@@ -549,3 +549,146 @@ export function JamaCaseStudy() {
     </article>
   );
 }
+
+// Workday Case Study Content
+export function WorkdayCaseStudy() {
+  return (
+    <article className="max-w-[680px] mx-auto space-y-10">
+      {/* Header */}
+      <header className="space-y-4">
+        <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
+          Case Study
+        </span>
+        <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight">
+          Building the Team Before Building the Product
+        </h1>
+        <p className="text-xl text-muted-foreground leading-relaxed">
+          What it actually takes to lead a platform PM team with no direction, no trust, and no identity
+        </p>
+        <div className="flex flex-wrap gap-3 pt-2">
+          <span className="text-xs px-3 py-1 rounded-full bg-primary/15 text-primary">
+            Workday
+          </span>
+          <span className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground">
+            2022–2025
+          </span>
+          <span className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground">
+            Platform
+          </span>
+          <span className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground">
+            Team Leadership
+          </span>
+        </div>
+      </header>
+
+      <hr className="border-border" />
+
+      {/* The Situation */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Situation
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          When I joined Workday as a Manager of Platform Product Management, I inherited the Interoperability team — three people, no shared direction, no product identity. Within a year I also took on the Delivery pillar, building what became a team of nine across two distinct product organizations.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          No trust in the roadmap or in each other. The org had a name — UI Platform — but nobody could tell you what it stood for or why it mattered. My job on paper was to lead the Interoperability and Delivery pillars. My real job was to build a team that could do the work first.
+        </p>
+      </section>
+
+      {/* The Real Problem */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Real Problem
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          Platform PM is a hard job to hire for and a harder job to manage. The work is invisible — you&apos;re not shipping features customers can see, you&apos;re building the connective tissue that makes everything else possible. Without a clear story for why that matters, teams drift. Engineers lose faith in product. Product loses credibility with engineering. And everyone loses the plot.
+        </p>
+        <p className="text-foreground leading-[1.8]">
+          That&apos;s where I started. Two of the original three people weren&apos;t working out. The team had no vision document, no operating model, no way of measuring whether what they were doing mattered. And Workday was simultaneously pushing hard to become a platform — which meant the stakes for getting interoperability right were only going up.
+        </p>
+      </section>
+
+      {/* What I Did */}
+      <section className="space-y-6">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          What I Did
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          Three things in parallel, and order mattered.
+        </p>
+
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <h3 className="font-semibold text-foreground">
+              1. Established identity before strategy.
+            </h3>
+            <p className="text-foreground leading-[1.8]">
+              Before we could have a roadmap, we needed to know who we were. I led sessions to build our team identity — what we stood for, how we operated, what good looked like. This sounds soft. It wasn&apos;t. Without it, every prioritization conversation became a political fight. With it, we had a shared language for tradeoffs.
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="font-semibold text-foreground">
+              2. Built the vision from the bottom up, then sold it from the top down.
+            </h3>
+            <p className="text-foreground leading-[1.8]">
+              The Kernel/Megatron vision — making architectural boundaries invisible to users and frictionless for developers — came from the team doing the work, not from me. My job was to help them articulate it, push it up to VP level, and create the conditions for leadership to champion it. When Patrick (VP) started using our documentation as an example of what &ldquo;good looks like,&rdquo; that was the signal we&apos;d gotten the flywheel moving. A former detractor became one of our strongest advocates.
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="font-semibold text-foreground">
+              3. Coached relentlessly on the things platform PMs don&apos;t naturally do: influence, visibility, and product marketing.
+            </h3>
+            <p className="text-foreground leading-[1.8]">
+              Technical platform work tends to stay hidden. I pushed every person on my team to get out of their 1:1s and into the broader organization — share what they were learning, make the work visible, build allies. One PM let a customer champion take credit for messaging she&apos;d written, because she recognized it would land better coming from them. That&apos;s sophisticated thinking. I tried to build that into how the whole team operated.
+            </p>
+          </div>
+        </div>
+
+        <p className="text-foreground leading-[1.8]">
+          On the managed-out side: I had to make two difficult calls early. Both people left on good terms. Making those calls quickly was one of the most important things I did — it cleared the way for the people who could do the work.
+        </p>
+      </section>
+
+      {/* The Outcomes */}
+      <section className="space-y-6">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Outcomes
+        </h2>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">3 → 9</p>
+            <p className="text-sm text-muted-foreground">PMs across US, Canada, and Ireland</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">6 hires</p>
+            <p className="text-sm text-muted-foreground">4 of them women, in a hard-to-hire space</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">90+</p>
+            <p className="text-sm text-muted-foreground">payroll partner integrations on Kernel</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">7–8.5/10</p>
+            <p className="text-sm text-muted-foreground">team satisfaction during uncertainty</p>
+          </div>
+        </div>
+        <p className="text-foreground leading-[1.8]">
+          The Kernel platform went from an internal tool to the connective tissue for Workday&apos;s ecosystem play — universal header for acquisitions, mobile web view platform, first GenAI chatbot strategy established. WebView Extend launched to all customers after a successful early access program. CI test time cut 50% through code migrations. GitHub Actions migration reduced pipeline failures and freed up developer capacity.
+        </p>
+      </section>
+
+      {/* The Lesson */}
+      <section className="space-y-4 pb-8">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Lesson
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          Platform product management lives or dies on trust — trust between product and engineering, trust between the team and leadership, and trust that the invisible work actually matters. You can&apos;t build a platform strategy without first building the conditions for people to do the work. That took about a year. Everything after that was leverage.
+        </p>
+      </section>
+    </article>
+  );
+}

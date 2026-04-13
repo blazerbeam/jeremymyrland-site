@@ -8,20 +8,20 @@ const testimonials = [
     quote:
       "Jeremy led the organization's largest investment in upgrading our global search platform. This upgrade generated over $100M in incremental revenue.",
     name: "Stephen Jacobs",
-    title: "Director of Product, Devoted Health",
-    context: "formerly Wayfair",
+    title: "Senior Director of Product Management, The Knot Worldwide",
   },
   {
     quote:
-      "He grew Nike Search revenue to higher levels significantly sooner than we ever imagined possible.",
-    name: "Dan Wakefield",
-    title: "Principal Architect, Nike",
+      "Jeremy is laser-focused on providing significant value with the right level of development — no more and no less. He is relentless in his pursuit of the right mix of product features and technology.",
+    name: "Patti Cousins",
+    title: "Product Manager",
+    context: "Nike colleague, 3 years partnering on search and digital merchandising",
   },
   {
     quote:
       "Jeremy knows no fear and is willing to make the tough calls that so many product managers evade. This is why development teams love him.",
     name: "Eva Miller",
-    title: "Manager of UX, Jama Software",
+    title: "UX Researcher, Brainola",
   },
 ];
 
@@ -105,6 +105,24 @@ export function TestimonialsSection() {
               </footer>
             </div>
           ))}
+        </div>
+
+        {/* LinkedIn link */}
+        <div
+          className={cn(
+            "mt-8 text-center transition-all duration-700 delay-500",
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          )}
+        >
+          <a
+            href="https://linkedin.com/in/jpmyrland"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            See all recommendations on LinkedIn
+            <span className="text-primary">→</span>
+          </a>
         </div>
       </div>
     </section>
