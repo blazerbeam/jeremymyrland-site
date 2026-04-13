@@ -36,7 +36,7 @@ const journeyRoles: JourneyRole[] = [
     dates: "2010–2012",
     color: "#B89B7A", // Warm brown - lightened for dark bg
     narrative:
-      "Started as a consultant traveling 90% of the time helping construction companies implement ERP software. Became their first consultant in Canada and Australia, which led to an International PM role. Launched the product in both countries, led the decision not to expand to India, and was the top revenue-driving consultant before moving into product.",
+      "Joined as a consultant and became the top revenue producer before ever touching a product role. Traveled constantly — Australia, Canada, customer sites across the US. When Viewpoint decided to expand internationally, I was already their most experienced person on the ground in both markets. Became their first International PM. Learned fast what it means to sell a product before it's ready — and what it takes to hold relationships together when trust is broken.",
     tags: ["ERP", "International Expansion", "Consulting"],
   },
   {
@@ -45,7 +45,7 @@ const journeyRoles: JourneyRole[] = [
     dates: "2012–2016",
     color: "#8AB4C7", // Slate blue - lightened for dark bg
     narrative:
-      "Joined as employee ~40 and their first real PM. Did the market segmentation work that shifted the company away from small customers toward large, complex ones — aerospace, defense, automotive. Launched a decision-tracking feature that logged 10,000 decisions in its first month. Became the first agile SaaS company to achieve ISO 26262 automotive certification, growing the automotive pipeline 5x in a single quarter. Named fastest-growing startup in Oregon while there.",
+      "Joined as employee #40 and their first real PM. The company was saying yes to everyone. I did the segmentation work that changed that — small customers were costing as much to serve as large ones and churning faster. We started saying no to the wrong deals and yes to aerospace, defense, and automotive. Launched a decision-tracking feature that logged 10,000 decisions in its first month. Then spent six months learning automotive well enough to convince TÜV SÜD — a European certification body — to certify us as the first agile SaaS company to achieve ISO 26262. It worked.",
     tags: ["0→1", "Market Segmentation", "Automotive", "ISO 26262"],
     stat: { value: "5x pipeline", color: "#F59E0B" }, // amber
   },
@@ -55,7 +55,7 @@ const journeyRoles: JourneyRole[] = [
     dates: "2016–2020",
     color: "#5C9E6E", // Primary green - matches new primary
     narrative:
-      "Joined right as Nike decided to replace its legacy Endeca search platform with an in-house ML system. Spent four years orchestrating the migration while managing real tension between brand (who wanted curation and control) and commerce (who wanted revenue). Reduced manual merchandising from ~85% of top queries to ~5%. Launched Search Preview, which drove $50M+ in incremental revenue in the first few months at 6%+ conversion vs a 3% baseline. Built transparency tooling so stakeholders could understand why the algorithm ranked products the way it did.",
+      "Joined right as Nike decided to replace Endeca with an in-house ML platform. Nobody owned the migration — I did. Spent four years in the middle of a genuine organizational tension: brand wanted curation and storytelling, commerce wanted revenue and optimization. Built the shared language that let both sides move forward. Reduced manual merchandising from ~85% of top queries to ~5%. Launched Search Preview — drove $50M+ in the first few months. The VP got cold feet the day before launch. We talked it through. We shipped.",
     tags: ["ML Search", "$50M Revenue", "Global Rollout", "Organizational Alignment"],
     stat: { value: "$50M+", color: "#5C9E6E" }, // accent green
   },
@@ -65,7 +65,7 @@ const journeyRoles: JourneyRole[] = [
     dates: "2020",
     color: "#C9A66B", // Muted gold - lightened for dark bg
     narrative:
-      "Joined as employee ~30 at a search startup right before the pandemic. Built a \"try it out\" pre-sales tool that doubled trial engagement. Cut customer onboarding from months to days. Early customers included Sephora and Target Australia. Short stint, but shaped the sales process.",
+      "Joined as employee ~30 at a search startup I'd seen demo'd and thought: this is the real thing. Took a pay cut, joined right before the pandemic. Focused entirely on growth — built a pre-sales tool that let prospects compare their search against Constructor live, which doubled trial engagement. Cut onboarding from months to days. Helped land Sephora and Target Australia. Six months, big impact, then the funding round fell apart and I had to make a hard call.",
     tags: ["Early Stage", "Growth", "Pre-Sales"],
   },
   {
@@ -74,7 +74,7 @@ const journeyRoles: JourneyRole[] = [
     dates: "2020–2021",
     color: "#9A9A9A", // Apple gray - lightened for dark bg
     narrative:
-      "Joined early in the pandemic as Apple accelerated its e-commerce push. Defined a federated search strategy spanning Apple.com, the Apple Store app, Help, and Siri. Built mockups, got buy-in from product marketing, and established a 3-year roadmap in a highly top-down environment where one wrong step in the approval chain cost weeks.",
+      "Joined two months into the pandemic as Apple accelerated its e-commerce push. Defined a federated search strategy spanning Apple.com, the App Store, Help, and Siri — connecting experiences that had never been coordinated before. Built mockups, navigated the approval chain, got a 3-year roadmap bought in. Apple is as top-down as advertised. Success there is about precision of thinking and knowing exactly who needs to say yes before you move.",
     tags: ["Federated Search", "Roadmap", "Cross-functional Alignment"],
   },
   {
@@ -83,7 +83,7 @@ const journeyRoles: JourneyRole[] = [
     dates: "2021–2022",
     color: "#A875C9", // Muted purple - lightened for dark bg
     narrative:
-      "Led the launch of a neural network-powered search engine that replaced Wayfair's legacy system. Built the A/B testing framework from scratch, iterated on the ranking model, and rolled out across 5 international markets with no major incidents on the US launch. $100M+ in incremental global revenue, $65M+ in the US alone.",
+      "Led the launch of a neural network-powered search engine to replace Wayfair's legacy system. The technical work was real — ranking models, A/B testing frameworks, relevance tuning across five international markets. But the harder job was getting 60+ people across merchandising, data science, SEO, and international teams to trust a new algorithm enough to let it run. We launched in the US with no major incidents. $100M+ in incremental revenue globally.",
     tags: ["Neural Search", "$100M Revenue", "5 Markets", "A/B Testing"],
     stat: { value: "$100M+", color: "#5C9E6E" }, // accent green
   },
@@ -94,22 +94,22 @@ const journeyRoles: JourneyRole[] = [
     color: "#E9A033", // Workday orange - lightened for dark bg
     narrative: "", // Using pillars instead
     hasPillars: true,
-    headerLine: "Led a team of 9 product managers across the US, Canada, and Ireland. Built two distinct product pillars from scratch simultaneously.",
+    headerLine: "Inherited the Interoperability team — three people, no shared direction, no product identity. Built it to nine across two pillars and three countries.",
     pillars: [
       {
         name: "INTEROPERABILITY",
-        vision: "Seamless, scalable experiences through full-stack orchestration.",
-        description: "The job: Be the connective tissue for Workday's platform and ecosystem play. Started with Kernel (front-end orchestration) and expanded into back-end and data layers. The pitch to leadership was simple — Workday needed to stop being a suite and start being a platform. Interoperability was what made that possible.",
+        vision: "Make Workday feel like a platform instead of a suite.",
+        description: "The Interoperability work (Kernel/Megatron) was about invisible architectural boundaries, consistent experiences across acquisitions and partners. Started with front-end orchestration and expanded into back-end and data layers.",
         covered: "90+ payroll partner integrations, acquired product integration (Evisort), skills cloud connectivity, marketplace infrastructure.",
       },
       {
         name: "DELIVERY",
-        vision: "Force multiplier for UI Platform.",
-        description: "North star metric: save developers time getting products to market. Consolidated fragmented CI infrastructure into GitHub Actions, built observability frameworks, established quality guardrails, divested proprietary systems that no longer belonged to the team.",
+        vision: "Save developers time.",
+        description: "The Delivery work was simpler to explain: save developers time. Consolidated CI, built observability, established guardrails. Divested proprietary systems that no longer belonged to the team.",
         principle: "Operating principle: time is the universal currency. Everything was measured against it.",
       },
     ],
-    footerLine: "6 hires total across both pillars. 2 promoted. 2 managed out.",
+    footerLine: "Made six hires, promoted two, managed out two. Built both teams from scratch simultaneously.",
     tags: ["Platform", "Interoperability", "Developer Experience", "Team Building", "People Management", "GenAI", "Full-Stack Orchestration"],
     stat: { value: "9 PMs", color: "#14B8A6" }, // teal
   },
@@ -119,7 +119,7 @@ const journeyRoles: JourneyRole[] = [
     dates: "2025–Present",
     color: "#5C9E6E", // Primary green - matches new primary
     narrative:
-      "Back at Nike, this time in enterprise HR. Same problem, different domain: disconnected systems that slow people down every day. Rebuilt the U.S. onboarding journey. Consolidated document management from ServiceNow into Workday — saved hundreds of thousands in licensing. Automated California compliance workflows. Now shaping Nike's strategic workforce planning — connecting Workday, planning tools, and skills data across 75,000+ employees.",
+      "Back at Nike in a completely different domain — enterprise HR instead of consumer search. Same problem though: disconnected systems that slow people down every day. Rebuilt the onboarding journey, saved hundreds of thousands in licensing by consolidating document management, automated California compliance workflows. Now shaping strategic workforce planning — connecting Workday, planning tools, and skills data across 75,000+ employees. The orchestration problem doesn't change. The domain does.",
     tags: ["Enterprise HR", "Workday", "Workforce Planning", "Automation"],
     stat: { value: "75K+ employees", color: "#5C9E6E" }, // accent green
   },
