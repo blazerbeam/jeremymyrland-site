@@ -589,10 +589,10 @@ export function WorkdayCaseStudy() {
           The Situation
         </h2>
         <p className="text-foreground leading-[1.8]">
-          When I joined Workday as a Manager of Platform Product Management, I inherited a team of three people. No shared direction. No product identity. No trust in the roadmap or in each other. The org had a name — UI Platform — but nobody could tell you what it stood for or why it mattered.
+          When I joined Workday as a Manager of Platform Product Management, I inherited the Interoperability team — three people, no shared direction, no product identity. Within a year I also took on the Delivery pillar, building what became a team of nine across two distinct product organizations.
         </p>
         <p className="text-foreground leading-[1.8]">
-          My job on paper was to lead the Interoperability and Delivery pillars. My real job was to build a team that could do the work first.
+          No trust in the roadmap or in each other. The org had a name — UI Platform — but nobody could tell you what it stood for or why it mattered. My job on paper was to lead the Interoperability and Delivery pillars. My real job was to build a team that could do the work first.
         </p>
       </section>
 
