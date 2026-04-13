@@ -10,11 +10,11 @@ const workHistory = [
     title: "Principal PM, HR Global Technology",
     dates: "2025–Present",
     summary:
-      "Redesigning enterprise HR systems for 75,000+ employees.",
+      "Redesigning enterprise HR systems for 75,000+ employees across retail, corporate, and supply chain.",
     outcomes: [
-      "Rebuilt U.S. onboarding journey — fewer steps, faster productivity",
-      "Consolidated document systems — saved hundreds of thousands in licensing",
-      "Automated California compliance workflows",
+      "Rebuilt U.S. onboarding journey — reduced steps and shortened time to productivity",
+      "Consolidated document management from ServiceNow into Workday — saved hundreds of thousands in annual licensing costs",
+      "Automated California meal waiver compliance — reduced regulatory overhead and ongoing costs",
     ],
   },
   {
@@ -44,13 +44,27 @@ const workHistory = [
     caseStudyId: "wayfair",
   },
   {
+    company: "Constructor",
+    title: "Senior Product Manager",
+    dates: "2020–2021",
+    summary:
+      "Early employee at a search startup. Focused on growth and getting customers live fast.",
+    outcomes: [
+      "Built pre-sales \"try it out\" tool — doubled trial engagement by letting prospects compare their legacy search directly against Constructor",
+      "Cut customer onboarding from months to days by standardizing implementation workflows",
+      "Helped land early customers including Sephora and Target Australia",
+    ],
+  },
+  {
     company: "Apple",
     title: "Senior PM, Search Experience",
     dates: "2020–2021",
     summary:
-      "Defined federated search strategy across Apple retail, support, apps, and Siri.",
+      "Defined Apple's unified search strategy across retail, support, apps, and Siri.",
     outcomes: [
-      "3-year roadmap established and bought in across a highly top-down organization",
+      "Established 3-year federated search roadmap — bought in across product, ML, and marketing in a highly top-down environment",
+      "Connected search experiences across Apple.com, Apple Store app, Help, and Siri into a unified strategy for the first time",
+      "Partnered with ML team to deploy predictive, context-aware results using collaborative filtering and relevance models",
     ],
   },
   {
