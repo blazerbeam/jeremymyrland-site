@@ -22,7 +22,7 @@ const workHistory = [
     title: "Manager, Platform Product Management",
     dates: "2022–2025",
     summary:
-      "Led global team of 5–9 PMs across US, Canada, Ireland building the connective tissue for Workday's platform ecosystem.",
+      "Led global team of 9 PMs across US, Canada, Ireland building the connective tissue for Workday's platform ecosystem.",
     outcomes: [
       "Defined interoperability vision adopted across 90+ payroll partner integrations",
       "Built and shipped first GenAI chatbot strategy",
