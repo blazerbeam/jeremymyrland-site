@@ -15,7 +15,7 @@ export function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen flex items-center pt-20 pb-16 px-6"
+      className="relative min-h-screen flex items-center pt-20 pb-16 px-6"
     >
       <div className="mx-auto max-w-6xl w-full">
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
@@ -95,6 +95,28 @@ export function HeroSection() {
           </div>
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <a
+        href="#journey"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary/50 hover:text-primary/70 transition-colors"
+        aria-label="Scroll to Journey section"
+      >
+        <svg
+          className="w-6 h-6 animate-bounce"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          style={{ animationDuration: "2s" }}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </a>
     </section>
   );
 }
