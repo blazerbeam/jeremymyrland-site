@@ -32,9 +32,7 @@ export function HeroSection() {
               I make complex systems actually work.
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              15 years of product leadership at Nike, Workday, Wayfair, and
-              Apple. I specialize in orchestration — connecting fragmented
-              systems, teams, and workflows so they produce real outcomes.
+              15 years of product leadership at Nike, Workday, Wayfair, and Apple — across consumer search, enterprise HR, developer platforms, and ecommerce. I specialize in orchestration: taking fragmented systems, teams, and workflows and making them actually produce outcomes.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button
