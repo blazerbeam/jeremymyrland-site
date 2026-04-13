@@ -65,7 +65,7 @@ const journeyRoles: JourneyRole[] = [
     dates: "2020",
     color: "#C9A66B", // Muted gold - lightened for dark bg
     narrative:
-      "Joined as employee ~30 at a search startup right before the pandemic. Built a \"try it out\" pre-sales tool that doubled trial engagement. Cut customer onboarding from months to days. Short stint, but shaped the sales process and helped land early customers including Sephora and Target Australia.",
+      "Joined as employee ~30 at a search startup right before the pandemic. Built a \"try it out\" pre-sales tool that doubled trial engagement. Cut customer onboarding from months to days. Early customers included Sephora and Target Australia. Short stint, but shaped the sales process.",
     tags: ["Early Stage", "Growth", "Pre-Sales"],
   },
   {
@@ -110,7 +110,7 @@ const journeyRoles: JourneyRole[] = [
       },
     ],
     footerLine: "6 hires total across both pillars. 2 promoted. 2 managed out.",
-    tags: ["Platform", "Interoperability", "Developer Experience", "Team Building", "GenAI", "Full-Stack Orchestration"],
+    tags: ["Platform", "Interoperability", "Developer Experience", "Team Building", "People Management", "GenAI", "Full-Stack Orchestration"],
     stat: { value: "9 PMs", color: "#14B8A6" }, // teal
   },
   {
@@ -350,6 +350,32 @@ export function JourneySection() {
                           <p className="text-sm text-muted-foreground font-medium pt-2">
                             {role.footerLine}
                           </p>
+
+                          {/* Case study link for Workday */}
+                          {role.company === "WORKDAY" && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCaseStudyOpen("workday");
+                              }}
+                              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors mt-4"
+                            >
+                              Read case study
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                />
+                              </svg>
+                            </button>
+                          )}
                         </div>
                       ) : (
                         <div className="space-y-4">
@@ -437,31 +463,6 @@ export function JourneySection() {
                               onClick={(e) => {
                                 e.stopPropagation();
                                 setCaseStudyOpen("jama");
-                              }}
-                              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                            >
-                              Read case study
-                              <svg
-                                className="w-4 h-4"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                />
-                              </svg>
-                            </button>
-                          )}
-                          {/* Case study link for Workday (2022-2025) */}
-                          {role.company === "WORKDAY" && (
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setCaseStudyOpen("workday");
                               }}
                               className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
                             >
