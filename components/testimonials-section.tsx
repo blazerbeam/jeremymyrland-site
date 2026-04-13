@@ -105,6 +105,24 @@ export function TestimonialsSection() {
             </div>
           ))}
         </div>
+
+        {/* LinkedIn link */}
+        <div
+          className={cn(
+            "mt-8 text-center transition-all duration-700 delay-500",
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          )}
+        >
+          <a
+            href="https://linkedin.com/in/jpmyrland"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            See additional recommendations on LinkedIn
+            <span className="text-primary">→</span>
+          </a>
+        </div>
       </div>
     </section>
   );
