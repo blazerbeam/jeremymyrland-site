@@ -164,7 +164,7 @@ export function JourneySection() {
             The Journey
           </span>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl font-semibold text-foreground text-balance">
-            15 Years of Building Products
+            The Full Story
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
             From ERP consultant to enterprise product leader. Click any role to read the full story.
