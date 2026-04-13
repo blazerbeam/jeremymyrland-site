@@ -8,20 +8,19 @@ const testimonials = [
     quote:
       "Jeremy led the organization's largest investment in upgrading our global search platform. This upgrade generated over $100M in incremental revenue.",
     name: "Stephen Jacobs",
-    title: "Director of Product, Devoted Health",
-    context: "formerly Wayfair",
+    title: "Senior Director of Product Management, The Knot Worldwide",
   },
   {
     quote:
       "He grew Nike Search revenue to higher levels significantly sooner than we ever imagined possible.",
     name: "Dan Wakefield",
-    title: "Principal Architect, Nike",
+    title: "Director of Technology, Nike",
   },
   {
     quote:
       "Jeremy knows no fear and is willing to make the tough calls that so many product managers evade. This is why development teams love him.",
     name: "Eva Miller",
-    title: "Manager of UX, Jama Software",
+    title: "User Experience Researcher, Brainola",
   },
 ];
 
