@@ -43,6 +43,26 @@ export function ContactSection() {
             Remote-friendly. Based in Lake Oswego, Oregon (Portland metro).
           </p>
 
+          {/* Resume download buttons */}
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <a
+              href="/Jeremy_Myrland_Resume_Light.pdf"
+              download
+              className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-full border border-border text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
+            >
+              Resume (Light)
+              <span className="text-xs">↓</span>
+            </a>
+            <a
+              href="/Jeremy_Myrland_Resume_Dark.pdf"
+              download
+              className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors"
+            >
+              Resume (Dark)
+              <span className="text-xs">↓</span>
+            </a>
+          </div>
+
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
               asChild
