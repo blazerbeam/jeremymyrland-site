@@ -45,8 +45,8 @@ const workHistory = [
   },
   {
     company: "Constructor",
-    title: "Senior Product Manager",
-    dates: "2020–2021",
+    title: "Group Product Manager",
+    dates: "2020",
     summary:
       "Early employee at a search startup. Focused on growth and getting customers live fast.",
     outcomes: [
