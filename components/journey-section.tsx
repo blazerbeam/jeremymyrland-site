@@ -283,10 +283,10 @@ export function JourneySection() {
                   {/* Expandable narrative */}
                   <div
                     className={cn(
-                      "overflow-hidden transition-all duration-300 ease-out",
+                      "transition-all duration-300 ease-out",
                       expandedIndex === index
-                        ? "max-h-[800px] opacity-100 mt-4"
-                        : "max-h-0 opacity-0"
+                        ? "max-h-[800px] opacity-100 mt-4 overflow-visible"
+                        : "max-h-0 opacity-0 overflow-hidden m-0 p-0"
                     )}
                   >
                     <div className="pt-4 border-t border-border">

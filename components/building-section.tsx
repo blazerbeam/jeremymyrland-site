@@ -49,9 +49,9 @@ export function BuildingSection() {
     <section
       id="building"
       ref={sectionRef}
-      className="py-24 px-6 bg-secondary/30"
+      className="py-24 px-4 sm:px-6 bg-secondary/30 overflow-x-hidden"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl w-full">
         {/* Header */}
         <div className="mb-16">
           <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
@@ -69,12 +69,12 @@ export function BuildingSection() {
         </div>
 
         {/* Project Cards */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <div
               key={project.name}
               className={cn(
-                "bg-card border border-border rounded-xl p-6 sm:p-8 transition-all duration-700 ease-out",
+                "bg-card border border-border rounded-xl p-5 sm:p-8 transition-all duration-700 ease-out max-w-full",
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
@@ -82,16 +82,16 @@ export function BuildingSection() {
               style={{ transitionDelay: isVisible ? `${index * 150}ms` : "0ms" }}
             >
               {/* Project Name + Tag */}
-              <div className="flex items-start justify-between mb-6">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-6">
                 <a
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-serif text-xl font-semibold text-foreground hover:text-primary transition-colors flex items-center gap-2"
+                  className="font-serif text-lg sm:text-xl font-semibold text-foreground hover:text-primary transition-colors flex items-center gap-2"
                 >
                   {project.name}
                   <svg
-                    className="w-4 h-4"
+                    className="w-4 h-4 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -104,7 +104,7 @@ export function BuildingSection() {
                     />
                   </svg>
                 </a>
-                <span className="text-[10px] font-medium tracking-wider uppercase text-muted-foreground bg-secondary px-2 py-1 rounded whitespace-nowrap ml-4">
+                <span className="text-[10px] font-medium tracking-wider uppercase text-muted-foreground bg-secondary px-2 py-1 rounded whitespace-nowrap self-start">
                   Experiment in progress
                 </span>
               </div>
