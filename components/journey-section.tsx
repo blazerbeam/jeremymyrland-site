@@ -200,10 +200,10 @@ export function JourneySection() {
                   style={{ backgroundColor: role.color, opacity: 0.4 }}
                 />
 
-                <button
+                <div
                   onClick={() => toggleExpand(index)}
                   className={cn(
-                    "w-full text-left bg-card border border-border rounded-xl p-5 sm:p-6 transition-all duration-300",
+                    "w-full text-left bg-card border border-border rounded-xl p-5 sm:p-6 transition-all duration-300 cursor-pointer",
                     "hover:shadow-md hover:border-border/80",
                     expandedIndex === index && "shadow-lg ring-1 ring-primary/20"
                   )}
@@ -488,7 +488,7 @@ export function JourneySection() {
                       </div>
                     </div>
                   </div>
-                </button>
+                </div>
               </div>
             ))}
           </div>
