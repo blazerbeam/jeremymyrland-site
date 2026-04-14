@@ -129,9 +129,7 @@ export function JourneySection() {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [caseStudyOpen, setCaseStudyOpen] = useState<string | null>(null);
-  const [contentHeights, setContentHeights] = useState<Record<number, number>>({});
   const sectionRef = useRef<HTMLElement>(null);
-  const contentRefs = useRef<Record<number, HTMLDivElement | null>>({});
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -152,37 +150,6 @@ export function JourneySection() {
     items?.forEach((item) => observer.observe(item));
 
     return () => observer.disconnect();
-  }, []);
-
-  // Measure all content heights on mount and when window resizes
-  useEffect(() => {
-    const measureHeights = () => {
-      const heights: Record<number, number> = {};
-      Object.keys(contentRefs.current).forEach((key) => {
-        const index = Number(key);
-        const el = contentRefs.current[index];
-        if (el) {
-          // Temporarily make visible to measure
-          const originalHeight = el.style.height;
-          const originalOverflow = el.style.overflow;
-          el.style.height = "auto";
-          el.style.overflow = "visible";
-          heights[index] = el.scrollHeight;
-          el.style.height = originalHeight;
-          el.style.overflow = originalOverflow;
-        }
-      });
-      setContentHeights(heights);
-    };
-
-    // Measure after a short delay to ensure refs are populated
-    const timer = setTimeout(measureHeights, 100);
-    window.addEventListener("resize", measureHeights);
-    
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener("resize", measureHeights);
-    };
   }, []);
 
   const toggleExpand = (index: number) => {
@@ -313,24 +280,17 @@ export function JourneySection() {
                     ))}
                   </div>
 
-                  {/* Expandable narrative */}
+                  {/* Expandable narrative - using CSS grid for Safari-safe animation */}
                   <div
-                    ref={(el) => {
-                      contentRefs.current[index] = el;
-                    }}
                     className={cn(
-                      "overflow-hidden",
-                      expandedIndex === index ? "mt-4" : "m-0 p-0"
+                      "grid transition-[grid-template-rows,opacity,margin] duration-300 ease-in-out",
+                      expandedIndex === index 
+                        ? "grid-rows-[1fr] opacity-100 mt-4" 
+                        : "grid-rows-[0fr] opacity-0"
                     )}
-                    style={{
-                      height: expandedIndex === index 
-                        ? `${contentHeights[index] || 0}px` 
-                        : "0px",
-                      opacity: expandedIndex === index ? 1 : 0,
-                      transition: "height 0.3s ease-in-out, opacity 0.3s ease-in-out, margin 0.3s ease-in-out",
-                    }}
                   >
-                    <div className="pt-4 border-t border-border">
+                    <div className="overflow-hidden min-h-0">
+                      <div className="pt-4 border-t border-border">
                       {role.hasPillars && role.pillars ? (
                         <div className="space-y-5">
                           {/* Header line */}
@@ -525,6 +485,7 @@ export function JourneySection() {
                           )}
                         </div>
                       )}
+                      </div>
                     </div>
                   </div>
                 </button>
