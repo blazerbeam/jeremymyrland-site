@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Source_Serif_4, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { Navigation } from '@/components/navigation'
+import { Footer } from '@/components/footer'
 import './globals.css'
 
 const sourceSerif = Source_Serif_4({ 
@@ -46,7 +48,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${sourceSerif.variable} ${inter.variable}`}>
       <body className="font-sans antialiased">
-        {children}
+        <Navigation />
+        <div className="min-h-screen">
+          {children}
+        </div>
+        <Footer />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
