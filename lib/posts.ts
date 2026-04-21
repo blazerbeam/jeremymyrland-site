@@ -9,12 +9,12 @@ export type Post = {
 
 export const posts: Post[] = [
   {
-    slug: "from-reactive-to-predictive-capability-led-workforce-planning",
-    title: "From Reactive to Predictive: A Quick Detour into Heavy Equipment",
-    date: "2025-01-15",
-    readingTime: "12 min read",
+    slug: "know-what-you-have",
+    title: "Know what you have",
+    date: "2026-04-20",
+    readingTime: "8 min",
     summary:
-      "Most organizations run workforce planning reactively or on a calendar. Neither approach sees what's already inside. Capability-led planning flips that — you understand what your people can actually do before you go hire for what you don't have.",
+      "Most workforce planning still treats talent as something you go get from outside. The better starting point is understanding what you already have — and building the systems and trust to make that visible.",
     content: `**TL;DR.** Most organizations run workforce planning reactively or on a calendar. Neither approach sees what's already inside. Capability-led planning flips that — you understand what your people can actually do before you go hire for what you don't have. The hard part isn't the idea. It's scale, trust, and managers willing to let go.
 
 ---
