@@ -32,7 +32,7 @@ export function HeroSection() {
               I make complex systems actually work.
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Staff PM and Director of Product. 15 years across consumer search at Nike, Apple, and Wayfair and enterprise platforms at Workday. The work I&apos;m proudest of is where fragmented systems, teams, and data had to actually function together.
+              Staff PM and Director of Product. 15 years across consumer search at Nike, Apple, and Wayfair and enterprise platforms at Workday. The work I&apos;m proudest of is where fragmented systems, teams, and data have to actually function together.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button

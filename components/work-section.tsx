@@ -24,8 +24,8 @@ const workHistory = [
     summary:
       "Led global team of 9 PMs across US, Canada, Ireland building the connective tissue for Workday's platform ecosystem.",
     outcomes: [
-      "Defined interoperability vision adopted across 90+ payroll partner integrations",
-      "Built and shipped first GenAI chatbot strategy",
+      "Defined interoperability vision powering hundreds of platform integrations — payroll, Adaptive Planning, Excel export, and the ecosystem of partner and internal connections across Workday",
+      "Delivered mobile and desktop client parity across the platform, removing a long-standing gap between how customers experienced Workday on different surfaces",
       "Made 6 hires, promoted 2, managed a team across 3 countries",
     ],
     caseStudyId: "workday",
