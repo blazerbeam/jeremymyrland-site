@@ -36,7 +36,7 @@ export function Navigation() {
       <nav className="mx-auto max-w-6xl px-6 py-4">
         <div className="flex items-center justify-between">
           <a
-            href="#"
+            href="/"
             className="font-serif text-xl font-semibold tracking-tight text-foreground hover:text-primary transition-colors"
           >
             Jeremy Myrland
