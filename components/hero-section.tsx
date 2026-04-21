@@ -32,7 +32,7 @@ export function HeroSection() {
               I make complex systems actually work.
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              15 years of product leadership at Nike, Workday, Wayfair, and Apple — across consumer search, enterprise HR, developer platforms, and ecommerce. I specialize in orchestration: taking fragmented systems, teams, and workflows and making them actually produce outcomes.
+              Staff PM and Director of Product. 15 years across consumer search at Nike, Apple, and Wayfair and enterprise platforms at Workday. The work I&apos;m proudest of is where fragmented systems, teams, and data had to actually function together.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button
@@ -56,19 +56,19 @@ export function HeroSection() {
             <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-0 sm:divide-x sm:divide-border/50 max-w-xl">
               <div className="text-center sm:px-4 first:sm:pl-0 last:sm:pr-0">
                 <p className="text-2xl sm:text-3xl font-semibold text-primary">$150M+</p>
-                <p className="text-xs sm:text-sm text-muted-foreground mt-1">Revenue Impact</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">revenue shipped</p>
               </div>
               <div className="text-center sm:px-4">
                 <p className="text-2xl sm:text-3xl font-semibold text-primary">75K+</p>
-                <p className="text-xs sm:text-sm text-muted-foreground mt-1">Employees Served</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">employees served</p>
               </div>
               <div className="text-center sm:px-4">
-                <p className="text-2xl sm:text-3xl font-semibold text-primary">9</p>
-                <p className="text-xs sm:text-sm text-muted-foreground mt-1">PMs Led</p>
+                <p className="text-2xl sm:text-3xl font-semibold text-primary">9 PMs</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">led globally</p>
               </div>
               <div className="text-center sm:px-4 last:sm:pr-0">
-                <p className="text-2xl sm:text-3xl font-semibold text-primary">15</p>
-                <p className="text-xs sm:text-sm text-muted-foreground mt-1">Years of Experience</p>
+                <p className="text-2xl sm:text-3xl font-semibold text-primary">2</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">products built nights + weekends</p>
               </div>
             </div>
           </div>
