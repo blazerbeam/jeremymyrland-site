@@ -676,7 +676,7 @@ export function WorkdayCaseStudy() {
           </div>
         </div>
         <p className="text-foreground leading-[1.8]">
-          The Kernel platform went from an internal tool to the connective tissue for Workday&apos;s ecosystem play — universal header for acquisitions, mobile web view platform, first GenAI chatbot strategy established. WebView Extend launched to all customers after a successful early access program. CI test time cut 50% through code migrations. GitHub Actions migration reduced pipeline failures and freed up developer capacity.
+          The Kernel platform went from an internal tool to the connective tissue for Workday&apos;s ecosystem play — universal header across acquisitions, mobile webview platform, and the foundation other teams built on top of. WebView Extend launched to all customers after a successful early access program. CI test time cut 50% through code migrations. GitHub Actions migration reduced pipeline failures and freed up developer capacity.
         </p>
       </section>
 
