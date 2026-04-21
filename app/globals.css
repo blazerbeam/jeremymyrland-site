@@ -85,8 +85,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-sans), 'Inter', system-ui, sans-serif;
-  --font-serif: var(--font-serif), 'Source Serif 4', Georgia, serif;
+  --font-sans: 'Inter', 'Inter Fallback', system-ui, sans-serif;
+  --font-serif: 'Source Serif 4', 'Source Serif 4 Fallback', Georgia, serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
