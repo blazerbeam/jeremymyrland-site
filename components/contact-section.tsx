@@ -39,7 +39,7 @@ export function ContactSection() {
           </span>
 
           <p className="mt-8 text-lg text-muted-foreground leading-relaxed">
-            Staff PM and Director of Product is where I do my best work.
+            Staff PM and Director of Product are where I do my best work.
             Remote-friendly. Based in Lake Oswego, Oregon (Portland metro).
           </p>
 

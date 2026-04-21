@@ -110,7 +110,7 @@ const journeyRoles: JourneyRole[] = [
       },
     ],
     footerLine: "Made six hires, promoted two, managed out two. Built both teams from scratch simultaneously.",
-    tags: ["Platform", "Interoperability", "Developer Experience", "Team Building", "People Management", "GenAI", "Full-Stack Orchestration"],
+    tags: ["Platform", "Interoperability", "Developer Experience", "Team Building", "People Management", "Full-Stack Orchestration"],
     stat: { value: "9 PMs", color: "#14B8A6" }, // teal
   },
   {
