@@ -80,11 +80,25 @@ export default async function PostPage({
                   {children}
                 </h3>
               ),
-              p: ({ children }) => (
-                <p className="text-[17px] leading-[1.75] text-foreground/85 mb-6">
-                  {children}
-                </p>
-              ),
+              p: ({ children, node }) => {
+                // Check if this is the first paragraph (TL;DR)
+                const parent = node?.position?.start;
+                const isFirstParagraph = parent?.line === 1;
+
+                if (isFirstParagraph) {
+                  return (
+                    <p className="text-[18px] leading-[1.75] text-foreground/85 mb-8 border-l-[3px] border-primary pl-5 py-4 bg-foreground/[0.03] rounded-r">
+                      {children}
+                    </p>
+                  );
+                }
+
+                return (
+                  <p className="text-[17px] leading-[1.75] text-foreground/85 mb-6">
+                    {children}
+                  </p>
+                );
+              },
               strong: ({ children }) => (
                 <strong className="font-semibold text-foreground">
                   {children}
