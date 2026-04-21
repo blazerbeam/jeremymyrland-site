@@ -77,7 +77,7 @@ The gap between "job title" and "what this person can actually do" is enormous i
 
 Consider this. Right now, somewhere in a large organization, there's a retail employee on the sales floor who is finishing a master's degree in data science, or organizational psychology, or supply chain. That person is in the system as a sales associate. The org doesn't know what they're building. They might not think to mention it. When a relevant role opens up, the organization goes to market, pays a recruiter, waits three months, and brings someone in from outside.
 
-That's not a hiring problem. That's a visibility problem.
+Hiring didn't fail. The org just couldn't see what it already had.
 
 When you close that gap, a few things change. Strategy gets more honest, built on execution capacity that actually exists, not optimistic hiring assumptions. Hidden options emerge — the PM who knows how to build a data pipeline, the analyst who came up through operations, the designer with a background in behavioral economics. Talent investment gets more targeted. You're not sending people to training because it checks a box. You're building a specific capability you've identified as critical to something real.
 
@@ -131,7 +131,7 @@ None of this makes this approach impossible. But accuracy is a journey, not a la
 
 I've been working through versions of this at a large, global organization. Connecting workforce decisions to skills, business needs, and future demand across a complex, multi-segment employee base that spans employment types, geographies, and functions. Most large companies are still in early innings. The tooling is improving. The data models are getting better. The organizational muscle for this kind of planning is still being built.
 
-But the direction is clear. Organizations that figure out how to see and activate what their people can actually do will move faster, spend more efficiently, and make better decisions. The employees inside those organizations will have more visibility into their own path, more confidence in their own capabilities, and more opportunity to land in work that actually fits.
+But the direction is clear. The orgs that learn to see what their people can actually do will move faster and make better decisions with less guessing. And the people inside those orgs will have something most of them don't have now: a real, evidence-based picture of their own capability, and a path that reflects it.
 
 That's the version of this worth building toward.
 
