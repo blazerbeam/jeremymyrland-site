@@ -32,7 +32,7 @@ export function HeroSection() {
               I make complex systems actually work.
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Staff PM and Director of Product. 15 years across consumer search at Nike, Apple, and Wayfair and enterprise platforms at Workday. The work I&apos;m proudest of is where fragmented systems, teams, and data have to actually function together.
+              Staff PM and Director of Product. 15 years orchestrating fragmented systems, teams, and data so they actually function together. Enterprise HR at Nike. Platform at Workday. Consumer search at Apple, Wayfair, and Nike. Early-stage product at Jama, Constructor, and Viewpoint. Plus the things I build on nights and weekends.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button
@@ -67,7 +67,7 @@ export function HeroSection() {
                 <p className="text-xs sm:text-sm text-muted-foreground mt-1">led globally</p>
               </div>
               <div className="text-center sm:px-4 last:sm:pr-0">
-                <p className="text-2xl sm:text-3xl font-semibold text-primary">2</p>
+                <p className="text-2xl sm:text-3xl font-semibold text-primary">3</p>
                 <p className="text-xs sm:text-sm text-muted-foreground mt-1">products built nights + weekends</p>
               </div>
             </div>
