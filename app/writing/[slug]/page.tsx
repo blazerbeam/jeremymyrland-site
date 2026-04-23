@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
@@ -138,6 +139,24 @@ export default async function PostPage({
                 <code className="bg-card px-1.5 py-0.5 rounded text-sm font-mono text-foreground">
                   {children}
                 </code>
+              ),
+              img: ({ src, alt }) => (
+                <figure className="my-8 flex flex-col items-center">
+                  <div className="w-full border border-border rounded overflow-hidden">
+                    <Image
+                      src={src || ""}
+                      alt={alt || ""}
+                      width={800}
+                      height={600}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {alt && (
+                    <figcaption className="mt-3 text-sm italic text-muted-foreground text-center">
+                      {alt}
+                    </figcaption>
+                  )}
+                </figure>
               ),
             }}
           >
