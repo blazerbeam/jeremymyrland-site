@@ -22,6 +22,17 @@ const projects = [
       "One place for sourcing items, tracking outreach, managing packages, and generating donor emails with AI. Second thing I've ever shipped.",
     builtWith: "Claude AI, v0, and Vercel",
   },
+  {
+    name: "pairwise.one",
+    url: "https://pairwise.one",
+    tagline: "Prioritization made simple. Compare two things at a time.",
+    problem:
+      "A pairwise comparison tool for groups. Instead of ranking ten things on a whiteboard, you compare two at a time until the math sorts out a ranking and a 2D plot sorts out which ones are quick wins and which are big bets.",
+    solution:
+      "The deeper story is what the rebuild itself proved. The original version of this product was a two-week team effort at Jama in 2015 that never shipped. I rebuilt it solo in 2026 over a few evening sessions. The first 80% of the work is genuinely transformed by AI tooling. The last 20% is where judgment takes over.",
+    builtWith: "Claude AI, v0, and Vercel",
+    storyLink: "/writing/the-wall-that-killed-array",
+  },
 ];
 
 export function BuildingSection() {
@@ -109,10 +120,17 @@ export function BuildingSection() {
                 </span>
               </div>
 
+              {/* Tagline (for Pairwise) */}
+              {"tagline" in project && project.tagline && (
+                <p className="mb-5 text-sm sm:text-base text-muted-foreground italic">
+                  {project.tagline}
+                </p>
+              )}
+
               {/* Problem section */}
               <div className="mb-5">
                 <span className="text-[10px] font-semibold tracking-[0.15em] uppercase text-muted-foreground">
-                  Problem I faced
+                  {"tagline" in project ? "What it does" : "Problem I faced"}
                 </span>
                 <blockquote className="mt-2 border-l-2 border-primary pl-4 text-sm sm:text-base text-foreground/90 leading-relaxed">
                   {project.problem}
@@ -122,11 +140,19 @@ export function BuildingSection() {
               {/* Solution section */}
               <div className="mb-5">
                 <span className="text-[10px] font-semibold tracking-[0.15em] uppercase text-muted-foreground">
-                  What I built
+                  {"tagline" in project ? "The deeper story" : "What I built"}
                 </span>
                 <blockquote className="mt-2 border-l-2 border-primary pl-4 text-sm sm:text-base text-foreground/90 leading-relaxed">
                   {project.solution}
                 </blockquote>
+                {"storyLink" in project && project.storyLink && (
+                  <a
+                    href={project.storyLink}
+                    className="mt-3 inline-block text-sm text-[#5C9E6E] hover:underline"
+                  >
+                    Read the full story →
+                  </a>
+                )}
               </div>
 
               {/* Built with */}
