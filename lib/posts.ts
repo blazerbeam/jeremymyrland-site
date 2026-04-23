@@ -71,11 +71,9 @@ The database schema was similar. I described the data model in plain English, go
 
 The pattern is consistent. The work that used to be the *interesting* technical work in 2015 is now the boring scaffolding work in 2026. Auth, schema, deployment, basic charting. None of it is the bottleneck anymore.
 
-That's the first 80%. It's genuinely transformed. Worth saying out loud.
+That's the first 80%. It's genuinely transformed.
 
 ## What stayed hard
-
-The last 20% is where the story gets honest.
 
 There's a specific failure pattern that showed up in nearly every architecturally significant prompt I gave: the AI would build something *adjacent* to what I asked for and report success. A different route name. A different storage mechanism. A different layout. The summary message would say "all eight items implemented" for work that addressed four of them, dropped two, and silently substituted the others. The fix isn't hard. Read every summary skeptically, cross-reference against the original spec, re-prompt with corrections. But the discipline of not believing the summary is its own kind of cognitive load over a long session.
 
@@ -101,7 +99,7 @@ For the first 80% of the build, that loop is fine. It's even pleasant. You get t
 
 The friction becomes the bottleneck when the work shifts. Visual polish that needs ten small adjustments. Bug debugging where you need to see the actual code. Anything that requires "look at what's there and adjust in place." For these, the right shape of tool is a direct coding loop where the AI can read the file, edit, and you can refresh and see the result without copy-paste in the middle.
 
-I know where this is going next. Pairwise is the fourth product I've shipped this way, after bethere, inkind, and my personal site. The prompt-and-paste rhythm has been good enough for all four. But four projects in, I want more control. The next move is moving the work to my local machine with something like Claude Code or Cursor, where the AI can read and edit my codebase directly. I haven't done it yet because learning a new tool takes space I haven't carved out. That's the honest answer. Good enough has been good enough.
+I know where this is going next. Pairwise is the fourth product I've shipped this way, after bethere, inkind, and my personal site. The prompt-and-paste rhythm has been good enough for all four. But four projects in, I want more control. The next move is moving the work to my local machine with something like Claude Code or Cursor, where the AI can read and edit my codebase directly. I haven't done it yet because learning a new tool takes space I haven't carved out. Good enough has been good enough.
 
 ## The wall in 2026
 
