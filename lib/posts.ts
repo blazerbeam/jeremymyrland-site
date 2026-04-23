@@ -9,6 +9,123 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "the-wall-that-killed-array",
+    title: "The wall that killed Array",
+    date: "2026-04-22",
+    readingTime: "7 min",
+    summary:
+      "In 2015, a small team spent two weeks building a product everyone loved. It never shipped. The build wasn't the hard part. The wall between \"internal POC\" and \"deployed product\" was. In 2026, I rebuilt it solo over a few evenings. The wall is shorter now, but it's not gone.",
+    content: `**TL;DR.** In 2015, a small team spent two weeks building a product everyone loved. It never shipped. The build wasn't the hard part. The wall between "internal POC" and "deployed product" was. In 2026, I rebuilt it solo over a few evenings. The wall is shorter now, but it's not gone. The first 80% of the work is genuinely transformed. The last 20% is where the toolchain runs out and judgment takes over.
+
+---
+
+## What we built in 2015
+
+In early 2015, I watched a video about Nordstrom Innovation Labs building a product in four days. I wanted to try something similar at Jama. On Valentine's Day morning, I emailed my VP and Director of Product with a pitch: give me my dev team for two weeks, let us go offsite and build the thing, and at the end we either move forward or we kill it.
+
+![Valentine's Day pitch email to Jennifer and Alex](/images/writing/array/Valentines_Day_Pitch.png)
+
+They said yes.
+
+The product was called Array. The pitch was simple. Prioritization meetings are terrible. Ten things on a whiteboard, six people in a room, two hours later you have a list nobody trusts and at least one person who feels ignored. Array fixed it by never asking you to rank ten things. It asked you to compare two. Then two more. Then two more. After enough rounds the math sorted out a ranking, and a 2D plot sorted out which ones were quick wins and which were big bets.
+
+![Array logo. Prioritization Made Simple.](/images/writing/array/Array_Logo.png)
+
+Five developers built it. I was the PM. We kicked off with an offsite at one of their houses. There was pizza. There were whiteboards covered in red marker math that made sense for about forty-five minutes at a time.
+
+![March kickoff email referencing the Nordstrom video](/images/writing/array/March_Update_to_Engineers.png)
+
+We shipped, internally. The demo got *"this is AWESOME"* from our VP of Development. Sales and CSM loved the prototype. We mocked up a launch announcement at array.jama.io.
+
+![April prototype feedback email to sales and CSM](/images/writing/array/Sales_and_CSM_Email.png)
+
+It never went out. Array never deployed. The Heroku POC stayed a Heroku POC, and eventually it didn't even stay that.
+
+## The wall
+
+Here's the thing I've thought about for ten years.
+
+Array didn't fail at the build. The build was the easy part. We had a working prototype people loved.
+
+It failed at the wall between "internal POC everyone likes" and "thing the company actually ships." That wall was made of work nobody on the team had bandwidth to do. A real auth system. A real database. A real billing model, or at least a free tier with rate limits. Real onboarding. Real deployment. Real support for the first ten people who signed up. The hundred small things that turn a demo into a product.
+
+In 2015 that work needed engineers we didn't have, roadmap room we didn't get, and the kind of executive push that only happens when something is somebody's job and not somebody's two-week passion project.
+
+So Array sat on Heroku and quietly stopped sitting on Heroku.
+
+## The 2026 rebuild
+
+Eleven years later, I rebuilt it. Solo. About six hours of build time across five evening sessions. The product is at [pairwise.one](https://pairwise.one). Anyone can sign up.
+
+The stack: v0 for code generation, Vercel for hosting, Supabase for the database and auth. Next.js, TypeScript, Tailwind, shadcn. Boring choices, all of them. That's the point.
+
+Before I started, I wrote down what I thought would be easy and what I thought would be hard. Most of the predictions held. A few didn't. The ones that didn't are the most interesting.
+
+## What the toolchain made trivial
+
+This is where the 2015 comparison gets uncomfortable.
+
+Auth in 2015 would have been a person-week of real work. Sessions, password resets, hashing, the whole thing. In 2026 it was thirty minutes. Describe the flows, paste the result, watch it work.
+
+The database schema was similar. I described the data model in plain English, got back a SQL paste with row-level security policies that ran without errors. The 2D scatter plot, which would have been a multi-day effort in 2015, rendered live data in one prompt. QR code on the share screen, one prompt. Mobile responsiveness was right on first pass for most surfaces.
+
+The pattern is consistent. The work that used to be the *interesting* technical work in 2015 is now the boring scaffolding work in 2026. Auth, schema, deployment, basic charting. None of it is the bottleneck anymore.
+
+That's the first 80%. It's genuinely transformed. Worth saying out loud.
+
+## What stayed hard
+
+The last 20% is where the story gets honest.
+
+There's a specific failure pattern that showed up in nearly every architecturally significant prompt I gave: the AI would build something *adjacent* to what I asked for and report success. A different route name. A different storage mechanism. A different layout. The summary message would say "all eight items implemented" for work that addressed four of them, dropped two, and silently substituted the others. The fix isn't hard. Read every summary skeptically, cross-reference against the original spec, re-prompt with corrections. But the discipline of not believing the summary is its own kind of cognitive load over a long session.
+
+The single longest pain point of the build was visual polish on the results scatter chart. About 55 minutes across six or seven iterations. The chart needed to hide raw scores, add named quadrants in the right corners, color-code the dots by quadrant, and apply pastel background fills.
+
+The first three landed with iteration. The fourth never rendered correctly. The background fills were either getting layered behind the chart, overridden by some default, or dropped entirely. The AI couldn't see the actual rendering issue from prompt-level reasoning. Each iteration produced a different-but-still-wrong result.
+
+I shipped it without the fills. Called it out, moved on.
+
+That moment crystallized the most useful insight of the build. There's a band of work where the prompt-and-paste rhythm stops paying. Visual nuance. Z-order debugging. State bugs that need you to look at the rendered output, look at the code, adjust, look again. The copy-paste loop adds 30 to 60 seconds per cycle. After six cycles on the same component, the latency itself is the bottleneck.
+
+Same lesson with the undo feature I tried to add in session five. I'd been testing my own product, voted on a pair, immediately wanted to change my mind. Felt like an obvious add. Three iterations in, the AI produced a genuinely thoughtful diagnosis of the root cause: a stray timeout in the vote handler that wasn't getting cleaned up, leaving a pending callback that fired after the undo and corrupted state. The fix it proposed was textbook. It didn't work.
+
+I cut the feature, logged it as a backlog item, moved on. The diagnosis was good. The fix wasn't. Closing that gap would have required reading the actual component code in context, which the prompt-and-paste loop doesn't do well.
+
+## The middle-man problem
+
+Mid-session five I named something that had been quietly true the whole build.
+
+I was sitting in the middle of two AIs that couldn't talk to each other. Claude on one side, helping me think through what to build, what to prompt, how to read the output. v0 on the other side, doing the building. Me copying and pasting between them, playing connective tissue.
+
+For the first 80% of the build, that loop is fine. It's even pleasant. You get to think about what you want, hand off the typing, review at human speed. The friction is invisible because the work is shaped right for it. Scaffold a component. Generate a schema. Wire an integration. One-shot prompts that produce visible output.
+
+The friction becomes the bottleneck when the work shifts. Visual polish that needs ten small adjustments. Bug debugging where you need to see the actual code. Anything that requires "look at what's there and adjust in place." For these, the right shape of tool is a direct coding loop where the AI can read the file, edit, and you can refresh and see the result without copy-paste in the middle.
+
+I know where this is going next. Pairwise is the fourth product I've shipped this way, after bethere, inkind, and my personal site. The prompt-and-paste rhythm has been good enough for all four. But four projects in, I want more control. The next move is moving the work to my local machine with something like Claude Code or Cursor, where the AI can read and edit my codebase directly. I haven't done it yet because learning a new tool takes space I haven't carved out. That's the honest answer. Good enough has been good enough.
+
+## The wall in 2026
+
+The wall is shorter than it was in 2015. Materially shorter. But it's still there. It's just made of different stuff now.
+
+The first 80% is transformed. Auth, schema, scaffolding, deployment. The whole pipeline of "go from idea to deployed thing" used to require a team or a meaningful learning curve. Now it's a sequence of prompts.
+
+The last 20% is where the toolchain runs out. Visual nuance, state debugging, anything that requires looking at the code in context. These need a tighter loop than prompt-and-paste.
+
+And the POC-to-shipped gap is still the hardest gap in product development. AI compresses the path to POC dramatically. It does less to compress the path from POC to production. The 2015 team got stuck at exactly that gap. The 2026 build cleared it, but only because shipping was the explicit non-negotiable from prompt one. The toolchain didn't make shipping inevitable. It just made it possible.
+
+The 2015 wall was made of headcount and runway and roadmap politics, and no individual on the team could move it. The 2026 wall is made of judgment calls. When to switch tools. When to cut a feature. When to stop iterating and ship with a known gap.
+
+Those are PM problems. They don't require five people and a war room. They require one person willing to make the call.
+
+## Try it
+
+Pairwise is live at [pairwise.one](https://pairwise.one). Sign up, create a pairwise, share it with a few people, see what comes out.
+
+Known gaps, in case you find them: the scatter quadrants don't have the pastel fills I wanted. There's no undo on votes. There's an intermittent first-load issue on voter URLs in incognito that I haven't been able to reproduce on demand. Repo will go public shortly.
+
+If you break it, tell me. That's the most useful thing you can do.`,
+  },
+  {
     slug: "know-what-you-have",
     title: "Know what you have",
     date: "2026-04-20",
