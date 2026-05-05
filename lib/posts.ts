@@ -9,6 +9,101 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "funnel-or-umbrella",
+    title: "Shit funnel or shit umbrella",
+    date: "2026-05-04",
+    readingTime: "5 min",
+    summary:
+      "In 2015 I gave a talk to a room of business analysts about a role that was quietly shifting underneath them. Ten years later, I had lunch with a principal engineer at Nike and we landed on the same conversation, one rung up. Roles compress. The people who see it coming have time to adapt.",
+    content: `**TL;DR.** In 2015 I gave a talk to a room of business analysts about a role that was quietly shifting underneath them. Ten years later, I had lunch with a principal engineer at Nike and we landed on the same conversation, one rung up. Roles compress. The people who see it coming have time to adapt.
+
+---
+
+In 2015 I was at Jama, our requirements management company. We sold to large, complex organizations. Most of our users were business analysts at companies building things like medical devices, defense systems, automotive software. People who wrote specs for a living.
+
+I spent a lot of time with those customers. And I kept noticing the same thing: the BAs were good at the job they had been hired to do, and the job they had been hired to do was changing.
+
+So I put together a talk. I gave it at conferences and customer events. At least five times. I called it "Shit Funnel or Shit Umbrella," which I borrowed from a Todd Jackson quote at Facebook. The line was: you can either be a shit funnel, taking everything from above and dumping it on your team, or you can be a shit umbrella, absorbing what doesn't matter and letting your team focus on what does.
+
+## What I actually told them
+
+I opened with what they were good at. Five skills:
+
+- **Visionary.** You have a view of the future.
+- **Story Teller.** You understand more than just functional requirements. You can tell the emotional story of what you're building.
+- **Translator.** You frame the conversation based on who you're talking to.
+- **Influencer.** You have to win hearts and minds without authority.
+- **Executor.** You get shit done.
+
+Then I put up a slide that said "BUT, we also do all of this..." and listed the trap: take orders, work within our title, only fight fires, get stuck in the what, come in way too late, forget to ask why, over document, make lists, set it and forget it, live in excel and word.
+
+That's the part of the talk that landed. Every time.
+
+The five skills above the line described a strategist. The list below described a clerk. Same person, same job title, two different jobs. The difference was almost entirely a choice about how you showed up.
+
+Toward the end I introduced Business Model Canvas. A simple one-page framework for mapping how a business actually works. Customer segments, value proposition, channels, revenue, cost. I told them: here's a tool that forces you out of the spec doc and into the business question. Use it once and you'll see the conversation shift. People who used to talk past you will start asking what you think.
+
+I closed with the funnel/umbrella line. Which one do you want to be.
+
+![From the deck, 2015. Closing slide.](/images/writing/funnel-or-umbrella/final-slide.png)
+
+## What happened after
+
+People came up after every talk. Multiple, every time. They wanted to be seen as strategic. They were tired of being treated like dictation machines. They knew their role was bigger than what their job description said it was.
+
+I got promises. People told me they would go back and try it. Run a canvas with their team. Push back the next time someone handed them a spec without context.
+
+I don't know how many of them actually did it. I have a foggy memory of someone reaching out months later saying it stuck, that they had pulled the canvas into a real conversation and it changed how their team worked. I'm honestly not sure that memory is real. It might be something I want to be true.
+
+What I am sure of is the appetite was there. People in the room knew the role was shifting. They didn't need me to tell them. They needed permission to act on it.
+
+## The pattern
+
+This isn't the first time a role has compressed. It won't be the last.
+
+BAs got absorbed into product. Designers got absorbed into product designers, then into design systems people who also build. DevOps wasn't a role, then it was a role, then it dissolved into "every engineer ships their own infrastructure now." QA teams got absorbed into engineering teams that test their own work.
+
+Every ten or fifteen years, the work that defined a role gets pulled up one rung. The skills don't disappear. They get folded into the role above. The people who saw it coming had time to adapt. The ones who didn't, didn't.
+
+In 2015 I was watching it happen to BAs. The part of their job that was repeatable was getting automated, templated, or absorbed into PM. The part that was strategic was already PM work. They could either claim the strategic half or watch the role shrink.
+
+## Lunch with David
+
+A few weeks ago I had lunch with David Daniel, a principal engineer at Nike and a friend of mine. David is the kind of engineer who asks the questions PMs are supposed to ask. Is this commercially viable. Will users actually use it. Why are we doing this at all. He does a lot of what product managers have historically done.
+
+We were talking about how we work now. Both of us prototype. Both of us write code that ships. Both of us spend less time in spec docs than we used to and more time in the artifact itself.
+
+At some point one of us said it, and the other agreed: if you're a PM today and you can't build the first version yourself, you're getting funneled.
+
+Engineering is no longer the constraint. That doesn't mean engineers don't matter. They matter more. It means the bottleneck has moved. The bottleneck used to be "we have an idea but we can't build it." The bottleneck now is "we have too many ideas and not enough clarity about which one is real." The PRD isn't the work anymore. The prototype is.
+
+## Five skills became six
+
+If I gave that 2015 talk to a room of PMs today, I'd keep all five skills. Visionary, storyteller, translator, influencer, executor. They still hold.
+
+I'd add one.
+
+**Builder.** You can produce a working version of the thing you're proposing. Not a spec, not a wireframe, not a Figma. A thing that runs. Maybe ugly, maybe scoped to one user, maybe held together with prompts and duct tape. But it runs.
+
+The new skill is the one most PMs don't have yet. Same shape as the gap BAs had with business models in 2015.
+
+I built bethere.community for school PTOs. I built inkind.one for nonprofit gala procurement. Both are live. Both started as my own ideas, prototyped on weekends, with no engineer in sight until I needed help scaling. Five years ago I could not have done either of those. Now I can do both, and so can a lot of other people if they choose to.
+
+The PMs I see thriving right now all have this skill. The ones struggling are still writing PRDs and waiting for an engineer to build it.
+
+## So
+
+Same question I asked the BAs in 2015, one rung up.
+
+Do you want to be a shit funnel or a shit umbrella.
+
+If you're a PM and the answer is umbrella, the work is the same as it was for the BAs who came up to me after those talks. Claim the strategic half of the role. The half that's already yours, the half nobody is going to give you permission to do, the half that defines whether your role grows with the change or shrinks under it.
+
+The people who chose umbrella in 2015 ended up running product orgs. Some of them probably built the AI tools the rest of us are using right now.
+
+I don't know if that one BA actually reached out to me months later. I'd like to think they did. I'd like to think they're a Director of Product somewhere now, having this exact conversation with a junior PM who thinks the PRD is the job.`,
+  },
+  {
     slug: "the-wall-that-killed-array",
     title: "The wall that killed Array",
     date: "2026-04-22",
