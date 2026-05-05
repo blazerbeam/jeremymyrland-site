@@ -114,12 +114,12 @@ export default async function PostPage({
                 </blockquote>
               ),
               ul: ({ children }) => (
-                <ul className="list-disc list-outside pl-6 mb-6 text-[17px] leading-[1.75] text-foreground/85 space-y-2">
+                <ul className="list-disc list-outside pl-6 mb-6 text-[17px] leading-[1.75] text-foreground/85 space-y-2 md:space-y-4">
                   {children}
                 </ul>
               ),
               ol: ({ children }) => (
-                <ol className="list-decimal list-outside pl-6 mb-6 text-[17px] leading-[1.75] text-foreground/85 space-y-2">
+                <ol className="list-decimal list-outside pl-6 mb-6 text-[17px] leading-[1.75] text-foreground/85 space-y-2 md:space-y-4">
                   {children}
                 </ol>
               ),
