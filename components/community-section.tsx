@@ -11,7 +11,20 @@ const communityItems = [
   },
   {
     name: "FOREST HILLS PTO",
-    description: "Vice President, incoming President. Forest Hills Elementary, Lake Oswego.",
+    description: (
+      <>
+        Vice President, incoming President.{" "}
+        <a
+          href="https://fhpto.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          Forest Hills Elementary
+        </a>
+        , Lake Oswego.
+      </>
+    ),
     color: "#14B8A6", // teal
   },
   {
