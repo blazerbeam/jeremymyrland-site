@@ -23,6 +23,16 @@ const projects = [
     builtWith: "Claude AI, v0, and Vercel",
   },
   {
+    name: "fhpto.org",
+    url: "https://fhpto.org",
+    github: "https://github.com/blazerbeam/v0-forest-hills-pto-website",
+    problem:
+      "The Forest Hills PTO \"site\" was a district compliance page. Dense, ugly, useless to the parents it was supposed to serve. Layer on a weekly newsletter that overwhelms more than it informs, and new families had nowhere good to start. The spring survey was blunt: parents want to help but don't know how.",
+    solution:
+      "A parent-friendly site built around what a busy parent needs in 30 seconds. What's this week. What's the year look like. Who runs this. How do I get involved. Calendar is authoritative enough to plan around. An \"at a glance\" page fits the entire PTO on one screen. Two evenings, about 8 hours total.",
+    builtWith: "Claude AI, v0, and Vercel",
+  },
+  {
     name: "pairwise.one",
     url: "https://pairwise.one",
     tagline: "Prioritization made simple. Compare two things at a time.",
