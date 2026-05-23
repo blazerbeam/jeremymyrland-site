@@ -13,16 +13,16 @@ const communityItems = [
     name: "FOREST HILLS PTO",
     description: (
       <>
-        Vice President, incoming President.{" "}
+        Vice President, incoming President. Forest Hills Elementary, Lake Oswego. Built a{" "}
         <a
-          href="https://fhpto.org"
+          href="https://v0-forest-hills-pto-website.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary hover:underline"
         >
-          Forest Hills Elementary
+          prototype site
         </a>
-        , Lake Oswego.
+        {" "}as part of exploring what a more parent-friendly PTO experience could look like.
       </>
     ),
     color: "#14B8A6", // teal
