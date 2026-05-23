@@ -23,13 +23,13 @@ const projects = [
     builtWith: "Claude AI, v0, and Vercel",
   },
   {
-    name: "fhpto.org",
-    url: "https://fhpto.org",
+    name: "fhpto.org (working prototype)",
+    url: "https://v0-forest-hills-pto-website.vercel.app/",
     github: "https://github.com/blazerbeam/v0-forest-hills-pto-website",
     problem:
-      "The Forest Hills PTO \"site\" was a district compliance page. Dense, ugly, useless to the parents it was supposed to serve. Layer on a weekly newsletter that overwhelms more than it informs, and new families had nowhere good to start. The spring survey was blunt: parents want to help but don't know how.",
+      "I'm the incoming President of our school PTO. Our official PTO presence was a district-mandated compliance page — ugly, dense, hard for parents to use. New families had nowhere good to start. A parent survey confirmed it: people wanted to help but didn't know how, and felt overwhelmed by communications.",
     solution:
-      "A parent-friendly site built around what a busy parent needs in 30 seconds. What's this week. What's the year look like. Who runs this. How do I get involved. Calendar is authoritative enough to plan around. An \"at a glance\" page fits the entire PTO on one screen. Two evenings, about 8 hours total.",
+      "A modern, parent-friendly site organized around what a busy parent actually needs in 30 seconds — what's this week, what's the year look like, who runs this, how do I get involved. Multi-page, mobile-first, with an illustrated calendar and an 'at a glance' page that fits the whole PTO on one screen. Built in 8 hours across two evenings. Now a working prototype — district policy required taking it offline at fhpto.org.",
     builtWith: "Claude AI, v0, and Vercel",
   },
   {
