@@ -5,6 +5,17 @@ import { cn } from "@/lib/utils";
 
 const projects = [
   {
+    name: "Roost",
+    url: "https://roost.directory",
+    tag: "Live · First customer",
+    featured: true,
+    problem:
+      "Our school ran on DirectorySpot: dated, clunky, the kind of tool nobody opens twice. I'd already built bethere.community to fix the volunteer-matching half of the problem. But the real gap was bigger. A school's entire parent community, from the directory to class lists to carpools to clubs, was scattered across aging tools that families quietly gave up on.",
+    solution:
+      "Roost, a modern parent directory that replaces DirectorySpot. Magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. It's the culmination of bethere.community and years of fighting our own directory. Launched in 2026 and now live on iOS and Android. I've landed my first customer, and over 100 families have used it.",
+    builtWith: "Claude Code, Next.js, Supabase, and Vercel",
+  },
+  {
     name: "bethere.community",
     url: "https://bethere.community",
     problem:
@@ -81,11 +92,11 @@ export function BuildingSection() {
           <p className="mt-6 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl">
             I&apos;ve never taken a CS class. Never written a line of code on my own.
             For most of my career, ideas died because I couldn&apos;t get developer
-            time fast enough. Generative AI changed that. Now I can go from problem
-            to working product in days, not quarters. These aren&apos;t businesses
-            yet — they&apos;re real experiments built to solve real problems I&apos;ve
-            actually lived. And honestly, I&apos;m still getting used to how fast
-            this moves.
+            time fast enough. Generative AI changed that. Now I go from problem to
+            working product in days, not quarters. Most of what&apos;s below started
+            as an experiment to solve a real problem I&apos;ve lived. One of them,
+            Roost, has grown into a real product, with a first customer and over 100
+            families using it.
           </p>
         </div>
 
@@ -96,6 +107,9 @@ export function BuildingSection() {
               key={project.name}
               className={cn(
                 "bg-card border border-border rounded-xl p-5 sm:p-8 transition-all duration-700 ease-out max-w-full",
+                "featured" in project &&
+                  project.featured &&
+                  "md:col-span-2 border-primary/30 bg-primary/[0.04]",
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
@@ -125,8 +139,17 @@ export function BuildingSection() {
                     />
                   </svg>
                 </a>
-                <span className="text-[10px] font-medium tracking-wider uppercase text-muted-foreground bg-secondary px-2 py-1 rounded whitespace-nowrap self-start">
-                  Experiment in progress
+                <span
+                  className={cn(
+                    "text-[10px] font-medium tracking-wider uppercase px-2 py-1 rounded whitespace-nowrap self-start",
+                    "tag" in project && project.tag
+                      ? "text-primary bg-primary/10"
+                      : "text-muted-foreground bg-secondary"
+                  )}
+                >
+                  {"tag" in project && project.tag
+                    ? project.tag
+                    : "Experiment in progress"}
                 </span>
               </div>
 
@@ -183,7 +206,7 @@ export function BuildingSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           )}
         >
-          All projects are open source.{" "}
+          Most of these are open source.{" "}
           <a
             href="https://github.com/blazerbeam"
             target="_blank"
