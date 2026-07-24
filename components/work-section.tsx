@@ -6,6 +6,18 @@ import { CaseStudyModal, NikeSearchCaseStudy, ViewpointCaseStudy, WayfairCaseStu
 
 const workHistory = [
   {
+    company: "Roost",
+    title: "Founder",
+    dates: "2026–Present",
+    summary:
+      "Founder of Roost, a modern parent directory that replaces DirectorySpot. Built solo, from the data model to the iOS and Android apps, while working full-time at Nike.",
+    outcomes: [
+      "Shipped a person-centric directory with magic-link sign-in and privacy each family controls, enforced at the database layer",
+      "Launched on iOS and Android in 2026, landed a first customer, and have over 100 families using the product",
+      "The culmination of bethere.community and years of fighting our own school's directory",
+    ],
+  },
+  {
     company: "Nike",
     title: "Principal PM, HR Global Technology",
     dates: "2025–Present",
