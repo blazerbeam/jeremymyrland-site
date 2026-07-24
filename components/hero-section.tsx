@@ -103,11 +103,10 @@ export function HeroSection() {
         aria-label="Scroll to Journey section"
       >
         <svg
-          className="w-6 h-6 animate-bounce"
+          className="w-6 h-6 animate-float-hint"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
-          style={{ animationDuration: "2s" }}
         >
           <path
             strokeLinecap="round"
