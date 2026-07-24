@@ -29,7 +29,7 @@ export function Navigation() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled || mobileMenuOpen
-          ? "bg-[#0F1117] border-b border-[#2A2D3A]"
+          ? "bg-background border-b border-border"
           : "bg-transparent"
       )}
     >
