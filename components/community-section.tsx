@@ -5,15 +5,10 @@ import { cn } from "@/lib/utils";
 
 const communityItems = [
   {
-    name: "LAKE OSWEGO SCHOOLS FOUNDATION",
-    description: "Secretary → Procurement Lead → incoming VP. The gala work led to building inkind.one.",
-    color: "#5C9E6E", // green
-  },
-  {
     name: "FOREST HILLS PTO",
     description: (
       <>
-        Vice President, incoming President. Forest Hills Elementary, Lake Oswego. Built a{" "}
+        President, 2026–27. Forest Hills Elementary, Lake Oswego. Built a{" "}
         <a
           href="https://v0-forest-hills-pto-website.vercel.app/"
           target="_blank"
@@ -22,10 +17,37 @@ const communityItems = [
         >
           prototype site
         </a>
-        {" "}as part of exploring what a more parent-friendly PTO experience could look like.
+        {" "}exploring a more parent-friendly PTO. The directory piece became Roost.
       </>
     ),
     color: "#14B8A6", // teal
+  },
+  {
+    name: "LAKE OSWEGO PLANNING COMMISSION",
+    description: "Alternate, 2026–27. Reviewing land use and development for the City of Lake Oswego.",
+    color: "#5B84C4", // steel blue
+  },
+  {
+    name: "AMERICAN LEADERSHIP FORUM",
+    description: (
+      <>
+        <a
+          href="https://www.alforegon.org/class48"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          Class 48
+        </a>
+        {" "}Fellow, 2026–27. A yearlong Oregon fellowship building collaborative leadership to take on complex civic and statewide issues.
+      </>
+    ),
+    color: "#C1554B", // brick red
+  },
+  {
+    name: "LAKE OSWEGO SCHOOLS FOUNDATION",
+    description: "Secretary → Procurement Lead → incoming VP. The gala work led to building inkind.one.",
+    color: "#5C9E6E", // green
   },
   {
     name: "CHILDREN'S CANCER ASSOCIATION",
