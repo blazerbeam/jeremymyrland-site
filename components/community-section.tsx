@@ -46,7 +46,7 @@ const communityItems = [
   },
   {
     name: "LAKE OSWEGO SCHOOLS FOUNDATION",
-    description: "Secretary → Procurement Lead → incoming VP. The gala work led to building inkind.one.",
+    description: "Secretary → Procurement Lead → Vice President. The gala work led to building inkind.one.",
     color: "#5C9E6E", // green
   },
   {

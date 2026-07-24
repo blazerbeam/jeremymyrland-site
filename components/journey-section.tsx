@@ -123,6 +123,16 @@ const journeyRoles: JourneyRole[] = [
     tags: ["Enterprise HR", "Workday", "Workforce Planning", "Automation"],
     stat: { value: "75K+ employees", color: "#5C9E6E" }, // accent green
   },
+  {
+    company: "ROOST",
+    title: "Founder",
+    dates: "2026–Present",
+    color: "#14B8A6", // teal - the current chapter
+    narrative:
+      "The culmination of everything before it. I'd spent years frustrated by the tools our school ran on, and I'd built bethere.community to fix one piece of it. Roost is the whole thing: a modern parent directory that replaces DirectorySpot, with magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. I built it solo while working full-time at Nike. Launched in 2026, shipped to iOS and Android, landed my first customer, and now over 100 families use it. Same orchestration problem I've worked on for 15 years. This time it's mine.",
+    tags: ["Founder", "Parent Directory", "iOS + Android", "First Customer"],
+    stat: { value: "100+ families", color: "#14B8A6" }, // teal
+  },
 ];
 
 export function JourneySection() {
@@ -167,7 +177,7 @@ export function JourneySection() {
             The Full Story
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            From ERP consultant to enterprise product leader. Click any role to read the full story.
+            From ERP consultant to enterprise product leader to founder. Click any role to read the full story.
           </p>
         </div>
 

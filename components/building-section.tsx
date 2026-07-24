@@ -206,7 +206,7 @@ export function BuildingSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           )}
         >
-          All projects are open source.{" "}
+          Most of these are open source.{" "}
           <a
             href="https://github.com/blazerbeam"
             target="_blank"
