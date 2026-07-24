@@ -4,33 +4,33 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Jeremy's Portfolio - Sophisticated Dark Theme */
-  /* Deep charcoal background (slightly warm, not pure black) */
-  --background: #0F1117;
+  /* Jeremy's Portfolio - Sophisticated Dark Theme (lifted value ladder) */
+  /* Deep charcoal background - raised + faintly warmed toward the green accent */
+  --background: #15171D;
   /* Off-white primary text */
   --foreground: #F0EDE6;
-  /* Card/surface color */
-  --card: #1A1D27;
+  /* Card/surface color - a clear step up from the background for real depth */
+  --card: #1F222B;
   --card-foreground: #F0EDE6;
-  --popover: #1A1D27;
+  --popover: #1F222B;
   --popover-foreground: #F0EDE6;
   /* Pacific Northwest green - lightened for dark backgrounds */
   --primary: #5C9E6E;
-  --primary-foreground: #0F1117;
-  /* Secondary surfaces */
-  --secondary: #1A1D27;
+  --primary-foreground: #15171D;
+  /* Secondary surfaces - one more step up, for chips/pills sitting on cards */
+  --secondary: #23262F;
   --secondary-foreground: #F0EDE6;
-  /* Muted tones */
-  --muted: #1A1D27;
-  --muted-foreground: #8A8FA8;
+  /* Muted tones - muted text brightened to ~6:1 for comfortable reading */
+  --muted: #23262F;
+  --muted-foreground: #9CA1B2;
   /* Accent matches primary */
   --accent: #5C9E6E;
-  --accent-foreground: #0F1117;
+  --accent-foreground: #15171D;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  /* Subtle borders */
-  --border: #2A2D3A;
-  --input: #2A2D3A;
+  /* Borders - lifted so surfaces read as separated, not merged */
+  --border: #333644;
+  --input: #333644;
   --ring: #5C9E6E;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -38,49 +38,49 @@
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0.5rem;
-  --sidebar: #1A1D27;
+  --sidebar: #1F222B;
   --sidebar-foreground: #F0EDE6;
   --sidebar-primary: #5C9E6E;
-  --sidebar-primary-foreground: #0F1117;
-  --sidebar-accent: #1A1D27;
+  --sidebar-primary-foreground: #15171D;
+  --sidebar-accent: #23262F;
   --sidebar-accent-foreground: #F0EDE6;
-  --sidebar-border: #2A2D3A;
+  --sidebar-border: #333644;
   --sidebar-ring: #5C9E6E;
 }
 
 /* Dark mode - same as root since this is a dark-first design */
 .dark {
-  --background: #0F1117;
+  --background: #15171D;
   --foreground: #F0EDE6;
-  --card: #1A1D27;
+  --card: #1F222B;
   --card-foreground: #F0EDE6;
-  --popover: #1A1D27;
+  --popover: #1F222B;
   --popover-foreground: #F0EDE6;
   --primary: #5C9E6E;
-  --primary-foreground: #0F1117;
-  --secondary: #1A1D27;
+  --primary-foreground: #15171D;
+  --secondary: #23262F;
   --secondary-foreground: #F0EDE6;
-  --muted: #1A1D27;
-  --muted-foreground: #8A8FA8;
+  --muted: #23262F;
+  --muted-foreground: #9CA1B2;
   --accent: #5C9E6E;
-  --accent-foreground: #0F1117;
+  --accent-foreground: #15171D;
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: #2A2D3A;
-  --input: #2A2D3A;
+  --border: #333644;
+  --input: #333644;
   --ring: #5C9E6E;
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: #1A1D27;
+  --sidebar: #1F222B;
   --sidebar-foreground: #F0EDE6;
   --sidebar-primary: #5C9E6E;
-  --sidebar-primary-foreground: #0F1117;
-  --sidebar-accent: #1A1D27;
+  --sidebar-primary-foreground: #15171D;
+  --sidebar-accent: #23262F;
   --sidebar-accent-foreground: #F0EDE6;
-  --sidebar-border: #2A2D3A;
+  --sidebar-border: #333644;
   --sidebar-ring: #5C9E6E;
 }
 
@@ -139,5 +139,26 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
     background-blend-mode: soft-light;
     background-size: 150px;
+  }
+}
+
+/* Gentle scroll hint - smooth sinusoidal float, no bounce easing */
+@keyframes float-hint {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-float-hint {
+  animation: float-hint 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-hint {
+    animation: none;
   }
 }

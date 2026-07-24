@@ -74,7 +74,7 @@ export function TestimonialsSection() {
             <div
               key={index}
               className={cn(
-                "bg-card border border-border rounded-lg p-6 border-l-2 border-l-primary transition-all duration-700",
+                "bg-card border border-border rounded-lg p-6 transition-all duration-700",
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"
