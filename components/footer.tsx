@@ -1,4 +1,13 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 export function Footer() {
+  const pathname = usePathname();
+
+  // Hidden on the standalone /resume document.
+  if (pathname === "/resume") return null;
+
   return (
     <footer className="py-8 px-6 border-t border-border">
       <div className="mx-auto max-w-6xl">
