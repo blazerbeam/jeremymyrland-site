@@ -9,6 +9,53 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "the-idea-im-not-building",
+    title: "The idea I'm not going to build",
+    date: "2026-07-24",
+    readingTime: "4 min",
+    summary:
+      "A recruiter's post gave me a product idea in about four seconds. I spent one morning falling for it and the rest of the morning talking myself out of it, which is the job now. Building the thing got easy. Figuring out if it's worth building is the hard part. Here's the idea, for free. I want to know what you'd build if you had the time.",
+    content: `**TL;DR.** A recruiter's post gave me a product idea in about four seconds. I spent one morning falling for it and the rest of the morning talking myself out of it, which is the job now. Building the thing got easy. Figuring out if it's worth building is the hard part. Here's the idea, for free. I want to know what you'd build if you had the time.
+
+---
+
+A few weeks ago a recruiter named Richard King posted something simple. He'd noticed the uptick in "sad to leave my employer of X years, thrilled to join ____" announcements. His advice to job seekers was practical: note the old employer, go check their careers page, the backfill is probably about to post.
+
+I had an idea before I finished reading it. Departures are a signal. Someone announces they're leaving, and that's a live opening at their old company, pointed right at the person who wants it. And I reacted the way I always do now. This is new. I could build it.
+
+## The idea, and how it died
+
+Working name, Backfill.fyi. Watch the departure announcements, turn each one into an alert on the open role, add Glassdoor-style notes on what the seat is actually like. I sketched it. I liked it.
+
+By lunch I'd killed it. Career-page monitoring is a solved, crowded problem. Departure detection already exists, it's just aimed at B2B sales instead of candidates. The person who just landed a new job has no reason to come back and document the old one. And "backfill" is already industry jargon for something else. The idea wasn't bad. It just didn't hold.
+
+So it pivoted. Pay to talk to the person who used to hold the exact seat you're interviewing for. Real scope, the real reason it opened, not generic prep. That died too. The insider-prep market is built out, it's a marketplace with one supplier per role, and the whole thing runs on someone's anxiety. I don't want to build a business that works better when people are scared.
+
+But one piece survived: a story.
+
+In 2021, Alex Shamir messaged me cold on LinkedIn. She'd just taken over my old role at Nike. Her opener was, roughly, "I guess I'm the new you." I said yes in about a minute and gave her every war story I had. We stayed in touch. Later, when I left Apple, I recommended her as my replacement. She got the job, did some genuinely cool work there, then went off and started her own company and sold it.
+
+That opener did all the work. "I'm the new you" is almost impossible to ignore. And it points at something nobody actually does: meet the person who had your seat before you. Not to prep for an interview. To understand the thing you just walked into.
+
+The predecessor conversation is the idea I actually believe in, smaller and weirder than the job board I started with. I still think it's good. I'm still not going to build it.
+
+## Why not
+
+Because I already caught the bug, and it has a name. It's Roost. It's a parent directory I'm building to replace the clunky one our school runs on. First customer, a hundred-plus families using it, and just about all of my free time. It's the most fun I've had with product in years.
+
+Around the same time, a peer named Matthew Thogerson posted something that stuck with me. The advice going around for product people in this brutal market is to vibecode your way back in. Ship a dozen apps. Out-build everyone. His pushback: the apps don't get you hired. Judgment does. Knowing where to say no, when to ask why, and when not to build at all.
+
+I replied that I've felt better about product this past year than I have in a long time. Both are true. They're the same thing. Building is fun again because the hard part changed. It used to be "can we even build this." Now it's "should we, and which one." The "I'm the new you" idea is proof. I could ship a version this month. The skill was deciding not to.
+
+## What I actually want
+
+I have more ideas than I will ever build. Anyone who catches this bug does. Building them isn't the hard part anymore. The hard part is time, and picking the right one, and the fact that you can only really love one of these at a time.
+
+So I'm giving this one away. If "meet your predecessor" grabs you, take it. I'll send you the whole messy idea doc, dead ends and all. I'd rather it exist than sit in my notes forever.
+
+What have you been inspired to build and haven't? What's the weird little problem you wish someone would just solve so you could use it? Tell me. I'm collecting them, and I'd love to talk through a few. Some of the best conversations I've had lately started exactly like that.`,
+  },
+  {
     slug: "funnel-or-umbrella",
     title: "Shit funnel or shit umbrella",
     date: "2026-05-04",
