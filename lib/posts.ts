@@ -19,7 +19,7 @@ export const posts: Post[] = [
 
 ---
 
-A few weeks ago a recruiter named Richard King posted something simple. He'd noticed the uptick in "sad to leave my employer of X years, thrilled to join ____" announcements. His advice to job seekers was practical: note the old employer, go check their careers page, the backfill is probably about to post.
+A recruiter named Richard King posted something simple. He'd noticed the uptick in "sad to leave my employer of X years, thrilled to join ____" announcements. His advice to job seekers was practical: note the old employer, go check their careers page, the backfill is probably about to post.
 
 I had an idea before I finished reading it. Departures are a signal. Someone announces they're leaving, and that's a live opening at their old company, pointed right at the person who wants it. And I reacted the way I always do now. This is new. I could build it.
 
