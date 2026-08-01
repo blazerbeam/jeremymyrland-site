@@ -31,7 +31,7 @@ export const posts: Post[] = [
 
 That kind of week.
 
-Some context: I've been building Roost since April. It's a private parent directory for school communities — the thing that replaces the spreadsheet your PTO rebuilds by hand every August. Nights and weekends, just me. Every hard part until now has been a building problem, which I like. Something doesn't work, you sit with it, eventually it works.
+Some context: I've been building Roost since April. It's a private parent directory for school communities. It replaces the spreadsheet your PTO rebuilds by hand every August. Nights and weekends, just me. Every hard part until now has been a building problem, which I like. Something doesn't work, you sit with it, eventually it works.
 
 The last few weeks have been different. Roost is live at my kid's school and it does what it's supposed to do. The job now is getting other people to look at it, and that's the first part of this that's felt like a slog.
 
@@ -39,11 +39,11 @@ The last few weeks have been different. Roost is live at my kid's school and it 
 
 Twelve videos. Eleven feature walkthroughs and one where I'm on camera talking about why I built the thing. A week of evenings, most of them going later than they should have.
 
-The recording is the part everyone imagines, and it is so tedious — the same thirty seconds over and over, each time slightly worse than the take you liked. But it wasn't the worst of it.
+The recording is the part everyone imagines, and it is so tedious: the same thirty seconds over and over, each time slightly worse than the take you liked. But it wasn't the worst of it.
 
 The worst of it was consistency. Twelve videos have to look like they came from the same place. Same intro card, same five seconds before the narration starts, same crossfade, same music at the same volume, same lower third with my name appearing at the same moment, same end card. Twelve times. None of it is hard. All of it is fiddly, and every one of those decisions is a small negotiation with software at eleven at night.
 
-What eventually worked was building one finished project as a template — splash card, end card, music bed already in place — and then duplicating it and swapping the middle for each new video. I should have figured that out on video two instead of video five.
+What eventually worked was building one finished project as a template (splash card, end card, music bed already in place) and then duplicating it and swapping the middle for each new video. I should have figured that out on video two instead of video five.
 
 I also wrote the same instructions out as a text prompt and reran it on every project rather than clicking through the same steps twelve times. Scene boundaries, intro duration, crossfade lengths, music gain, text styling, chapter markers, all of it spelled out once. That was the single biggest time save of the week, and it's the kind of thing that only occurs to you after you've done it by hand enough times to resent it.
 
@@ -354,8 +354,8 @@ If you break it, tell me. That's the most useful thing you can do.`,
     date: "2026-04-20",
     readingTime: "8 min",
     summary:
-      "Most workforce planning still treats talent as something you go get from outside. The better starting point is understanding what you already have — and building the systems and trust to make that visible.",
-    content: `**TL;DR.** Most organizations run workforce planning reactively or on a calendar. Neither approach sees what's already inside. Capability-led planning flips that — you understand what your people can actually do before you go hire for what you don't have. The hard part isn't the idea. It's scale, trust, and managers willing to let go.
+      "Most workforce planning still treats talent as something you go get from outside. The better starting point is understanding what you already have, and building the systems and trust to make that visible.",
+    content: `**TL;DR.** Most organizations run workforce planning reactively or on a calendar. Neither approach sees what's already inside. Capability-led planning flips that. You understand what your people can actually do before you go hire for what you don't have. The hard part isn't the idea. It's scale, trust, and managers willing to let go.
 
 ---
 
@@ -411,7 +411,7 @@ That's the problem. The idea was right. The execution didn't scale.
 
 The shift I'm interested in is this: before you look at who you need to hire, understand what you already have.
 
-Not job titles. Not tenure. Actual capabilities — the skills, patterns, and approaches that show up in how people work, not just what their résumé says.
+Not job titles. Not tenure. Actual capabilities: the skills, patterns, and approaches that show up in how people work, not just what their résumé says.
 
 The gap between "job title" and "what this person can actually do" is enormous in most organizations. And it creates real, concrete missed opportunities.
 
@@ -419,7 +419,7 @@ Consider this. Right now, somewhere in a large organization, there's a retail em
 
 Hiring didn't fail. The org just couldn't see what it already had.
 
-When you close that gap, a few things change. Strategy gets more honest, built on execution capacity that actually exists, not optimistic hiring assumptions. Hidden options emerge — the PM who knows how to build a data pipeline, the analyst who came up through operations, the designer with a background in behavioral economics. Talent investment gets more targeted. You're not sending people to training because it checks a box. You're building a specific capability you've identified as critical to something real.
+When you close that gap, a few things change. Strategy gets more honest, built on execution capacity that actually exists, not optimistic hiring assumptions. Hidden options emerge: the PM who knows how to build a data pipeline, the analyst who came up through operations, the designer with a background in behavioral economics. Talent investment gets more targeted. You're not sending people to training because it checks a box. You're building a specific capability you've identified as critical to something real.
 
 ## People need to be at the center of this. Full stop.
 
@@ -437,7 +437,7 @@ Think about what it would mean to have a clear, evidence-based picture of your o
 
 The goal isn't a company database built for workforce strategy decisions. It's a living picture of what people can do. One that's useful to them first, and useful to the organization as a result.
 
-## Managers are the bridge — and they have to let go a little
+## Managers are the bridge, and they have to let go a little
 
 This is where the equipment analogy comes back around.
 
