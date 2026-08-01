@@ -5,9 +5,92 @@ export type Post = {
   readingTime: string;
   summary: string;
   content: string;
+  /**
+   * Optional article image (path under /public). Used for the Open Graph /
+   * social share card and, when a post embeds a video, as the click-to-play
+   * poster. Posts without one fall back to the site default OG behavior.
+   */
+  image?: string;
+  /** Accessible iframe title for an embedded video, if the post has one. */
+  embedTitle?: string;
 };
 
 export const posts: Post[] = [
+  {
+    slug: "twelve-videos-in-a-week",
+    title:
+      "Twelve videos in a week, and what they taught me about my own product",
+    date: "2026-07-31",
+    readingTime: "5 min",
+    summary:
+      "I recorded the entire founder video and never turned the screen recording on. What making twelve product videos for Roost taught me about the patience real users actually have.",
+    image: "/images/writing/twelve-videos-in-a-week/poster.jpg",
+    embedTitle:
+      "Why I built Roost — a parent directory for school communities",
+    content: `I recorded the entire founder video and never turned the screen recording on. Figured that out on the third take.
+
+That kind of week.
+
+Some context: I've been building Roost since April. It's a private parent directory for school communities — the thing that replaces the spreadsheet your PTO rebuilds by hand every August. Nights and weekends, just me. Every hard part until now has been a building problem, which I like. Something doesn't work, you sit with it, eventually it works.
+
+The last few weeks have been different. Roost is live at my kid's school and it does what it's supposed to do. The job now is getting other people to look at it, and that's the first part of this that's felt like a slog.
+
+## The actual work
+
+Twelve videos. Eleven feature walkthroughs and one where I'm on camera talking about why I built the thing. A week of evenings, most of them going later than they should have.
+
+The recording is the part everyone imagines, and it is so tedious — the same thirty seconds over and over, each time slightly worse than the take you liked. But it wasn't the worst of it.
+
+The worst of it was consistency. Twelve videos have to look like they came from the same place. Same intro card, same five seconds before the narration starts, same crossfade, same music at the same volume, same lower third with my name appearing at the same moment, same end card. Twelve times. None of it is hard. All of it is fiddly, and every one of those decisions is a small negotiation with software at eleven at night.
+
+What eventually worked was building one finished project as a template — splash card, end card, music bed already in place — and then duplicating it and swapping the middle for each new video. I should have figured that out on video two instead of video five.
+
+I also wrote the same instructions out as a text prompt and reran it on every project rather than clicking through the same steps twelve times. Scene boundaries, intro duration, crossfade lengths, music gain, text styling, chapter markers, all of it spelled out once. That was the single biggest time save of the week, and it's the kind of thing that only occurs to you after you've done it by hand enough times to resent it.
+
+## On Descript
+
+I used [Descript](https://descript.cello.so/GMLSvfwBagy), and I'm glad I did.
+
+What it does well is let you edit video by editing the transcript. Delete a sentence, the video loses the sentence. Cut the "um," it's gone. Move a paragraph and the footage moves with it. If you think in text — and I do — that's most of the battle. It turned something I assumed would take weeks into about a week.
+
+Not all of it was smooth. The timeline editor fought me more than once, usually right when I was tired and wanted to be done. Layer ordering in particular: overlay text has to be applied after any zoom or reframe work, or it doesn't show up, and there's nothing that tells you that. You just get a video with no text on it and no idea why.
+
+And the AI credits go faster than you'd guess. That's worst at the start, when being new means redoing everything twice, which is exactly when you have the least sense of what each operation costs.
+
+The part I didn't expect: they sent me one of those "how's it going?" emails I normally delete without reading. I liked the product enough that I actually wrote back and told them which bits were frustrating. A real person replied, walked me through some transition fades the AI couldn't work out, and topped up my credits. I've ignored a hundred of those emails and never once seen it go that way.
+
+## The thing I keep thinking about
+
+I didn't read the docs.
+
+I wasn't going to watch a tutorial about the software I was using to make tutorials. I opened it and expected it to be obvious, and when it wasn't I got annoyed pretty fast. Call it ninety seconds before I started looking for some other way to do the thing, or some other tool entirely.
+
+I was, in that week, exactly the user I spend all my time trying to design for. Motivated, in a hurry, unwilling to be taught, and entirely capable of blaming the software for a problem I'd caused myself. When it was obvious, I loved it and told people. When it wasn't, my first instinct was that the product was bad, not that I was going too fast.
+
+That's about the patience a PTO volunteer is going to bring to Roost. Probably less, honestly. They're doing it in the evening, after their actual job, unpaid, because somebody asked them to and they said yes. They are not going to read my help page. They're going to open the thing, and either it makes sense in the first minute or they close the tab and go back to the spreadsheet that at least they understand.
+
+## What I'd do differently
+
+Build the template first. Do one video end to end, get every setting right, then never touch those settings again.
+
+Write the polish steps down as instructions rather than doing them from memory, because on video eight you will not remember what you did on video three, and the inconsistency is visible.
+
+Record in short segments instead of one continuous take. When you flub a thirty-second stretch, you re-record thirty seconds, not four minutes. That one change probably saved me two evenings.
+
+And check that the screen recording is actually on.
+
+Here's the short video, if you want to see what a few months of evenings adds up to:
+
+[EMBED:n1bqHP-DeD0]
+
+[The full set is here](https://www.youtube.com/playlist?list=PLPt7QbXbpk0o)
+
+And Roost itself, if you're a PTO person and any of this sounded familiar: [roost.directory](https://roost.directory)
+
+---
+
+**About that Descript link.** It's a referral link. If you sign up through it, you get 50% off for two months, and I get 30% of whatever you spend, up to $20. I signed up using somebody else's referral link, so passing one along seems fair. Everything above is what I'd have written without it.`,
+  },
   {
     slug: "the-idea-im-not-building",
     title: "The idea I'm not going to build",

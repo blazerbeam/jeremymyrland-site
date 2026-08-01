@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
+import { YouTubeFacade } from "@/components/youtube-facade";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -20,9 +21,25 @@ export async function generateMetadata({
   const post = getPostBySlug(slug);
   if (!post) return { title: "Post Not Found" };
 
+  const url = `/writing/${post.slug}`;
+  const images = post.image ? [{ url: post.image, width: 1280, height: 720 }] : undefined;
+
   return {
     title: `${post.title} | Jeremy Myrland`,
     description: post.summary,
+    openGraph: {
+      title: post.title,
+      description: post.summary,
+      type: "article",
+      url,
+      images,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.summary,
+      images: post.image ? [post.image] : undefined,
+    },
   };
 }
 
@@ -82,6 +99,28 @@ export default async function PostPage({
                 </h3>
               ),
               p: ({ children, node }) => {
+                // A paragraph that is exactly [EMBED:videoId] is a video embed
+                // marker (react-markdown renders the unlinked brackets as text).
+                // Swap it for the click-to-play facade — nothing from YouTube
+                // loads until the reader clicks.
+                const text = Array.isArray(children)
+                  ? children.filter((c) => typeof c === "string").join("")
+                  : typeof children === "string"
+                    ? children
+                    : "";
+                const embedMatch = text
+                  .trim()
+                  .match(/^\[EMBED:([A-Za-z0-9_-]+)\]$/);
+                if (embedMatch && post.image) {
+                  return (
+                    <YouTubeFacade
+                      videoId={embedMatch[1]}
+                      title={post.embedTitle ?? post.title}
+                      poster={post.image}
+                    />
+                  );
+                }
+
                 // Check if this is the first paragraph (TL;DR)
                 const parent = node?.position?.start;
                 const isFirstParagraph = parent?.line === 1;
@@ -124,16 +163,24 @@ export default async function PostPage({
                 </ol>
               ),
               li: ({ children }) => <li>{children}</li>,
-              a: ({ href, children }) => (
-                <a
-                  href={href}
-                  className="text-primary underline hover:no-underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {children}
-                </a>
-              ),
+              a: ({ href, children }) => {
+                // Affiliate/referral links get rel="sponsored" for disclosure.
+                // "sponsored" preserves the referrer (no noreferrer) so the
+                // partner's attribution still works.
+                const isSponsored =
+                  typeof href === "string" &&
+                  href.includes("descript.cello.so");
+                return (
+                  <a
+                    href={href}
+                    className="text-primary underline hover:no-underline"
+                    target="_blank"
+                    rel={isSponsored ? "sponsored noopener" : "noopener noreferrer"}
+                  >
+                    {children}
+                  </a>
+                );
+              },
               hr: () => <hr className="border-border my-10" />,
               code: ({ children }) => (
                 <code className="bg-card px-1.5 py-0.5 rounded text-sm font-mono text-foreground">
