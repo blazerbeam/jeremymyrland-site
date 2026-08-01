@@ -18,6 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://jeremymyrland.com'),
   title: 'Jeremy Myrland | Senior Product Leader',
   description: '15 years of product leadership at Nike, Workday, Wayfair, and Apple. I specialize in orchestration — connecting fragmented systems, teams, and workflows so they produce real outcomes.',
   generator: 'v0.app',
