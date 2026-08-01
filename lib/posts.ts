@@ -31,7 +31,7 @@ export const posts: Post[] = [
 
 That kind of week.
 
-Some context: I've been building Roost since April. It's a private parent directory for school communities — the thing that replaces the spreadsheet your PTO rebuilds by hand every August. Nights and weekends, just me. Every hard part until now has been a building problem, which I like. Something doesn't work, you sit with it, eventually it works.
+Some context: I've been building Roost since April. It's a private parent directory for school communities. It replaces the spreadsheet your PTO rebuilds by hand every August. Nights and weekends, just me. Every hard part until now has been a building problem, which I like. Something doesn't work, you sit with it, eventually it works.
 
 The last few weeks have been different. Roost is live at my kid's school and it does what it's supposed to do. The job now is getting other people to look at it, and that's the first part of this that's felt like a slog.
 
@@ -39,11 +39,11 @@ The last few weeks have been different. Roost is live at my kid's school and it 
 
 Twelve videos. Eleven feature walkthroughs and one where I'm on camera talking about why I built the thing. A week of evenings, most of them going later than they should have.
 
-The recording is the part everyone imagines, and it is so tedious — the same thirty seconds over and over, each time slightly worse than the take you liked. But it wasn't the worst of it.
+The recording is the part everyone imagines, and it is so tedious: the same thirty seconds over and over, each time slightly worse than the take you liked. But it wasn't the worst of it.
 
 The worst of it was consistency. Twelve videos have to look like they came from the same place. Same intro card, same five seconds before the narration starts, same crossfade, same music at the same volume, same lower third with my name appearing at the same moment, same end card. Twelve times. None of it is hard. All of it is fiddly, and every one of those decisions is a small negotiation with software at eleven at night.
 
-What eventually worked was building one finished project as a template — splash card, end card, music bed already in place — and then duplicating it and swapping the middle for each new video. I should have figured that out on video two instead of video five.
+What eventually worked was building one finished project as a template (splash card, end card, music bed already in place) and then duplicating it and swapping the middle for each new video. I should have figured that out on video two instead of video five.
 
 I also wrote the same instructions out as a text prompt and reran it on every project rather than clicking through the same steps twelve times. Scene boundaries, intro duration, crossfade lengths, music gain, text styling, chapter markers, all of it spelled out once. That was the single biggest time save of the week, and it's the kind of thing that only occurs to you after you've done it by hand enough times to resent it.
 
