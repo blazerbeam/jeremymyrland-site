@@ -81,7 +81,7 @@ And check that the screen recording is actually on.
 
 Here's the short video, if you want to see what a few months of evenings adds up to:
 
-[EMBED:n1bqHP-DeD0]
+[EMBED:eNfGBqXcQsM]
 
 [The full set is here](https://www.youtube.com/playlist?list=PLPt7QbXbpk0o)
 
