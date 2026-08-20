@@ -7,12 +7,12 @@ const projects = [
   {
     name: "Roost",
     url: "https://roost.directory",
-    tag: "Live · First customer",
+    tag: "Live · Three schools",
     featured: true,
     problem:
       "Our school ran on DirectorySpot: dated, clunky, the kind of tool nobody opens twice. I'd already built bethere.community to fix the volunteer-matching half of the problem. But the real gap was bigger. A school's entire parent community, from the directory to class lists to carpools to clubs, was scattered across aging tools that families quietly gave up on.",
     solution:
-      "Roost, a modern parent directory that replaces DirectorySpot. Magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. It's the culmination of bethere.community and years of fighting our own directory. Launched in 2026 and now live on iOS and Android. I've landed my first customer, and over 100 families have used it.",
+      "Roost, a modern parent directory that replaces DirectorySpot. Magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. It's the culmination of bethere.community and years of fighting our own directory. Launched in 2026 and now live on iOS and Android. Three schools now run on it — an elementary, a middle school, and a high school — covering more than 1,800 students and 2,500 parents.",
     builtWith: "Claude Code, Next.js, Supabase, and Vercel",
   },
   {
@@ -34,13 +34,13 @@ const projects = [
     builtWith: "Claude AI, v0, and Vercel",
   },
   {
-    name: "fhpto.org (working prototype)",
-    url: "https://v0-forest-hills-pto-website.vercel.app/",
+    name: "fhpto.org",
+    url: "https://fhpto.org",
     github: "https://github.com/blazerbeam/v0-forest-hills-pto-website",
     problem:
       "I'm the incoming President of our school PTO. Our official PTO presence was a district-mandated compliance page — ugly, dense, hard for parents to use. New families had nowhere good to start. A parent survey confirmed it: people wanted to help but didn't know how, and felt overwhelmed by communications.",
     solution:
-      "A modern, parent-friendly site organized around what a busy parent actually needs in 30 seconds — what's this week, what's the year look like, who runs this, how do I get involved. Multi-page, mobile-first, with an illustrated calendar and an 'at a glance' page that fits the whole PTO on one screen. Built in 8 hours across two evenings. Now a working prototype — district policy required taking it offline at fhpto.org.",
+      "A modern, parent-friendly site organized around what a busy parent actually needs in 30 seconds — what's this week, what's the year look like, who runs this, how do I get involved. Multi-page, mobile-first, with an illustrated calendar and an 'at a glance' page that fits the whole PTO on one screen. Built in 8 hours across two evenings. Live at fhpto.org, and now the front door for a PTO I've spent the year operationalizing — Google Workspace for board continuity, a nonprofit Canva for anyone to make something on-brand, and a digital welcome pack that replaced the paper one.",
     builtWith: "Claude AI, v0, and Vercel",
   },
   {
@@ -95,8 +95,8 @@ export function BuildingSection() {
             time fast enough. Generative AI changed that. Now I go from problem to
             working product in days, not quarters. Most of what&apos;s below started
             as an experiment to solve a real problem I&apos;ve lived. One of them,
-            Roost, has grown into a real product, with a first customer and over 100
-            families using it.
+            Roost, has grown into a real product — three schools now run on it,
+            covering more than 2,500 parents.
           </p>
         </div>
 

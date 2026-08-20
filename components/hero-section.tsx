@@ -32,7 +32,7 @@ export function HeroSection() {
               I make complex systems actually work.
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Staff PM and Director of Product. 15 years orchestrating fragmented systems, teams, and data so they actually function together. Enterprise HR at Nike. Platform at Workday. Consumer search at Apple, Wayfair, and Nike. Early-stage product at Jama, Constructor, and Viewpoint. And now founder of Roost, a modern parent directory in the hands of over 100 families.
+              Staff PM and Director of Product. 15 years orchestrating fragmented systems, teams, and data so they actually function together. Enterprise HR at Nike. Platform at Workday. Consumer search at Apple, Wayfair, and Nike. Early-stage product at Jama, Constructor, and Viewpoint. And now founder of Roost, a modern parent directory running at three schools.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button

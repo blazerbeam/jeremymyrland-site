@@ -13,7 +13,7 @@ const workHistory = [
       "Founder of Roost, a modern parent directory that replaces DirectorySpot. Built solo, from the data model to the iOS and Android apps, while working full-time at Nike.",
     outcomes: [
       "Shipped a person-centric directory with magic-link sign-in and privacy each family controls, enforced at the database layer",
-      "Launched on iOS and Android in 2026, landed a first customer, and have over 100 families using the product",
+      "Launched on iOS and Android in 2026 and signed three school customers — an elementary, a middle school, and a high school — covering 1,800+ students and 2,500+ parents",
       "The culmination of bethere.community and years of fighting our own school's directory",
     ],
   },

@@ -13,7 +13,7 @@ const experience = [
     bullets: [
       "Built a modern parent directory replacing the incumbent (DirectorySpot), solo: the Postgres data model and row-level security, the Next.js web app, and native iOS and Android apps.",
       "Shipped it with AI coding agents, MCP tooling, and CLIs — no CS background — while working full time at Nike.",
-      "First customer signed; 100+ families live across web and mobile.",
+      "Three school customers signed — elementary, middle, and high school — covering 1,800+ students and 2,500+ parents across web and mobile.",
     ],
   },
   {
@@ -132,7 +132,7 @@ const products = [
   {
     name: "Roost",
     detail:
-      "Parent directory at roost.directory. First customer, 100+ families, live on iOS and Android.",
+      "Parent directory at roost.directory. Three school customers, 2,500+ parents, live on iOS and Android.",
   },
   {
     name: "bethere.community",
