@@ -18,10 +18,11 @@ const projects = [
   {
     name: "bethere.community",
     url: "https://bethere.community",
+    tag: "Shipped into Roost",
     problem:
-      "I was running our school PTO and watched the same thing happen every year — parents get blasted with generic volunteer asks, most ignore them, and the same five people end up doing everything. The matching problem seemed solvable.",
+      "I was running our school PTO and watched the same thing happen every year. Parents get blasted with generic volunteer asks, most ignore them, and the same five people end up doing everything. The matching problem seemed solvable.",
     solution:
-      "Answer a few questions, get matched to opportunities that actually fit your life. First real thing I've ever shipped.",
+      "Answer a few questions, get matched to opportunities that actually fit your life. First real thing I ever shipped, and the prototype that proved parents would answer. What it couldn't solve on its own was that a PTO's committees, events, and people already live somewhere else, and no chair is going to re-enter all of it into a second tool. So I rebuilt it inside Roost, where that data already exists. It runs there now. The original is still live as a record of where the idea started.",
     builtWith: "Claude AI, v0, and Vercel",
   },
   {
