@@ -22,23 +22,9 @@ export const metadata: Metadata = {
   title: 'Jeremy Myrland | Senior Product Leader',
   description: '15 years of product leadership at Nike, Workday, Wayfair, and Apple. I specialize in orchestration — connecting fragmented systems, teams, and workflows so they produce real outcomes.',
   generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
+  // Icons come from the app/ file convention (icon.svg, icon.png, apple-icon.png).
+  // The block that used to sit here pointed at four files that were never
+  // committed, so every request 404'd and browsers fell back to the globe.
 }
 
 export default function RootLayout({
