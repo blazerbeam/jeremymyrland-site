@@ -136,7 +136,8 @@ const products = [
   },
   {
     name: "bethere.community",
-    detail: "Volunteer matching for school communities.",
+    detail:
+      "Volunteer matching for school communities. Now shipped as part of Roost.",
   },
   {
     name: "inkind.one",
