@@ -7,12 +7,12 @@ const projects = [
   {
     name: "Roost",
     url: "https://roost.directory",
-    tag: "Live · Three schools",
+    tag: "Live · Five schools",
     featured: true,
     problem:
       "Our school ran on DirectorySpot: dated, clunky, the kind of tool nobody opens twice. I'd already built bethere.community to fix the volunteer-matching half of the problem. But the real gap was bigger. A school's entire parent community, from the directory to class lists to carpools to clubs, was scattered across aging tools that families quietly gave up on.",
     solution:
-      "Roost, a modern parent directory that replaces DirectorySpot. Magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. It's the culmination of bethere.community and years of fighting our own directory. Launched in 2026 and now live on iOS and Android. Three schools now run on it — an elementary, a middle school, and a high school — covering more than 1,800 students and 2,500 parents.",
+      "A modern parent directory that replaces DirectorySpot. Magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. It is the culmination of bethere.community and years of fighting our own directory.\n\nLaunched in 2026, live on iOS and Android. Now running in five Lake Oswego schools across elementary, middle, and high school, covering about 1,700 families. 79% of households at the first school have logged in. Fewer than half a percent of parents have opted out of being listed. About 270 families have kids at more than one school and use a single login for all of them.",
     builtWith: "Claude Code, Next.js, Supabase, and Vercel",
   },
   {
@@ -96,8 +96,8 @@ export function BuildingSection() {
             time fast enough. Generative AI changed that. Now I go from problem to
             working product in days, not quarters. Most of what&apos;s below started
             as an experiment to solve a real problem I&apos;ve lived. One of them,
-            Roost, has grown into a real product — three schools now run on it,
-            covering more than 2,500 parents.
+            Roost, has grown into a real product. Five schools now run on it,
+            covering about 1,700 families.
           </p>
         </div>
 
@@ -177,7 +177,11 @@ export function BuildingSection() {
                   {"tagline" in project ? "The deeper story" : "What I built"}
                 </span>
                 <blockquote className="mt-2 border-l-2 border-primary pl-4 text-sm sm:text-base text-foreground/90 leading-relaxed">
-                  {project.solution}
+                  {project.solution.split("\n\n").map((paragraph, i) => (
+                    <p key={i} className={i > 0 ? "mt-4" : undefined}>
+                      {paragraph}
+                    </p>
+                  ))}
                 </blockquote>
                 {"storyLink" in project && project.storyLink && (
                   <a
