@@ -12,7 +12,7 @@ const projects = [
     problem:
       "Our school ran on DirectorySpot: dated, clunky, the kind of tool nobody opens twice. I'd already built bethere.community to fix the volunteer-matching half of the problem. But the real gap was bigger. A school's entire parent community, from the directory to class lists to carpools to clubs, was scattered across aging tools that families quietly gave up on.",
     solution:
-      "A modern parent directory that replaces DirectorySpot. Magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. It is the culmination of bethere.community and years of fighting our own directory.\n\nLaunched in 2026, live on iOS and Android. Now running in five Lake Oswego schools across elementary, middle, and high school, covering about 1,700 families. 79% of households at the first school have logged in. Fewer than half a percent of parents have opted out of being listed. About 270 families have kids at more than one school and use a single login for all of them.",
+      "A modern parent directory that replaces DirectorySpot. Magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. It is the culmination of bethere.community and years of fighting our own directory.\n\nLaunched in 2026, live on iOS and Android. Now running in five Lake Oswego schools across elementary, middle, and high school, covering about 1,700 families. 79% of households at the first school have logged in. Zero opt-outs across all five. About 280 families have kids at more than one school and use a single login for all of them.",
     builtWith: "Claude Code, Next.js, Supabase, and Vercel",
   },
   {
