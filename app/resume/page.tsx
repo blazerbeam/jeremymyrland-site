@@ -13,7 +13,7 @@ const experience = [
     bullets: [
       "Built a modern parent directory replacing the incumbent (DirectorySpot), solo: the Postgres data model and row-level security, the Next.js web app, and native iOS and Android apps.",
       "Shipped it with AI coding agents, MCP tooling, and CLIs — no CS background — while working full time at Nike.",
-      "Five school customers signed across elementary, middle, and high school, covering about 1,700 families on web and mobile, plus the district education foundation.",
+      "Live at 6 Lake Oswego schools, K-12 (Forest Hills, Hallinan, Oak Creek, and Lake Grove Elementary, Lake Oswego Middle School, and Lake Oswego High School), reaching nearly 2,000 families, 2,700+ students, and 3,400+ parents and guardians on web and mobile, plus the district education foundation.",
     ],
   },
   {
@@ -132,7 +132,7 @@ const products = [
   {
     name: "Roost",
     detail:
-      "Parent directory at roost.directory. Five schools and a district education foundation, about 1,700 families, live on iOS and Android.",
+      "Parent directory at roost.directory. Live at 6 Lake Oswego schools, K-12, and a district education foundation, nearly 2,000 families, on iOS and Android.",
   },
   {
     name: "bethere.community",

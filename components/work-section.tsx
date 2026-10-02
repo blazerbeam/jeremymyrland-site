@@ -13,7 +13,7 @@ const workHistory = [
       "Founder of Roost, a modern parent directory that replaces DirectorySpot. Built solo, from the data model to the iOS and Android apps, while working full-time at Nike.",
     outcomes: [
       "Shipped a person-centric directory with magic-link sign-in and privacy each family controls, enforced at the database layer",
-      "Launched on iOS and Android in 2026. Five schools across elementary, middle, and high school now run on it, covering about 1,700 families, along with the district education foundation",
+      "Launched on iOS and Android in 2026. Now live at 6 Lake Oswego schools, K-12 (Forest Hills, Hallinan, Oak Creek, and Lake Grove Elementary, Lake Oswego Middle School, and Lake Oswego High School), reaching nearly 2,000 families, 2,700+ students, and 3,400+ parents and guardians, along with the district education foundation",
       "The culmination of bethere.community and years of fighting our own school's directory",
     ],
   },
