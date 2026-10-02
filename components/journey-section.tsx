@@ -129,9 +129,9 @@ const journeyRoles: JourneyRole[] = [
     dates: "2026–Present",
     color: "#14B8A6", // teal - the current chapter
     narrative:
-      "The culmination of everything before it. I'd spent years frustrated by the tools our school ran on, and I'd built bethere.community to fix one piece of it. Roost is the whole thing: a modern parent directory that replaces DirectorySpot, with magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. I built it solo while working full-time at Nike. Launched in 2026, shipped to iOS and Android, and signed five school customers across elementary, middle, and high school, covering about 1,700 families, plus the district education foundation. Same orchestration problem I've worked on for 15 years. This time it's mine.",
+      "The culmination of everything before it. I'd spent years frustrated by the tools our school ran on, and I'd built bethere.community to fix one piece of it. Roost is the whole thing: a modern parent directory that replaces DirectorySpot, with magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. I built it solo while working full-time at Nike. Launched in 2026, shipped to iOS and Android, and is now live at 6 Lake Oswego schools, K-12 (Forest Hills, Hallinan, Oak Creek, and Lake Grove Elementary, Lake Oswego Middle School, and Lake Oswego High School), reaching nearly 2,000 families, 2,700+ students, and 3,400+ parents and guardians, plus the district education foundation. Same orchestration problem I've worked on for 15 years. This time it's mine.",
     tags: ["Founder", "Parent Directory", "iOS + Android", "First Customer"],
-    stat: { value: "3 schools", color: "#14B8A6" }, // teal
+    stat: { value: "6 schools", color: "#14B8A6" }, // teal
   },
 ];
 

@@ -7,12 +7,12 @@ const projects = [
   {
     name: "Roost",
     url: "https://roost.directory",
-    tag: "Live · Five schools",
+    tag: "Live · 6 schools",
     featured: true,
     problem:
       "Our school ran on DirectorySpot: dated, clunky, the kind of tool nobody opens twice. I'd already built bethere.community to fix the volunteer-matching half of the problem. But the real gap was bigger. A school's entire parent community, from the directory to class lists to carpools to clubs, was scattered across aging tools that families quietly gave up on.",
     solution:
-      "A modern parent directory that replaces DirectorySpot. Magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. It is the culmination of bethere.community and years of fighting our own directory.\n\nLaunched in 2026, live on iOS and Android. Now running in five Lake Oswego schools across elementary, middle, and high school, covering about 1,700 families. 79% of households at the first school have logged in. Zero opt-outs across all five. About 280 families have kids at more than one school and use a single login for all of them.",
+      "A modern parent directory that replaces DirectorySpot. Magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. It is the culmination of bethere.community and years of fighting our own directory.\n\nLaunched in 2026, live on iOS and Android. Now live at 6 Lake Oswego schools, K-12 (Forest Hills, Hallinan, Oak Creek, and Lake Grove Elementary, Lake Oswego Middle School, and Lake Oswego High School), reaching nearly 2,000 families, 2,700+ students, and 3,400+ parents and guardians. Hundreds of families have kids at more than one school on a single login. At Forest Hills, where we started, more than 80% of families have signed in, and not one family has opted out.",
     builtWith: "Claude Code, Next.js, Supabase, and Vercel",
   },
   {
@@ -96,8 +96,8 @@ export function BuildingSection() {
             time fast enough. Generative AI changed that. Now I go from problem to
             working product in days, not quarters. Most of what&apos;s below started
             as an experiment to solve a real problem I&apos;ve lived. One of them,
-            Roost, has grown into a real product. Five schools now run on it,
-            covering about 1,700 families.
+            Roost, has grown into a real product. It is live at 6 Lake Oswego
+            schools, K-12, reaching nearly 2,000 families.
           </p>
         </div>
 
