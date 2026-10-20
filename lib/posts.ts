@@ -20,72 +20,61 @@ export const posts: Post[] = [
     slug: "the-district-gave-us-names-and-emails",
     title: "The district gave us names and emails",
     date: "2026-10-19",
-    readingTime: "5 min",
+    readingTime: "4 min",
     summary:
-      "Roost was built to be handed a roster. Then our school district decided PTOs would get each parent's name and email, and nothing else. What broke, what I rebuilt in about a week, and why it set up the grassroots version of Roost.",
-    content: `**TL;DR.** Roost was built to be handed a roster. Then our school district decided PTOs would get each parent's name and email, and nothing else. I had about a week to rebuild onboarding around families building their own records instead of confirming ours. The first version was wrong in ways worth writing down. Here's what broke, what I changed, and why I think the district did me a favor without meaning to.
+      "Roost was built to be handed a roster. Then our school district decided PTOs would get each parent's name and email, and nothing else. What broke when Roost had to onboard families from names and emails alone, what I learned, and why I'm glad it happened.",
+    content: `**TL;DR.** Roost was built around the school handing over a roster. This year our district could only give PTOs each parent's name and email. I rebuilt onboarding so families add themselves instead of confirming what the school sent, and I got a fair amount wrong along the way. Here's what broke, what I learned, and why I'm glad it happened.
 
 ---
 
-Roost is a parent directory. It's live at seven schools in Lake Oswego now, about 2,350 families, built on nights and weekends.
+Roost is a parent directory. It's live at seven schools in Lake Oswego, about 2,350 families, and I build it on nights and weekends.
 
-Every school directory works the same way underneath. Someone at the school has a roster: parents, kids, grades, teachers. The PTO gets a copy, loads it, and families show up already assembled. The best version of that product is one where a parent signs in and everything is already right. Confirm, maybe fix a typo, done.
+Most school directories work the same way underneath. The school has a roster with parents, kids, grades and teachers. The PTO gets a copy, loads it, and families show up already put together. A parent signs in, checks that it's right, maybe fixes a typo, and they're done.
 
-I built Roost to be that version. Less friction, fewer questions, let the data do the work.
+That's what I built Roost to do. The less a parent has to type, the better.
 
-## What we actually got
+## The change
 
-On October 8 the district told PTOs what they'd share this year: parent first name, last name and email, for parents who hadn't opted out. No kids. No grades. No teachers. Nothing saying which two adults are married, or which kid belongs to whom.
+On October 8 the district told PTOs what they could share this year: parent first name, last name and email, for parents who hadn't opted out. No kids, no grades, no teachers, and nothing about which adults belong to the same family.
 
-I get why. Less data shared is less data leaked. It was still the opposite of what the product assumed, and it landed the same week schools wanted to launch.
+A few days later someone from the district called me personally to apologize. They'd tried to give us more, but the way the rules were being interpreted didn't allow it. I told them not to worry about it. It gave me something I hadn't planned for, and it would only make the story better.
 
-A list of names and emails isn't a roster. It's a guest list.
+It also landed the week schools wanted to launch. I was up past 1 am two weekends in a row.
 
 ## What broke
 
-Everything that relied on the school knowing who a family is.
+Pretty much anything that depended on the school knowing who was in a family.
 
-**Email isn't identity.** Parents give different schools different addresses. Work email at one, personal at another. Two parents share one inbox. The first time I published a district list, Roost matched people by email, and it created 46 second copies of parents who were already in Roost under another address. 27 of them got an email asking them to add their kids, to a family that already had them. I caught it because I recognized names at my own kid's school. Publishing now checks names before it creates anyone, and the copies were folded back into the real records.
+**Matching by email.** Parents give different schools different addresses, and some couples share one inbox. The first time I published a district list, Roost matched people by email and created 46 second copies of parents who were already in Roost under another address. 27 of them got an email asking them to add kids to a family that already had them. I only noticed because I recognized names at my own kid's school. Roost now checks names before it creates anyone, and the copies were merged back into the real records.
 
-**A low number can be a broken pipe.** After the first invites, about 8% of parents signed in. That looked like low interest. Part of it was that sign-in links expired after an hour, and most parents opened the email later than that. Longer links, plus a reminder, and one school got ten sign-ins within hours.
+**A number I misread.** After the first invites, about 8% of parents signed in. I read that as low interest. Part of it was that sign-in links expired after an hour, and most people opened the email later than that. With longer links and a reminder, one school got ten sign-ins within a few hours.
 
-**The first parent who writes in is describing everyone who didn't.** A middle school mom emailed her PTO one evening: her ninth grader showed up, but she couldn't add her seventh grader. Roost showed 15 parents in her spot had signed in that day, and 2 had added kids. I'd been reading that as "parents are busy." It was a form that opened on the wrong school.
+**One parent's email.** A middle school mom wrote to her PTO one evening: her ninth grader showed up, but she couldn't add her seventh grader. Roost showed 15 parents in the same spot had signed in that day, and only 2 had added kids. I'd been chalking that up to busy parents. It was a form that opened on the wrong school.
 
-So I went through the welcome myself, as a brand new parent, from the email to the end. The first screen after sign-in sent people to the directory instead of to adding their kids. Nothing ever asked. That had been in front of real parents all day.
+After that I went through the whole welcome myself as a new parent, starting from the email. The first screen after signing in sent people to the directory instead of to adding their kids, and nothing on it asked. Real parents had been hitting that all day.
 
-## The first version was a list. The second was a plan.
+## The PTO side
 
-The PTO side had the same problem in a different shape. My first pass at the check-in compared the district list against Roost and sorted every family into a group: new to Roost, something's different, missing a teacher, not on this year's list. All accurate. Also not much help, because a volunteer looking at a page of problem groups doesn't know which one to touch first, and some of them make the others worse.
+My first version of the check-in compared the district list with Roost and sorted every family into groups: new, something different, missing a teacher, not on this year's list. It was accurate, and a volunteer had no idea where to start.
 
-The order turned out to be the product:
+What schools use now is a short set of steps with a status on each, in an order that heads off the problems I'd already caused. Find people who are already in Roost before adding anyone new. Ask families who might have moved away before sending invites. Ask for teachers before the welcome email goes out, so nobody gets two emails asking for the same thing.
 
-1. Upload the lists. Nothing in Roost changes yet.
-2. Find everyone already in Roost under another email, before anyone new gets added.
-3. Publish the rest.
-4. Ask parents who've signed in before to add their kids.
-5. Ask families who aren't on this year's list whether they're still at the school.
-6. Ask families missing a teacher to pick one.
-7. Send everyone else a welcome invite, which asks for all of it.
-8. The leftovers only a family can answer: two homes, stepfamilies, a kid only Roost knows about.
+Palisades was the first school to run it start to finish. 513 invites went out, and 27 parents signed in within 25 minutes, adding their kids and picking teachers as they went.
 
-Each step shows done, to do, or waiting. Every one is there because skipping it caused something. Publish before step 2 and you make duplicates. Send the welcome before step 5 and you invite families who moved away. Send it before step 6 and some parents get two emails asking for the same thing.
+## What I'm taking from it
 
-## Where it landed
+- Onboarding rests on assumptions about who has the data. When that changes, the product has to change with it, so find out early who holds it and what they're allowed to share.
+- Before anything creates records in bulk, show who it would create, matched every way you can.
+- Before a big send, walk through the whole thing as the person receiving it, not just the screen you changed.
+- If the person using a tool has to figure out what to do first, the tool needs more work.
 
-Palisades was the first school to run the finished version from top to bottom. 513 invites went out, and 27 parents signed in within 25 minutes, adding kids and picking teachers as they went.
+Mostly, it was a good reminder of what the job is. A product manager doesn't get to pick the constraints. The work is building something good inside them, quickly, and owning what breaks along the way. It's a muscle I hadn't needed in a while, and it felt good to use it again.
 
-## What I'd tell someone else
+## What it sets up
 
-- **Onboarding is a set of assumptions about who holds the data.** When that changes, the product changes. Find out early who actually holds it, and what they're allowed to hand you.
-- **Count before you create.** Any bulk action that makes records should show who it would make, matched every way you can, before it runs.
-- **Walk the whole journey before a big send.** Not the screen you changed. All of it, starting from the email.
-- **Steps beat lists.** If the person using the tool has to decide what to do first, the tool isn't done.
+I'd been planning a free tier where any parent can start a directory for their school, no PTO needed. The hard part was always going to be that there's no roster, so families have to add themselves.
 
-## The accidental favor
-
-I'd been planning a free grassroots tier: any parent can start a directory for their school, no PTO required. The hard part was always going to be that there's no roster. Families have to put themselves in.
-
-That's what I just built, on a deadline, for seven schools. The district didn't mean to, but it made me build the grassroots version first.`,
+That's what I just built for seven schools. I wasn't planning to do it this fall, but the district's change got me there first.`,
   },
   {
     slug: "twelve-videos-in-a-week",
