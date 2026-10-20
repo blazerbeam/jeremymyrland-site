@@ -50,7 +50,9 @@ This project no longer uses v0. Claude Code edits files directly. The loop:
 - Avoid: corporate speak, inspirational language, repetition.
 - AI tells to watch for and strip from drafts: "said out loud," "different tool, same
   trap," "the signal was clear," overuse of "completely," reflexive parallel-structure
-  kickers.
+  kickers. Also the punchy contrast line: "A list of names and emails isn't a roster.
+  It's a guest list." and "The first version was a list. The second was a plan." Jeremy
+  hates these. Say the plain thing instead.
 - Goal: an experienced operator explaining how things work and what to do next.
 
 ### Blog / writing section (technical)
