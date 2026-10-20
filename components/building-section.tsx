@@ -12,7 +12,7 @@ const projects = [
     problem:
       "Our school ran on DirectorySpot: dated, clunky, the kind of tool nobody opens twice. I'd already built bethere.community to fix the volunteer-matching half of the problem. But the real gap was bigger. A school's entire parent community, from the directory to class lists to carpools to clubs, was scattered across aging tools that families quietly gave up on.",
     solution:
-      "A modern parent directory that replaces DirectorySpot. Magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. It is the culmination of bethere.community and years of fighting our own directory.\n\nLaunched in 2026, live on iOS and Android. Now live at 6 Lake Oswego schools, K-12 (Forest Hills, Hallinan, Oak Creek, and Lake Grove Elementary, Lake Oswego Middle School, and Lake Oswego High School), reaching nearly 2,000 families, 2,700+ students, and 3,400+ parents and guardians. Hundreds of families have kids at more than one school on a single login. At Forest Hills, where we started, more than 80% of families have signed in, and not one family has opted out.",
+      "A modern parent directory that replaces DirectorySpot. Magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. It is the culmination of bethere.community and years of fighting our own directory.\n\nLaunched in 2026, live on iOS and Android. Now live at 7 Lake Oswego schools, K-12 (Forest Hills, Hallinan, Oak Creek, and Lake Grove Elementary, Palisades World Language School, Lake Oswego Middle School, and Lake Oswego High School), reaching about 2,350 families, 3,300+ students, and 4,200+ parents and guardians. Hundreds of families have kids at more than one school on a single login. At Forest Hills, where we started, more than 80% of families have signed in, and not one family has opted out.",
     builtWith: "Claude Code, Next.js, Supabase, and Vercel",
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     url: "https://fhpto.org",
     github: "https://github.com/blazerbeam/v0-forest-hills-pto-website",
     problem:
-      "I'm the incoming President of our school PTO. Our official PTO presence was a district-mandated compliance page — ugly, dense, hard for parents to use. New families had nowhere good to start. A parent survey confirmed it: people wanted to help but didn't know how, and felt overwhelmed by communications.",
+      "I'm the President of our school PTO. Our official PTO presence was a district-mandated compliance page: ugly, dense, hard for parents to use. New families had nowhere good to start. A parent survey confirmed it: people wanted to help but didn't know how, and felt overwhelmed by communications.",
     solution:
       "A modern, parent-friendly site organized around what a busy parent actually needs in 30 seconds — what's this week, what's the year look like, who runs this, how do I get involved. Multi-page, mobile-first, with an illustrated calendar and an 'at a glance' page that fits the whole PTO on one screen. Built in 8 hours across two evenings. Live at fhpto.org, and now the front door for a PTO I've spent the year operationalizing — Google Workspace for board continuity, a nonprofit Canva for anyone to make something on-brand, and a digital welcome pack that replaced the paper one.",
     builtWith: "Claude AI, v0, and Vercel",
@@ -96,8 +96,8 @@ export function BuildingSection() {
             time fast enough. Generative AI changed that. Now I go from problem to
             working product in days, not quarters. Most of what&apos;s below started
             as an experiment to solve a real problem I&apos;ve lived. One of them,
-            Roost, has grown into a real product. It is live at 6 Lake Oswego
-            schools, K-12, reaching nearly 2,000 families.
+            Roost, has grown into a real product. It is live at 7 Lake Oswego
+            schools, K-12, reaching about 2,350 families.
           </p>
         </div>
 

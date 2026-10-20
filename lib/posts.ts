@@ -17,6 +17,77 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "the-district-gave-us-names-and-emails",
+    title: "The district gave us names and emails",
+    date: "2026-10-19",
+    readingTime: "5 min",
+    summary:
+      "Roost was built to be handed a roster. Then our school district decided PTOs would get each parent's name and email, and nothing else. What broke, what I rebuilt in about a week, and why it set up the grassroots version of Roost.",
+    content: `**TL;DR.** Roost was built to be handed a roster. Then our school district decided PTOs would get each parent's name and email, and nothing else. I had about a week to rebuild onboarding around families building their own records instead of confirming ours. The first version was wrong in ways worth writing down. Here's what broke, what I changed, and why I think the district did me a favor without meaning to.
+
+---
+
+Roost is a parent directory. It's live at seven schools in Lake Oswego now, about 2,350 families, built on nights and weekends.
+
+Every school directory works the same way underneath. Someone at the school has a roster: parents, kids, grades, teachers. The PTO gets a copy, loads it, and families show up already assembled. The best version of that product is one where a parent signs in and everything is already right. Confirm, maybe fix a typo, done.
+
+I built Roost to be that version. Less friction, fewer questions, let the data do the work.
+
+## What we actually got
+
+On October 8 the district told PTOs what they'd share this year: parent first name, last name and email, for parents who hadn't opted out. No kids. No grades. No teachers. Nothing saying which two adults are married, or which kid belongs to whom.
+
+I get why. Less data shared is less data leaked. It was still the opposite of what the product assumed, and it landed the same week schools wanted to launch.
+
+A list of names and emails isn't a roster. It's a guest list.
+
+## What broke
+
+Everything that relied on the school knowing who a family is.
+
+**Email isn't identity.** Parents give different schools different addresses. Work email at one, personal at another. Two parents share one inbox. The first time I published a district list, Roost matched people by email, and it created 46 second copies of parents who were already in Roost under another address. 27 of them got an email asking them to add their kids, to a family that already had them. I caught it because I recognized names at my own kid's school. Publishing now checks names before it creates anyone, and the copies were folded back into the real records.
+
+**A low number can be a broken pipe.** After the first invites, about 8% of parents signed in. That looked like low interest. Part of it was that sign-in links expired after an hour, and most parents opened the email later than that. Longer links, plus a reminder, and one school got ten sign-ins within hours.
+
+**The first parent who writes in is describing everyone who didn't.** A middle school mom emailed her PTO one evening: her ninth grader showed up, but she couldn't add her seventh grader. Roost showed 15 parents in her spot had signed in that day, and 2 had added kids. I'd been reading that as "parents are busy." It was a form that opened on the wrong school.
+
+So I went through the welcome myself, as a brand new parent, from the email to the end. The first screen after sign-in sent people to the directory instead of to adding their kids. Nothing ever asked. That had been in front of real parents all day.
+
+## The first version was a list. The second was a plan.
+
+The PTO side had the same problem in a different shape. My first pass at the check-in compared the district list against Roost and sorted every family into a group: new to Roost, something's different, missing a teacher, not on this year's list. All accurate. Also not much help, because a volunteer looking at a page of problem groups doesn't know which one to touch first, and some of them make the others worse.
+
+The order turned out to be the product:
+
+1. Upload the lists. Nothing in Roost changes yet.
+2. Find everyone already in Roost under another email, before anyone new gets added.
+3. Publish the rest.
+4. Ask parents who've signed in before to add their kids.
+5. Ask families who aren't on this year's list whether they're still at the school.
+6. Ask families missing a teacher to pick one.
+7. Send everyone else a welcome invite, which asks for all of it.
+8. The leftovers only a family can answer: two homes, stepfamilies, a kid only Roost knows about.
+
+Each step shows done, to do, or waiting. Every one is there because skipping it caused something. Publish before step 2 and you make duplicates. Send the welcome before step 5 and you invite families who moved away. Send it before step 6 and some parents get two emails asking for the same thing.
+
+## Where it landed
+
+Palisades was the first school to run the finished version from top to bottom. 513 invites went out, and 27 parents signed in within 25 minutes, adding kids and picking teachers as they went.
+
+## What I'd tell someone else
+
+- **Onboarding is a set of assumptions about who holds the data.** When that changes, the product changes. Find out early who actually holds it, and what they're allowed to hand you.
+- **Count before you create.** Any bulk action that makes records should show who it would make, matched every way you can, before it runs.
+- **Walk the whole journey before a big send.** Not the screen you changed. All of it, starting from the email.
+- **Steps beat lists.** If the person using the tool has to decide what to do first, the tool isn't done.
+
+## The accidental favor
+
+I'd been planning a free grassroots tier: any parent can start a directory for their school, no PTO required. The hard part was always going to be that there's no roster. Families have to put themselves in.
+
+That's what I just built, on a deadline, for seven schools. The district didn't mean to, but it made me build the grassroots version first.`,
+  },
+  {
     slug: "twelve-videos-in-a-week",
     title:
       "Twelve videos in a week, and what they taught me about my own product",

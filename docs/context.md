@@ -81,7 +81,7 @@ words, mix lengths deliberately, real artifact images over stock.
 - **bethere.community** — volunteer matching for school PTOs. First thing Jeremy shipped.
 - **inkind.one** — nonprofit gala auction procurement app. Also uses Supabase.
 - **fhpto.org** — Forest Hills Elementary PTO site. Beta, in active use. Built in ~8 hours
-  as incoming PTO President. Mobile-first, organized around what a busy parent needs in 30
+  as PTO President. Mobile-first, organized around what a busy parent needs in 30
   seconds.
 
 Stack for all three: Next.js, TypeScript, Vercel, Claude AI.
@@ -89,7 +89,7 @@ Stack for all three: Next.js, TypeScript, Vercel, Claude AI.
 ## Community & civic (public)
 
 American Leadership Forum (ALF) Oregon Chapter Fellow, Class of 2026-27. Lake Oswego
-Schools Foundation board. Forest Hills PTO (incoming President). Children's Cancer
+Schools Foundation board. Forest Hills PTO (President, 2026-27). Children's Cancer
 Association, Special Olympics Oregon, Habitat for Humanity, Young Entrepreneurs Business
 Week. Big Blazers and OSU fan (footer only).
 
