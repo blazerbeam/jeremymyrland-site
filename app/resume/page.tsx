@@ -12,8 +12,8 @@ const experience = [
     dates: "2026–Present",
     bullets: [
       "Built a modern parent directory replacing the incumbent (DirectorySpot), solo: the Postgres data model and row-level security, the Next.js web app, and native iOS and Android apps.",
-      "Shipped it with AI coding agents, MCP tooling, and CLIs — no CS background — while working full time at Nike.",
-      "Live at 7 Lake Oswego schools, K-12 (Forest Hills, Hallinan, Oak Creek, and Lake Grove Elementary, Palisades World Language School, Lake Oswego Middle School, and Lake Oswego High School), reaching about 2,350 families, 3,300+ students, and 4,200+ parents and guardians on web and mobile, plus the district education foundation.",
+      "Shipped it with AI coding agents, MCP tooling, and CLIs, with no CS background, while working full time at Nike.",
+      "7 paying schools in Lake Oswego, K-12, plus the district education foundation. About 2,800 families on web and mobile.",
     ],
   },
   {
@@ -21,10 +21,12 @@ const experience = [
     title: "Principal PM, HR Global Technology",
     dates: "2025–Present",
     bullets: [
-      "Own product strategy for an enterprise HR platform serving 75,000+ employees across retail, corporate, and supply chain, with Workday as the system of record.",
-      "Drove platform consolidation and automation: collapsed document management into Workday, eliminating redundant tooling and saving hundreds of thousands in annual licensing.",
-      "Build intake and prioritization frameworks and outcome-based metrics tied to self-service adoption and process efficiency.",
-      "Introduced manager-facing workflow intelligence and proactive recommendations to reduce HR support escalations.",
+      "Own product strategy for the HR platform serving 75,000+ employees across retail, corporate, distribution and manufacturing, with Workday as the system of record.",
+      "Leading a multi-year global onboarding rebuild that replaces ServiceNow, Workday and manual steps with one Workday experience from offer through first pay. Cut time to start from a 15-day minimum to 3 days in most cases. Live in the US, Canada and Mexico; China and India rolling out through March 2027.",
+      "Consolidated employee document management from ServiceNow into Workday: $750K saved plus $200K a year ongoing. Employees self-serve most employment documents instead of filing tickets.",
+      "Automated California meal waiver compliance, replacing quarterly store-manager spreadsheets with a systematic Workday process. Cut fines from ~$25K a quarter to near zero.",
+      "Partner with global process owners and Talent Acquisition to turn country-specific hiring rules, works council requirements and self-identification into Workday solutions, including pre-hire collection of legal and demographic documents.",
+      "Built a personal AI chief-of-staff agent that keeps PRDs current, handles all my Jira authoring, maps cross-team dependencies, and drafts monthly and quarterly updates. Saves 5+ hours a week.",
     ],
   },
   {
@@ -119,7 +121,7 @@ const expertise = [
   {
     label: "HR Technology",
     detail:
-      "Workday · HRIS · workforce planning · self-service automation · compliance workflows",
+      "Workday · ServiceNow · global onboarding · multi-country hiring requirements · self-service automation · compliance workflows · workforce planning",
   },
   {
     label: "Leadership",
@@ -132,7 +134,7 @@ const products = [
   {
     name: "Roost",
     detail:
-      "Parent directory at roost.directory. Live at 7 Lake Oswego schools, K-12, and a district education foundation, about 2,350 families, on iOS and Android.",
+      "Parent directory at roost.directory. 7 paying schools in Lake Oswego, K-12, plus the district education foundation. About 2,800 families, on iOS and Android.",
   },
   {
     name: "bethere.community",
@@ -151,10 +153,11 @@ const products = [
 
 const community = [
   {
-    org: "Lake Oswego Schools Foundation",
-    detail: "Board member, fundraising strategy",
+    org: "American Leadership Forum of Oregon",
+    detail: "Class 48 Fellow, 2026–27",
   },
-  { org: "Forest Hills PTO", detail: "Board" },
+  { org: "Lake Oswego Schools Foundation", detail: "Vice President" },
+  { org: "Forest Hills PTO", detail: "President, 2026–27" },
   {
     org: "Special Olympics Oregon",
     detail: "Super Plunger, $10,000+ raised",
@@ -181,7 +184,7 @@ export default function ResumePage() {
   useEffect(() => {
     const previous = document.title;
     // Browsers use the document title as the default filename when saving to PDF.
-    document.title = "Jeremy Myrland — Résumé";
+    document.title = "Jeremy Myrland Résumé";
     return () => {
       document.title = previous;
     };
@@ -189,7 +192,7 @@ export default function ResumePage() {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
-      {/* Toolbar — screen only */}
+      {/* Toolbar, screen only */}
       <div className="print:hidden sticky top-0 z-10 border-b border-border bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-3">
           <a
@@ -251,15 +254,13 @@ export default function ResumePage() {
           <SectionLabel>Experience</SectionLabel>
           <div className="mt-5 space-y-6">
             {experience.map((role) => (
-              <div
-                key={`${role.company}-${role.dates}`}
-                className="break-inside-avoid"
-              >
-                <div className="flex flex-wrap items-baseline justify-between gap-x-3">
+              <div key={`${role.company}-${role.dates}`}>
+                {/* Roles may split across printed pages, but never strand a heading */}
+                <div className="flex flex-wrap items-baseline justify-between gap-x-3 break-after-avoid">
                   <h3 className="font-serif text-lg font-semibold">
                     {role.company}{" "}
                     <span className="font-sans text-base font-normal text-muted-foreground">
-                      — {role.title}
+                      | {role.title}
                     </span>
                   </h3>
                   <span className="whitespace-nowrap text-sm tabular-nums text-muted-foreground">
@@ -268,7 +269,7 @@ export default function ResumePage() {
                 </div>
                 <ul className="mt-2 space-y-1.5">
                   {role.bullets.map((bullet, i) => (
-                    <li key={i} className="flex gap-2.5 text-sm leading-relaxed">
+                    <li key={i} className="flex gap-2.5 text-sm leading-relaxed break-inside-avoid">
                       <span
                         aria-hidden
                         className="mt-[0.5em] h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
@@ -311,7 +312,7 @@ export default function ResumePage() {
             {products.map((product) => (
               <div key={product.name} className="text-sm">
                 <span className="font-semibold">{product.name}</span>
-                <span className="text-foreground/85"> — {product.detail}</span>
+                <span className="text-foreground/85">: {product.detail}</span>
               </div>
             ))}
           </div>
@@ -349,7 +350,7 @@ export default function ResumePage() {
               B.S. Business Administration (Accounting) · Minor in Speech Communications
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
-              Ford Family Scholar — a full-ride scholarship awarded to up to 120 Oregon
+              Ford Family Scholar, a full-ride scholarship awarded to up to 120 Oregon
               students statewide each year.
             </p>
           </div>
@@ -360,6 +361,8 @@ export default function ResumePage() {
       <style>{`
         @media print {
           @page { margin: 0.5in; }
+          /* Everything is sized in rem, so this scales the whole printout down a notch */
+          html { font-size: 14px; }
           html, body {
             background: #15171D !important;
             -webkit-print-color-adjust: exact;
