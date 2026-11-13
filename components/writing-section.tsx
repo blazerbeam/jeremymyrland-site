@@ -1,31 +1,17 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-const articles = [
-  {
-    title: "The black box problem: why search teams need transparency tooling",
-    teaser:
-      "When your search algorithm makes decisions, everyone needs to understand why — especially when revenue is on the line.",
-    link: "#",
-  },
-  {
-    title:
-      "What building bethere.community taught me about volunteer coordination",
-    teaser:
-      "The real problem isn't finding volunteers. It's matching the right people to the right opportunities at the right time.",
-    link: "#",
-  },
-  {
-    title: "Orchestration vs. feature shipping: the distinction that matters",
-    teaser:
-      "Most product managers build features. The best ones build systems that make features work together.",
-    link: "#",
-  },
-];
+export type WritingCard = {
+  slug: string;
+  title: string;
+  date: string;
+  excerpt: string;
+};
 
-export function WritingSection() {
+export function WritingSection({ posts }: { posts: WritingCard[] }) {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -60,28 +46,39 @@ export function WritingSection() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {articles.map((article, index) => (
+          {posts.map((post, index) => (
             <article
-              key={article.title}
+              key={post.slug}
               className={cn(
-                "group cursor-pointer transition-all duration-700 ease-out",
+                "group transition-all duration-700 ease-out",
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
               )}
               style={{ transitionDelay: isVisible ? `${index * 150}ms` : "0ms" }}
             >
-              <div className="bg-card border border-border rounded-xl p-6 h-full flex flex-col hover:shadow-lg transition-shadow">
-                <h3 className="font-serif text-lg font-semibold text-foreground leading-snug group-hover:text-primary transition-colors">
-                  {article.title}
+              <Link
+                href={`/writing/${post.slug}`}
+                className="bg-card border border-border rounded-xl p-6 h-full flex flex-col hover:shadow-lg transition-shadow"
+              >
+                <time
+                  dateTime={post.date}
+                  className="text-sm text-muted-foreground"
+                >
+                  {new Date(post.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                    timeZone: "UTC",
+                  })}
+                </time>
+                <h3 className="mt-3 font-serif text-lg font-semibold text-foreground leading-snug group-hover:text-primary transition-colors">
+                  {post.title}
                 </h3>
                 <p className="mt-4 text-sm text-muted-foreground leading-relaxed flex-grow">
-                  {article.teaser}
+                  {post.excerpt}
                 </p>
-                <a
-                  href={article.link}
-                  className="mt-6 inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                >
+                <span className="mt-6 inline-flex items-center text-sm font-medium text-primary group-hover:text-primary/80 transition-colors">
                   Read more
                   <svg
                     className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
@@ -96,10 +93,19 @@ export function WritingSection() {
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
-                </a>
-              </div>
+                </span>
+              </Link>
             </article>
           ))}
+        </div>
+
+        <div className="mt-10">
+          <Link
+            href="/writing"
+            className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+          >
+            All writing →
+          </Link>
         </div>
       </div>
     </section>

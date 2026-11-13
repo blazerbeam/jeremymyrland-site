@@ -63,11 +63,11 @@ export function HeroSection() {
                 <p className="text-xs sm:text-sm text-muted-foreground mt-1">employees served</p>
               </div>
               <div className="text-center sm:px-4">
-                <p className="text-2xl sm:text-3xl font-semibold text-primary">9 PMs</p>
-                <p className="text-xs sm:text-sm text-muted-foreground mt-1">led globally</p>
+                <p className="text-2xl sm:text-3xl font-semibold text-primary">15 → 3</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">days to start (Nike global onboarding)</p>
               </div>
               <div className="text-center sm:px-4 last:sm:pr-0">
-                <p className="text-2xl sm:text-3xl font-semibold text-primary">~2,350</p>
+                <p className="text-2xl sm:text-3xl font-semibold text-primary">2,800</p>
                 <p className="text-xs sm:text-sm text-muted-foreground mt-1">families on Roost</p>
               </div>
             </div>

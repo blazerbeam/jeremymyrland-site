@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { CaseStudyModal, NikeSearchCaseStudy, ViewpointCaseStudy, WayfairCaseStudy, JamaCaseStudy, WorkdayCaseStudy } from "./case-study-modal";
+import { useOpenCaseStudy } from "./case-study-modal";
 
 const workHistory = [
   {
@@ -13,7 +13,7 @@ const workHistory = [
       "Founder of Roost, a modern parent directory that replaces DirectorySpot. Built solo, from the data model to the iOS and Android apps, while working full-time at Nike.",
     outcomes: [
       "Shipped a person-centric directory with magic-link sign-in and privacy each family controls, enforced at the database layer",
-      "Launched on iOS and Android in 2026. Now live at 7 Lake Oswego schools, K-12 (Forest Hills, Hallinan, Oak Creek, and Lake Grove Elementary, Palisades World Language School, Lake Oswego Middle School, and Lake Oswego High School), reaching about 2,350 families, 3,300+ students, and 4,200+ parents and guardians, along with the district education foundation",
+      "Launched on iOS and Android in 2026. Now live at 7 Lake Oswego schools, K-12 (Forest Hills, Hallinan, Oak Creek, and Lake Grove Elementary, Palisades World Language School, Lake Oswego Middle School, and Lake Oswego High School), reaching about 2,800 families, along with the district education foundation",
       "The culmination of bethere.community and years of fighting our own school's directory",
     ],
   },
@@ -22,12 +22,16 @@ const workHistory = [
     title: "Principal PM, HR Global Technology",
     dates: "2025–Present",
     summary:
-      "Redesigning enterprise HR systems for 75,000+ employees across retail, corporate, and supply chain.",
+      "Global onboarding rebuild, HR automation, and workforce planning for 75K+ employees.",
     outcomes: [
-      "Rebuilt U.S. onboarding journey — reduced steps and shortened time to productivity",
-      "Consolidated document management from ServiceNow into Workday — saved hundreds of thousands in annual licensing costs",
-      "Automated California meal waiver compliance — reduced regulatory overhead and ongoing costs",
+      "Own product strategy for the HR platform serving 75,000+ employees across retail, corporate, distribution and manufacturing, with Workday as the system of record.",
+      "Leading a multi-year global onboarding rebuild that replaces ServiceNow, Workday and manual steps with one Workday experience from offer through first pay. Cut time to start from a 15-day minimum to 3 days in most cases. Live in the US, Canada and Mexico; China and India rolling out through March 2027.",
+      "Consolidated employee document management from ServiceNow into Workday: $750K saved plus $200K a year ongoing. Employees self-serve most employment documents instead of filing tickets.",
+      "Automated California meal waiver compliance, replacing quarterly store-manager spreadsheets with a systematic Workday process. Cut fines from ~$25K a quarter to near zero.",
+      "Partner with global process owners and Talent Acquisition to turn country-specific hiring rules, works council requirements and self-identification into Workday solutions, including pre-hire collection of legal and demographic documents.",
+      "Built a personal AI chief-of-staff agent that keeps PRDs current, handles all my Jira authoring, maps cross-team dependencies, and drafts monthly and quarterly updates. Saves 5+ hours a week.",
     ],
+    caseStudyId: "nike-onboarding",
   },
   {
     company: "Workday",
@@ -118,7 +122,7 @@ const workHistory = [
 
 export function WorkSection() {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
-  const [caseStudyOpen, setCaseStudyOpen] = useState<string | null>(null);
+  const setCaseStudyOpen = useOpenCaseStudy();
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -233,37 +237,6 @@ export function WorkSection() {
         </div>
       </div>
 
-      {/* Case Study Modals */}
-      <CaseStudyModal
-        isOpen={caseStudyOpen === "nike-search"}
-        onClose={() => setCaseStudyOpen(null)}
-      >
-        <NikeSearchCaseStudy />
-      </CaseStudyModal>
-      <CaseStudyModal
-        isOpen={caseStudyOpen === "viewpoint"}
-        onClose={() => setCaseStudyOpen(null)}
-      >
-        <ViewpointCaseStudy />
-      </CaseStudyModal>
-      <CaseStudyModal
-        isOpen={caseStudyOpen === "wayfair"}
-        onClose={() => setCaseStudyOpen(null)}
-      >
-        <WayfairCaseStudy />
-      </CaseStudyModal>
-      <CaseStudyModal
-        isOpen={caseStudyOpen === "jama"}
-        onClose={() => setCaseStudyOpen(null)}
-      >
-        <JamaCaseStudy />
-      </CaseStudyModal>
-      <CaseStudyModal
-        isOpen={caseStudyOpen === "workday"}
-        onClose={() => setCaseStudyOpen(null)}
-      >
-        <WorkdayCaseStudy />
-      </CaseStudyModal>
     </section>
   );
 }

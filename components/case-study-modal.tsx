@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface CaseStudyModalProps {
@@ -96,6 +96,129 @@ export function CaseStudyModal({ isOpen, onClose, children }: CaseStudyModalProp
         </div>
       </div>
     </>
+  );
+}
+
+// One copy of every case study for the whole page. Journey and Work both open
+// these through useOpenCaseStudy, so each case study renders once, not per section.
+const caseStudies: { id: string; Content: () => React.JSX.Element }[] = [
+  { id: "nike-onboarding", Content: NikeOnboardingCaseStudy },
+  { id: "nike-search", Content: NikeSearchCaseStudy },
+  { id: "viewpoint", Content: ViewpointCaseStudy },
+  { id: "wayfair", Content: WayfairCaseStudy },
+  { id: "jama", Content: JamaCaseStudy },
+  { id: "workday", Content: WorkdayCaseStudy },
+];
+
+const OpenCaseStudyContext = createContext<(id: string | null) => void>(() => {});
+
+export function useOpenCaseStudy() {
+  return useContext(OpenCaseStudyContext);
+}
+
+export function CaseStudyProvider({ children }: { children: React.ReactNode }) {
+  const [openId, setOpenId] = useState<string | null>(null);
+
+  return (
+    <OpenCaseStudyContext.Provider value={setOpenId}>
+      {children}
+      {caseStudies.map(({ id, Content }) => (
+        <CaseStudyModal
+          key={id}
+          isOpen={openId === id}
+          onClose={() => setOpenId(null)}
+        >
+          <Content />
+        </CaseStudyModal>
+      ))}
+    </OpenCaseStudyContext.Provider>
+  );
+}
+
+// Nike Global Onboarding Case Study Content
+export function NikeOnboardingCaseStudy() {
+  return (
+    <article className="max-w-[680px] mx-auto space-y-10">
+      {/* Header */}
+      <header className="space-y-4">
+        <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
+          Case Study
+        </span>
+        <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight">
+          One System From Offer to First Pay
+        </h1>
+        <p className="text-xl text-muted-foreground leading-relaxed">
+          Rebuilding Nike&apos;s global onboarding, one country at a time
+        </p>
+        <div className="flex flex-wrap gap-3 pt-2">
+          <span className="text-xs px-3 py-1 rounded-full bg-primary/15 text-primary">
+            Nike
+          </span>
+          <span className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground">
+            2025–Present
+          </span>
+          <span className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground">
+            Enterprise HR
+          </span>
+        </div>
+      </header>
+
+      <hr className="border-border" />
+
+      {/* The Situation */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Situation
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          New hire onboarding at Nike was split across ServiceNow, Workday and manual processes, different for retail and corporate, and different in every country. New hires waited a 15-day minimum to start.
+        </p>
+      </section>
+
+      {/* What I Did */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          What I Did
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          Consolidate onboarding into one Workday experience and roll it out country by country instead of a big-bang launch. Partner with Talent Acquisition to pull legal and demographic document collection into pre-hire where countries require it. Work with global process owners to meet works council and local hiring requirements.
+        </p>
+      </section>
+
+      {/* The Outcomes */}
+      <section className="space-y-6">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Outcomes
+        </h2>
+        <div className="grid gap-4 sm:grid-cols-3">
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">15 → 3</p>
+            <p className="text-sm text-muted-foreground">days to start</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">1 system</p>
+            <p className="text-sm text-muted-foreground">offer to first pay</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <p className="text-2xl font-semibold text-primary">3 countries</p>
+            <p className="text-sm text-muted-foreground">live</p>
+          </div>
+        </div>
+        <p className="text-foreground leading-[1.8]">
+          Time to start cut from 15 days to 3 in most cases. One system from offer through onboarding to first pay. Live in the US, Canada and Mexico; Mainland China, Greater China and India rolling out through March 2027. Hiring and onboarding operating costs down significantly.
+        </p>
+      </section>
+
+      {/* The Lesson */}
+      <section className="space-y-4 pb-8">
+        <h2 className="font-serif text-xl font-semibold text-primary">
+          The Lesson
+        </h2>
+        <p className="text-foreground leading-[1.8]">
+          In HR systems the hard part is not the software, it&apos;s the country-by-country rules and the people who own them. Shipping one region at a time let each launch teach the next.
+        </p>
+      </section>
+    </article>
   );
 }
 
@@ -522,10 +645,6 @@ export function JamaCaseStudy() {
           <div className="bg-card border border-border rounded-lg p-5">
             <p className="text-2xl font-semibold text-primary">10,000</p>
             <p className="text-sm text-muted-foreground">decisions logged in month one of new feature</p>
-          </div>
-          <div className="bg-card border border-border rounded-lg p-5">
-            <p className="text-2xl font-semibold text-primary">#1</p>
-            <p className="text-sm text-muted-foreground">fastest-growing startup in Oregon</p>
           </div>
           <div className="bg-card border border-border rounded-lg p-5">
             <p className="text-2xl font-semibold text-primary">First</p>
