@@ -26,14 +26,18 @@ and workflows function together. Currently Principal PM, HR Global Technology at
 1. Hero (stats bar)
 2. The Journey (role timeline)
 3. The Work (case study cards)
-4. What I'm Building (bethere + inkind + fhpto)
-5. Community (grid + photos)
-6. Testimonials (quotes)
-7. Education (Oregon State + Ford Family Scholar)
-8. Contact (resume downloads + links)
-9. Footer ("Go Blazers. Go Beavs.")
+4. What I'm Building (Roost, bethere, inkind, fhpto, pairwise)
+5. Writing (the 3 newest posts from `lib/posts.ts`)
+6. Community (3 primary roles, the rest under "More community work", plus photos)
+7. Testimonials (quotes)
+8. Education (Oregon State + Ford Family Scholar)
+9. Contact (resume downloads + links)
+10. Footer ("Go Blazers. Go Beavs.")
 
-Separate pages: `/writing`, `/writing/[slug]`.
+Separate pages: `/writing`, `/writing/[slug]`, `/resume`.
+
+pairwise's hosted app is paused on purpose (its database is paused to stay on the free
+plan). The card links to the GitHub repo and says so. Don't link to pairwise.one as live.
 
 ### Design system
 
@@ -61,8 +65,8 @@ words, mix lengths deliberately, real artifact images over stock.
 
 ## Career summary (public, as reflected on the site)
 
-- **Nike** — Principal PM, HR Global Technology (Jan 2025 to present). 75K+ employees. No
-  case study (current employer).
+- **Nike** — Principal PM, HR Global Technology (Jan 2025 to present). 75K+ employees.
+  Case study: "One System From Offer to First Pay" (global onboarding, 15 to 3 days).
 - **Workday** — Manager, Platform Product Management (Jun 2022 to Jan 2025). Case study:
   "Building the Team Before Building the Product."
 - **Wayfair** — Associate Director, Search Platform (Apr 2021 to Jun 2022). Neural search,

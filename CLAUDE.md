@@ -76,8 +76,13 @@ This project no longer uses v0. Claude Code edits files directly. The loop:
 ## Site structure
 
 Home page sections, in order: Hero (stats bar), The Journey (role timeline), The Work
-(case study cards), What I'm Building, Community, Testimonials, Education, Contact, Footer
-("Go Blazers. Go Beavs."). Separate pages: `/writing` and `/writing/[slug]`.
+(case study cards), What I'm Building, Writing (3 newest posts), Community, Testimonials,
+Education, Contact, Footer ("Go Blazers. Go Beavs."). Separate pages: `/writing`,
+`/writing/[slug]`, and `/resume`.
+
+Case studies render once for the whole page through `CaseStudyProvider` in
+`components/case-study-modal.tsx`. Journey and Work open them with `useOpenCaseStudy()`.
+Add a new case study to the `caseStudies` list there, not as a modal inside a section.
 
 Nav: left "Jeremy Myrland" (home). Right: Journey, Work, Building, Writing, Community,
 Contact, LinkedIn, GitHub.
