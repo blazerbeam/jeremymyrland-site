@@ -45,7 +45,9 @@ const projects = [
   },
   {
     name: "pairwise.one",
-    url: "https://pairwise.one",
+    // The hosted app's database is paused, so link to the code instead.
+    url: "https://github.com/blazerbeam/pairwise",
+    tag: "Paused, code on GitHub",
     tagline: "Prioritization made simple. Compare two things at a time.",
     problem:
       "A pairwise comparison tool for groups. Instead of ranking ten things on a whiteboard, you compare two at a time until the math sorts out a ranking and a 2D plot sorts out which ones are quick wins and which are big bets.",
