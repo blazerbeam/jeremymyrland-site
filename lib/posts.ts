@@ -406,7 +406,9 @@ Pairwise is live at [pairwise.one](https://pairwise.one). Sign up, create a pair
 
 Known gaps, in case you find them: the scatter quadrants don't have the pastel fills I wanted. There's no undo on votes. There's an intermittent first-load issue on voter URLs in incognito that I haven't been able to reproduce on demand. Repo will go public shortly.
 
-If you break it, tell me. That's the most useful thing you can do.`,
+If you break it, tell me. That's the most useful thing you can do.
+
+*Update, November 2026: the hosted version is paused, so sign-up and voting at pairwise.one don't work right now. The code is public at [github.com/blazerbeam/pairwise](https://github.com/blazerbeam/pairwise).*`,
   },
   {
     slug: "know-what-you-have",
