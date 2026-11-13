@@ -37,12 +37,11 @@ const projects = [
   {
     name: "fhpto.org",
     url: "https://fhpto.org",
-    github: "https://github.com/blazerbeam/v0-forest-hills-pto-website",
     problem:
-      "I'm the President of our school PTO. Our official PTO presence was a district-mandated compliance page: ugly, dense, hard for parents to use. New families had nowhere good to start. A parent survey confirmed it: people wanted to help but didn't know how, and felt overwhelmed by communications.",
+      "I'm the President of our school PTO, which runs on an operating budget of about $160K a year. That's a lot for a PTO. A parent survey showed people wanted to help but didn't know how, and felt overwhelmed by communications. Running it well meant building an operation the next board can pick up and repeat.",
     solution:
-      "A modern, parent-friendly site organized around what a busy parent actually needs in 30 seconds — what's this week, what's the year look like, who runs this, how do I get involved. Multi-page, mobile-first, with an illustrated calendar and an 'at a glance' page that fits the whole PTO on one screen. Built in 8 hours across two evenings. Live at fhpto.org, and now the front door for a PTO I've spent the year operationalizing — Google Workspace for board continuity, a nonprofit Canva for anyone to make something on-brand, and a digital welcome pack that replaced the paper one.",
-    builtWith: "Claude AI, v0, and Vercel",
+      "fhpto.org started as a full parent-friendly site with a calendar and an 'at a glance' page. It's now a simpler site: who we are, what the PTO funds, and the links families use. The bigger work is behind it. I've focused on making the PTO's operations efficient and reproducible, including how we reach parents: Google Workspace for board continuity, a nonprofit Canva so anyone can make something on-brand, and a digital welcome pack that replaced the paper one. I've also helped shepherd in a balanced budget approach.",
+    builtWith: "v0, Claude Code, and Vercel",
   },
   {
     name: "pairwise.one",
@@ -211,7 +210,8 @@ export function BuildingSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           )}
         >
-          Most of these are open source.{" "}
+          This site, pairwise.one, and the original bethere.community prototype are
+          open source at{" "}
           <a
             href="https://github.com/blazerbeam"
             target="_blank"
@@ -220,6 +220,7 @@ export function BuildingSection() {
           >
             github.com/blazerbeam
           </a>
+          . Roost&apos;s code is private.
         </p>
       </div>
     </section>
