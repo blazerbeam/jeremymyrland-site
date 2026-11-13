@@ -7,12 +7,12 @@ const projects = [
   {
     name: "Roost",
     url: "https://roost.directory",
-    tag: "Live · 6 schools",
+    tag: "Live, 7 paying schools",
     featured: true,
     problem:
       "Our school ran on DirectorySpot: dated, clunky, the kind of tool nobody opens twice. I'd already built bethere.community to fix the volunteer-matching half of the problem. But the real gap was bigger. A school's entire parent community, from the directory to class lists to carpools to clubs, was scattered across aging tools that families quietly gave up on.",
     solution:
-      "A modern parent directory that replaces DirectorySpot. Magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. It is the culmination of bethere.community and years of fighting our own directory.\n\nLaunched in 2026, live on iOS and Android. Now live at 7 Lake Oswego schools, K-12 (Forest Hills, Hallinan, Oak Creek, and Lake Grove Elementary, Palisades World Language School, Lake Oswego Middle School, and Lake Oswego High School), reaching about 2,350 families, 3,300+ students, and 4,200+ parents and guardians. Hundreds of families have kids at more than one school on a single login. At Forest Hills, where we started, more than 80% of families have signed in, and not one family has opted out.",
+      "A modern parent directory that replaces DirectorySpot. Magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. It is the culmination of bethere.community and years of fighting our own directory.\n\nLaunched in 2026, live on iOS and Android. Now live at 7 Lake Oswego schools, K-12 (Forest Hills, Hallinan, Oak Creek, and Lake Grove Elementary, Palisades World Language School, Lake Oswego Middle School, and Lake Oswego High School), reaching about 2,800 families. Hundreds of families have kids at more than one school on a single login. At Forest Hills, where we started, more than 80% of families have signed in, and not one family has opted out.",
     builtWith: "Claude Code, Next.js, Supabase, and Vercel",
   },
   {
@@ -97,7 +97,7 @@ export function BuildingSection() {
             working product in days, not quarters. Most of what&apos;s below started
             as an experiment to solve a real problem I&apos;ve lived. One of them,
             Roost, has grown into a real product. It is live at 7 Lake Oswego
-            schools, K-12, reaching about 2,350 families.
+            schools, K-12, reaching about 2,800 families.
           </p>
         </div>
 

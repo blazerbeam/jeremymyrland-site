@@ -23,11 +23,6 @@ const communityItems = [
     color: "#14B8A6", // teal
   },
   {
-    name: "LAKE OSWEGO PLANNING COMMISSION",
-    description: "Alternate, 2026–27. Reviewing land use and development for the City of Lake Oswego.",
-    color: "#5B84C4", // steel blue
-  },
-  {
     name: "AMERICAN LEADERSHIP FORUM",
     description: (
       <>
@@ -48,6 +43,15 @@ const communityItems = [
     name: "LAKE OSWEGO SCHOOLS FOUNDATION",
     description: "Secretary → Procurement Lead → Vice President. The gala work led to building inkind.one.",
     color: "#5C9E6E", // green
+  },
+];
+
+// Shown collapsed under "More community work".
+const moreCommunityItems = [
+  {
+    name: "LAKE OSWEGO PLANNING COMMISSION",
+    description: "Alternate, 2026–27. Reviewing land use and development for the City of Lake Oswego.",
+    color: "#5B84C4", // steel blue
   },
   {
     name: "CHILDREN'S CANCER ASSOCIATION",
@@ -105,7 +109,7 @@ export function CommunitySection() {
           </p>
         </div>
 
-        {/* 2x3 Card Grid */}
+        {/* Primary roles */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {communityItems.map((item, index) => (
             <div
@@ -131,6 +135,50 @@ export function CommunitySection() {
             </div>
           ))}
         </div>
+
+        {/* Everything else, collapsed */}
+        <details
+          className={cn(
+            "group mt-6 transition-all duration-700 ease-out delay-300",
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          )}
+        >
+          <summary className="inline-flex cursor-pointer list-none items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors [&::-webkit-details-marker]:hidden">
+            More community work
+            <svg
+              className="w-4 h-4 transition-transform group-open:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </summary>
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {moreCommunityItems.map((item) => (
+              <div
+                key={item.name}
+                className="bg-card border border-border rounded-lg p-5"
+                style={{
+                  borderLeftWidth: '3px',
+                  borderLeftColor: item.color,
+                }}
+              >
+                <h3 className="font-serif text-sm font-semibold text-foreground tracking-wide">
+                  {item.name}
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </details>
 
         {/* Community Photos */}
         <div

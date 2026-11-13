@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { CaseStudyModal, NikeSearchCaseStudy, ViewpointCaseStudy, WayfairCaseStudy, JamaCaseStudy, WorkdayCaseStudy } from "./case-study-modal";
+import { useOpenCaseStudy } from "./case-study-modal";
 
 interface Pillar {
   name: string;
@@ -119,7 +119,7 @@ const journeyRoles: JourneyRole[] = [
     dates: "2025–Present",
     color: "#5C9E6E", // Primary green - matches new primary
     narrative:
-      "Back at Nike in a completely different domain — enterprise HR instead of consumer search. Same problem though: disconnected systems that slow people down every day. Rebuilt the onboarding journey, saved hundreds of thousands in licensing by consolidating document management, automated California compliance workflows. Now shaping strategic workforce planning — connecting Workday, planning tools, and skills data across 75,000+ employees. The orchestration problem doesn't change. The domain does.",
+      "Back at Nike in a completely different domain: enterprise HR instead of consumer search. Same problem though: disconnected systems that slow people down every day. Leading a global onboarding rebuild that cut time to start from 15 days to 3, saved hundreds of thousands in licensing by consolidating document management, automated California compliance workflows. Now shaping strategic workforce planning, connecting Workday, planning tools, and skills data across 75,000+ employees. The orchestration problem doesn't change. The domain does.",
     tags: ["Enterprise HR", "Workday", "Workforce Planning", "Automation"],
     stat: { value: "75K+ employees", color: "#5C9E6E" }, // accent green
   },
@@ -129,16 +129,16 @@ const journeyRoles: JourneyRole[] = [
     dates: "2026–Present",
     color: "#14B8A6", // teal - the current chapter
     narrative:
-      "The culmination of everything before it. I'd spent years frustrated by the tools our school ran on, and I'd built bethere.community to fix one piece of it. Roost is the whole thing: a modern parent directory that replaces DirectorySpot, with magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. I built it solo while working full-time at Nike. Launched in 2026, shipped to iOS and Android, and is now live at 7 Lake Oswego schools, K-12 (Forest Hills, Hallinan, Oak Creek, and Lake Grove Elementary, Palisades World Language School, Lake Oswego Middle School, and Lake Oswego High School), reaching about 2,350 families, 3,300+ students, and 4,200+ parents and guardians, plus the district education foundation. Same orchestration problem I've worked on for 15 years. This time it's mine.",
+      "The culmination of everything before it. I'd spent years frustrated by the tools our school ran on, and I'd built bethere.community to fix one piece of it. Roost is the whole thing: a modern parent directory that replaces DirectorySpot, with magic-link sign-in, privacy each family controls, and one account that follows a family from elementary through high school. I built it solo while working full-time at Nike. Launched in 2026, shipped to iOS and Android, and is now live at 7 Lake Oswego schools, K-12 (Forest Hills, Hallinan, Oak Creek, and Lake Grove Elementary, Palisades World Language School, Lake Oswego Middle School, and Lake Oswego High School), reaching about 2,800 families, plus the district education foundation. Same orchestration problem I've worked on for 15 years. This time it's mine.",
     tags: ["Founder", "Parent Directory", "iOS + Android", "First Customer"],
-    stat: { value: "6 schools", color: "#14B8A6" }, // teal
+    stat: { value: "7 schools", color: "#14B8A6" }, // teal
   },
 ];
 
 export function JourneySection() {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-  const [caseStudyOpen, setCaseStudyOpen] = useState<string | null>(null);
+  const setCaseStudyOpen = useOpenCaseStudy();
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -393,6 +393,31 @@ export function JourneySection() {
                           <p className="text-sm sm:text-base text-foreground leading-relaxed whitespace-pre-line">
                             {role.narrative}
                           </p>
+                          {/* Case study link for Nike HR (2025-Present) */}
+                          {role.company === "NIKE" && role.dates === "2025–Present" && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCaseStudyOpen("nike-onboarding");
+                              }}
+                              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                            >
+                              Read case study
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                />
+                              </svg>
+                            </button>
+                          )}
                           {/* Case study link for Nike Search (2016-2020) */}
                           {role.company === "NIKE" && role.dates === "2016–2020" && (
                             <button
@@ -505,37 +530,6 @@ export function JourneySection() {
         </div>
       </div>
 
-      {/* Case Study Modals */}
-      <CaseStudyModal
-        isOpen={caseStudyOpen === "nike-search"}
-        onClose={() => setCaseStudyOpen(null)}
-      >
-        <NikeSearchCaseStudy />
-      </CaseStudyModal>
-      <CaseStudyModal
-        isOpen={caseStudyOpen === "viewpoint"}
-        onClose={() => setCaseStudyOpen(null)}
-      >
-        <ViewpointCaseStudy />
-      </CaseStudyModal>
-      <CaseStudyModal
-        isOpen={caseStudyOpen === "wayfair"}
-        onClose={() => setCaseStudyOpen(null)}
-      >
-        <WayfairCaseStudy />
-      </CaseStudyModal>
-      <CaseStudyModal
-        isOpen={caseStudyOpen === "jama"}
-        onClose={() => setCaseStudyOpen(null)}
-      >
-        <JamaCaseStudy />
-      </CaseStudyModal>
-      <CaseStudyModal
-        isOpen={caseStudyOpen === "workday"}
-        onClose={() => setCaseStudyOpen(null)}
-      >
-        <WorkdayCaseStudy />
-      </CaseStudyModal>
     </section>
   );
 }
