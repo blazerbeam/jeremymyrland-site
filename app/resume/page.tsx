@@ -317,8 +317,9 @@ export default function ResumePage() {
             ))}
           </div>
           <p className="mt-3 text-xs text-muted-foreground">
-            Built solo with AI agent tooling (Claude Code, MCP), no CS background. Most are
-            open source at github.com/blazerbeam.
+            Built solo with AI agent tooling (Claude Code, MCP), no CS background. This site,
+            pairwise.one, and the original bethere.community prototype are open source at
+            github.com/blazerbeam. Roost&apos;s code is private.
           </p>
         </section>
 
